@@ -1,0 +1,97 @@
+{
+  "bundleVersion": "0.5.0-role-contracts",
+  "status": "local-source-not-installed",
+  "skills": [
+    "indie-game-development",
+    "indie-game-improvement",
+    "indie-game-bugfix",
+    "game-project-profile",
+    "game-feature-spec",
+    "game-improvement-assessment",
+    "game-bug-reproduction",
+    "game-bug-diagnosis",
+    "game-task-planning",
+    "game-rule-implementation",
+    "game-functional-verification",
+    "game-code-review",
+    "game-technical-design",
+    "game-input-implementation",
+    "game-movement-implementation",
+    "game-camera-implementation",
+    "game-session-implementation",
+    "game-content-loading",
+    "game-test-infrastructure",
+    "game-save-implementation",
+    "game-platform-integration",
+    "game-performance-profiling",
+    "game-build-packaging",
+    "game-test-design",
+    "game-workflow",
+    "game-workflow-supervision"
+  ],
+  "uiDependencies": [
+    {
+      "id": "art-asset-review",
+      "source": "../game-ui-production-skills/skills/art-asset-review",
+      "skillSha256": "bf6b85878dbf6d9d405af96b51f60a67061f2cd2a890df98e712fda157a1d522"
+    },
+    {
+      "id": "game-ui-acceptance-review",
+      "source": "../game-ui-production-skills/skills/game-ui-acceptance-review",
+      "skillSha256": "6954e9ceac711741eae1b28a624850d07ffb1ce1cc50144b0be8f324eb0a4f89"
+    },
+    {
+      "id": "game-ui-art-direction",
+      "source": "../game-ui-production-skills/skills/game-ui-art-direction",
+      "skillSha256": "3be8eb642b24a20e4cb787aa354c31b60b49fa6f3fb2a0223f21287d1fbad2c0"
+    },
+    {
+      "id": "game-ui-asset-production",
+      "source": "../game-ui-production-skills/skills/game-ui-asset-production",
+      "skillSha256": "83d77d0f1aba174213dfdbd39d79177845864fccdc8ec560ceb2d6c244cb6214"
+    },
+    {
+      "id": "game-ui-component-system",
+      "source": "../game-ui-production-skills/skills/game-ui-component-system",
+      "skillSha256": "2d5d5c64c0729f01865909c423b637eba1741f2d4ed7ea095c3697391f75b32f"
+    },
+    {
+      "id": "game-ui-handoff",
+      "source": "../game-ui-production-skills/skills/game-ui-handoff",
+      "skillSha256": "5188b93839f3ab6e5c242361f119e986f8c64b248117d84348d28216bc39f6fa"
+    },
+    {
+      "id": "game-ui-implementation",
+      "source": "../game-ui-production-skills/skills/game-ui-implementation",
+      "skillSha256": "3620a88934f2ce9bd40e4f2ea55e26b94973a0a278fc36c47611641854d5eaa5"
+    },
+    {
+      "id": "game-ui-mockup",
+      "source": "../game-ui-production-skills/skills/game-ui-mockup",
+      "skillSha256": "2311c6231da98110d354eec7214b4f4976f00b0d5a59ce2c8c06215385e6ebdc"
+    },
+    {
+      "id": "game-ui-runtime-validation",
+      "source": "../game-ui-production-skills/skills/game-ui-runtime-validation",
+      "skillSha256": "4a3f1858f32fbc3c369b5dc8a187c966b6a909592552de6ed63e2703d8bb9767"
+    },
+    {
+      "id": "game-ui-screen-spec",
+      "source": "../game-ui-production-skills/skills/game-ui-screen-spec",
+      "skillSha256": "fd793750e487c78c1570c9ce92d5316d915bc144c7e8d74e749c960346c677cc"
+    }
+  ],
+  "installationImplemented": true,
+  "installationScope": "local-content-locked-install-no-upgrade",
+  "graphExecution": {
+    "mode": "instruction-driven",
+    "transactionalRunnerImplemented": false,
+    "allArtifactTemplatesImplemented": false,
+    "runtimeDiscovery": "not-verified"
+  },
+  "uiRepository": {
+    "url": "https://github.com/gwkang/game-ui-production-skills.git",
+    "commit": "589d5ce3728e03172d8171f906bcd69b195b62f0",
+    "checkout": "../game-ui-production-skills"
+  }
+}

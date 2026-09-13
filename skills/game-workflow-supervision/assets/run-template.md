@@ -1,0 +1,63 @@
+# Workflow run
+
+Rules: required fields must be populated or explicitly not-applicable with reasons. Record real execution, not hypothetical success. Link existing sources rather than copy their authority. Overall supervisor is the only shared-record writer. Results can live in task-local files using the envelope below.
+
+## Identity
+- Run ID / plan revision / overall executor:
+- Original request / authority / intent / selected entry flow:
+- Workspace / target / existing changes to preserve:
+- Skill and input paths/revisions:
+- Resolved conversation/artifact language and source/override:
+- Mode / isolation or confirmed single writer / resource limits:
+- Repair limit / relevant project commands and review policy:
+
+## Tasks
+| Task ID | Skill/owner/supervisor | Inputs/revisions | Output template/rules/location | Predecessors/result conditions | Read/write/resources | Integration owner | State/attempt/executor |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+## Artifact verification
+Use [the bounded verification rules](../../game-task-planning/references/verification-scope.md). Each selected artifact has a row or an inline record with the same fields. Freeze before checking; do not add criteria during repair. Producer and verifier executor IDs must differ. Author self-checks do not close verification; producer repairs and the separate verifier rechecks.
+
+| Artifact/revision | Producer/separate verifier executor IDs | Scope source; included criteria/pass conditions; exclusions | Necessary reads; permitted repair paths/resources | Checks/evidence | Repair owner/budget/attempt | Verdict/current evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+
+## Repair and deferred observations
+| Finding/evidence | Artifact/criterion or out-of-scope reason | Repair owner/allowed change or deferred only | Attempt/hypothesis | Affected rechecks/result | Blocker/minimum scope proposal if necessary |
+| --- | --- | --- | --- | --- | --- |
+
+Out-of-scope observations create no task or gate. A necessary change beyond authority blocks only dependent criteria pending explicit scope authorization. Keep unchanged criteria and still-valid evidence across retries.
+
+## Supervisor assignments
+| Assignment/plan revision | Executor/role card | Task set and read/write/resource boundary | Remaining shared retry budget | Previous owner stopped / retirement / activation evidence | Inherited results and input/criterion validity |
+| --- | --- | --- | --- | --- | --- |
+
+## Decisions and events
+| Event ID | Task/attempt/dispatch | Observation and evidence | Decision/authority | Affected work and next action |
+| --- | --- | --- | --- | --- |
+
+Use pending/ready/running/completed/failed/blocked/cancelled/skipped for task execution, pass/fail/inconclusive/not-applicable for verdict, current/stale/unknown for evidence. State explicitly when a dispatch is uncertain. A completed check with fail does not enable its pass branch.
+
+## Worker result envelope
+- Run / task / attempt / dispatch / actual executor:
+- Consumed inputs and revisions:
+- Produced artifacts and [type/version envelope](../../game-task-planning/references/artifact-contract.md), format/rule locator/revision, consumer:
+- Role card ID/version; decision states/source IDs; selected reference card/decision/verification links (or no-reference reason):
+- Changed paths / candidate identity including relevant dirty content:
+- Checks: command or observation, environment, result, raw evidence locator:
+- Verdict / evidence validity / limitations:
+- Verification contract / in-scope failing criterion IDs / repair attempt and affected rechecks:
+- Defects, return owner and next required action:
+- Deferred out-of-scope observations (no automatic work or gate):
+
+## Acceptance coverage
+| Criterion ID | Intent/source | Artifact/candidate | Scenario/result/evidence | Review/decision if required | Current status |
+| --- | --- | --- | --- | --- | --- |
+
+## Final report
+- Status and fulfilled scope:
+- Current candidate and artifacts:
+- Verification/review results and limitations:
+- Unresolved or excluded scope with reason:
+- Next action for blocked/failed work:
+
+Completion checks: all selected required outputs have their templates/rules and usable content; all in-scope criteria have current sufficient evidence; required gates and decisions are satisfied; no stale/late result supplies acceptance. A field-count check does not establish quality. Persist this report without declaring external publication or installation that did not occur.
