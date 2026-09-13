@@ -92,6 +92,7 @@
   "uiRepository": {
     "url": "https://github.com/gwkang/game-ui-production-skills.git",
     "commit": "589d5ce3728e03172d8171f906bcd69b195b62f0",
-    "checkout": "../game-ui-production-skills"
+    "checkout": "../game-ui-production-skills",
+    "publicationStatus": "pending-owner-authorization"
   }
 }
