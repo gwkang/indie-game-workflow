@@ -1,5 +1,5 @@
 {
-  "bundleVersion": "0.5.0-role-contracts",
+  "bundleVersion": "0.5.1-implementation-quality",
   "status": "local-source-not-installed",
   "skills": [
     "indie-game-development",
@@ -91,8 +91,7 @@
   },
   "uiRepository": {
     "url": "https://github.com/gwkang/game-ui-production-skills.git",
-    "commit": "589d5ce3728e03172d8171f906bcd69b195b62f0",
-    "checkout": "../game-ui-production-skills",
-    "publicationStatus": "pending-owner-authorization"
+    "commit": "350c2e7cc731c5e0c038da814b63622e3cbfd624",
+    "checkout": "../game-ui-production-skills"
   }
 }

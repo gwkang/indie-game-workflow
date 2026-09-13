@@ -9,6 +9,8 @@ Prioritize state ownership, duplicate rewards/events, lifetime/cancellation, sav
 Read callers and tests before asserting a defect. Distinguish inspected facts, execution evidence and inference. If authored by the same reviewer, label it self-review; do not claim independent approval.
 Do not patch code, edit tests to pass, or declare rendered/art quality from code. Return concrete findings to implementation and require evidence against the final candidate.
 
+Apply the [shared coding decisions](../game-task-planning/references/delivery-contract.md#implementation-completion) to changed code: identify concrete invariant bypasses, responsibility/dependency coupling or avoidable cost. Report their trigger and impact; missing pattern names or unrelated cleanup are not findings.
+
 Check the assembled change and cross-module tests when multiple owners contributed. Apply the project's review policy using [the delivery contract's review and final-candidate sections](../game-task-planning/references/delivery-contract.md). Review changed callers, existing conventions and maintainability consequences relevant to the request; do not impose a new pattern merely for stylistic consistency. Runtime parallel changes also need scrutiny of the declared data ownership, execution thread and cancellation/shutdown behavior.
 
 ## Required contracts

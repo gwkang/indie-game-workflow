@@ -1,6 +1,6 @@
 {
   "lockVersion": 1,
-  "bundleVersion": "0.5.0-role-contracts",
+  "bundleVersion": "0.5.1-implementation-quality",
   "entries": [
     {
       "id": "indie-game-development",
@@ -77,7 +77,7 @@
       "contractVersion": "2026-09-13",
       "files": {
         "references/artifact-contract.md": "5601be0bac4fda873be7db5f7d213a77335bf7802bf9fa829219b816d9bc90b4",
-        "references/delivery-contract.md": "e3dd87e5c7efa3d4e5a121e23bc37facbc78628aff7737166c6eac8802ef249f",
+        "references/delivery-contract.md": "99118d52d6a5ed1dde257cd81818a1eb8d0c35691cd43caa7289d02e79cce9b3",
         "references/professional-references.md": "d0fb417a90b09689d7a70140a4d73b2296487c5467ccfe9596819e25527c3625",
         "references/role-cards.md": "2f076e9d85e1cb469e78259d33ad5813ce8b52fd0d8b5551c176689dc62cc5d8",
         "references/role-contract.md": "2c3944609001bfdf82a2141987f8b9539c3db37c2db94ba20045dc71c58a2e31",
@@ -107,7 +107,7 @@
       "source": "skills/game-code-review",
       "contractVersion": "2026-09-13",
       "files": {
-        "SKILL.md": "80d9c224683ca791197fb05ca5d0580c1af76b93c0b9005d5248e1525fc91edf"
+        "SKILL.md": "07bef5cb93895a7ec3dc5a772da1f6f1fa0984814f9a6c822369b3f5cfc74884"
       }
     },
     {
@@ -117,7 +117,7 @@
       "files": {
         "assets/technical-design-template.md": "eaa794eee4814271a1b195706fd07997beddde193f1e7bb4bdc096e1926725a4",
         "references/runtime-concurrency.md": "714e08df69b409e9929660448cf7f9549105132ccf08b3034d3904f16372abb6",
-        "SKILL.md": "a538bef27ffe9ff56af654a907c9892cc4dd17198f6d291425dc6cfd49291209"
+        "SKILL.md": "b3484051616a6c8d3368d359b294b92b5e37c637379f150db869feea07a8ce46"
       }
     },
     {
@@ -269,7 +269,7 @@
       "source": "../game-ui-production-skills/skills/game-ui-implementation",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "213d4d84e01c4ab20df1f8ba3be430a10a7cf08d091de3cf02c8052483340ee8",
+        "references/output-contract.md": "1858be95cfc9bfa414fd6f45fa0f9e300db3f4fc1ee72234665ba69f8b80c682",
         "SKILL.md": "3620a88934f2ce9bd40e4f2ea55e26b94973a0a278fc36c47611641854d5eaa5"
       }
     },

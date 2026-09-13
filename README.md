@@ -24,14 +24,12 @@ UI는 [game-ui-production-skills](https://github.com/gwkang/game-ui-production-s
 
 ## 설치
 
-**UI 의존성 공개 대기:** 아래 고정 UI 커밋은 아직 기존 공개 저장소에 업로드되지 않았습니다. 따라서 현재 이 저장소만으로 통합 설치를 완료할 수 없습니다. UI 의존성 공개 후 아래 절차를 사용할 수 있습니다. 워크플로우 26개 원본과 계약은 지금 열람할 수 있습니다.
-
 Python 3.12 이상과 Git이 필요합니다. 두 저장소를 같은 상위 폴더에 받습니다.
 
 ```sh
 git clone https://github.com/gwkang/indie-game-workflow.git
 git clone https://github.com/gwkang/game-ui-production-skills.git
-git -C game-ui-production-skills checkout 589d5ce3728e03172d8171f906bcd69b195b62f0
+git -C game-ui-production-skills checkout 350c2e7cc731c5e0c038da814b63622e3cbfd624
 cd indie-game-workflow
 python -B tools/install_bundle.py --target "ABSOLUTE_EXISTING_SKILL_DIRECTORY"
 python -B tools/install_bundle.py --target "ABSOLUTE_EXISTING_SKILL_DIRECTORY" --apply
@@ -51,9 +49,13 @@ python -B tools/install_bundle.py --target "ABSOLUTE_EXISTING_SKILL_DIRECTORY" -
 
 각 스킬 본문에는 핵심 책임을 두고 상세 규칙은 참조로 연결했습니다. 시작점은 [공통 역할 계약](skills/game-task-planning/references/role-contract.md), [산출물 양식](skills/game-task-planning/references/artifact-contract.md), [범위 제한 검증](skills/game-task-planning/references/verification-scope.md)입니다.
 
+## 이번 보완
+
+공통 구현 기준에 책임·캡슐화·의존성·복잡도·테스트 가능성을 연결했습니다. 작은 정적 UI 배치 수정은 적절한 관측 증거를 사용할 수 있으며, 상태·입력의 회귀 검증과 독립 검증은 유지합니다. 새 문서나 품질 gate를 일률적으로 추가하지 않습니다.
+
 ## 검증과 한계
 
-현재 버전은 `0.5.0-role-contracts`입니다. 36개 스킬의 지침·인계 계약을 별도 서브에이전트로 검토했습니다. 이는 실제 게임 제작 품질이나 모든 엔진에서의 실행 성공을 보증하지 않습니다.
+현재 버전은 `0.5.1-implementation-quality`입니다. 36개 스킬의 지침·인계 계약을 별도 서브에이전트로 검토했습니다. 이는 실제 게임 제작 품질이나 모든 엔진에서의 실행 성공을 보증하지 않습니다.
 
 감독은 지침과 Markdown 기록으로 동작합니다. 트랜잭션 그래프 실행기, 원자적 자원 예약, 자동 장애 복구, 백그라운드 서비스는 포함하지 않습니다. 오디오·3D 에셋 제작 등 별도 전문 역할이 필요한 작업은 그 능력을 추가로 확인해야 합니다.
 
