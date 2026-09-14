@@ -15,6 +15,15 @@ Every selected artifact needs appropriate content/semantic and format checks; fi
 
 If the intended check cannot answer a frozen criterion, correct that check within the same criterion and record why. Changing the product expectation or adding a criterion is a scope change, not a test correction.
 
+## Review the current state before alleging a defect
+
+- Inspect the actual candidate, relevant implementation/callers/tests and existing evidence before judging it. For non-code outputs, inspect their current source artifacts and consumers. Read related wiki pages, design decisions and previous review/repair records when present; follow known project pointers and bounded searches, not a repository-wide documentation audit.
+- Cite the relevant record locator/revision in the existing review handoff, or state that no relevant record was found. Absence of a wiki is not a defect or a reason to create documentation. Unavailable required evidence is an explicit limitation; do not invent a product failure.
+- Treat records as context, not unquestionable truth. Compare their scope, date and authority with the current request and implementation. Reuse valid decisions; do not reopen an accepted tradeoff or previously resolved finding without current evidence that an included criterion fails. Existing behavior alone does not prove correctness either.
+- Before reporting a suspected defect, check whether a current guard, caller contract, supported configuration, test or documented decision already addresses it. A static code path can establish a defect without executing it; identify the supported trigger, expected requirement, current evidence and consequence. Label inference and missing execution honestly.
+- Report only violations of frozen criteria or applicable existing requirements within scope. Do not invent requirements, unsupported environments or hypothetical failures to produce findings. Pattern preferences, optional refinements and unexplained documentation differences are not defects. Missing tests alone are not a defect unless a scoped requirement demands them or concrete uncovered behavior justifies the finding.
+- There is no finding quota. If no supported defect remains after the scoped checks, report no findings with reviewed scope and limitations, and stop. Inconclusive evidence is not proof of correctness. Do not broaden searches, add quality gates or propose work merely to avoid an empty review.
+
 ## Classify findings and close the scoped loop
 
 1. Bind each failure to an included criterion and current artifact evidence. Return it to the artifact's repair owner; a verifier does not silently edit the artifact it judges. The producer repairs and the separate verifier rechecks; record both executor IDs on every attempt. A replacement verifier must also be independent of the producer.
@@ -25,6 +34,6 @@ If the intended check cannot answer a frozen criterion, correct that check withi
 
 The supervisor preserves the frozen contract across reassignment and retries. Report artifact pass/fail/inconclusive separately from execution completion and project-wide gate status. Once required scoped checks pass on valid inputs, finish; optional improvement observations do not start a new cycle.
 
-## Existing UI dependency handoff
+## Integrated UI review handoff
 
-The workflow planner/supervisor supplies this contract alongside the original UI templates, selected screens/states/targets and existing approval rules. Preserve those schemas and independent acceptance requirements. A finding on an unselected screen is deferred; a shared component defect affecting a selected criterion returns to its existing repair owner within the assigned component scope. If that scope is insufficient, use the blocked path above. This wrapper does not claim to govern standalone UI calls outside this workflow.
+The workflow planner/supervisor supplies this contract alongside the original UI templates, selected screens/states/targets and existing approval rules. Preserve those schemas and independent acceptance requirements. A finding on an unselected screen is deferred; a shared component defect affecting a selected criterion returns to its existing repair owner within the assigned component scope. If that scope is insufficient, use the blocked path above. The same bounded review rules apply to direct calls of the integrated UI skills.

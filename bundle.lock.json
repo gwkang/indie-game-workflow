@@ -1,6 +1,6 @@
 {
   "lockVersion": 1,
-  "bundleVersion": "0.5.1-implementation-quality",
+  "bundleVersion": "0.6.0-integrated-ui",
   "entries": [
     {
       "id": "indie-game-development",
@@ -31,7 +31,7 @@
       "source": "skills/game-project-profile",
       "contractVersion": "2026-09-13",
       "files": {
-        "assets/profile-template.md": "e6adf0965c17333b94c0bc1676aceb64d7940b73b018b36550528a5bab581b66",
+        "assets/profile-template.md": "c8c93791dc28542c8859e418567e686d323e1fe55372805ff2438c318ea01dc7",
         "references/artifact-language.md": "0c0626ac7406e1202f949d685bda08480810427b052d563a70f2279a9fdd8e9a",
         "references/profile-contract.md": "9f6d00daa0e88e5e2b1187614ae4616d06060d15843fca8ef936fa5fc3e1110a",
         "SKILL.md": "7ff36ef5d198dbca8d55e30961f86e160a017f2319f55e29e1d95876e23ce50e"
@@ -81,9 +81,9 @@
         "references/professional-references.md": "d0fb417a90b09689d7a70140a4d73b2296487c5467ccfe9596819e25527c3625",
         "references/role-cards.md": "2f076e9d85e1cb469e78259d33ad5813ce8b52fd0d8b5551c176689dc62cc5d8",
         "references/role-contract.md": "2c3944609001bfdf82a2141987f8b9539c3db37c2db94ba20045dc71c58a2e31",
-        "references/ui-adapter.md": "af8514186faa4b16f4fdd6f284fafbf92ab1d7dd1f060f40ac383130d454531d",
-        "references/verification-scope.md": "2f9f0017f53d7b518c0a77d4e25c661dbd9c2c2d72d8639e3819aa9e1783e57e",
-        "SKILL.md": "2181c56fe7550074cd1c039666a2d6bc7f0f5ec519ebe8f48ead6744f57e5e1f"
+        "references/ui-adapter.md": "81c7a57ab440c493ed36602e00ea40164cfe7975aab88c8b1424fd3818cf8962",
+        "references/verification-scope.md": "2e45241c2bd4d0dc3c03042690df3315748b64e51e2d694ae9c0f7ff7451b234",
+        "SKILL.md": "a8a0f33c31fc4afe164cce1921be44a519d614110e2eb6a6523904c3dc83b786"
       }
     },
     {
@@ -99,7 +99,7 @@
       "source": "skills/game-functional-verification",
       "contractVersion": "2026-09-13",
       "files": {
-        "SKILL.md": "4adaea1f632a6eb9ddcbda3b3e0b4d2ac0b0269e02fb9df6a965a1b924c1424e"
+        "SKILL.md": "b04a8f343606d265888358c7c539c89c0eac5c388ddea864b21987fac0701889"
       }
     },
     {
@@ -107,7 +107,7 @@
       "source": "skills/game-code-review",
       "contractVersion": "2026-09-13",
       "files": {
-        "SKILL.md": "07bef5cb93895a7ec3dc5a772da1f6f1fa0984814f9a6c822369b3f5cfc74884"
+        "SKILL.md": "e503ed2fb5f780b9f762806131eb2b60b9a5fabe251a35cd8ef84bfe19875861"
       }
     },
     {
@@ -210,94 +210,94 @@
     },
     {
       "id": "art-asset-review",
-      "source": "../game-ui-production-skills/skills/art-asset-review",
+      "source": "skills/art-asset-review",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "a8ec250e66c5aa96270ba9d13697bfd5c81efe4ed2af81e9d0a29dab0975799b",
-        "SKILL.md": "bf6b85878dbf6d9d405af96b51f60a67061f2cd2a890df98e712fda157a1d522"
+        "references/output-contract.md": "1184026b4b40c6da7677967c29c5d723cefc5abc955d19d8c0b3f966caa0f884",
+        "SKILL.md": "86b429dd6e8aff43025ee7beb7a1fcabfa2be11efcfe1adec8b1ee78f40c60a4"
       }
     },
     {
       "id": "game-ui-acceptance-review",
-      "source": "../game-ui-production-skills/skills/game-ui-acceptance-review",
+      "source": "skills/game-ui-acceptance-review",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "b7b3ea1627ef056fe9279e12abf78d53fa51976e1b6e5dff2e533cd2780e48bc",
-        "SKILL.md": "6954e9ceac711741eae1b28a624850d07ffb1ce1cc50144b0be8f324eb0a4f89"
+        "references/output-contract.md": "dff561c4bab41732a18ef6f1e52dcfe1ece3741a89aba3092662fea8e93f328c",
+        "SKILL.md": "fe55ced34ea5b5e787c8f6311319b1f05599b2d1cc81b6ab6123e1177088320a"
       }
     },
     {
       "id": "game-ui-art-direction",
-      "source": "../game-ui-production-skills/skills/game-ui-art-direction",
+      "source": "skills/game-ui-art-direction",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "4493c614a50b79914ecc30c05f80b75a9a44112ba82ef23fa15480474b019449",
-        "SKILL.md": "3be8eb642b24a20e4cb787aa354c31b60b49fa6f3fb2a0223f21287d1fbad2c0"
+        "references/output-contract.md": "aaec3f1ca31975feb7d61ac9af3197b1868665bf13e02a2153172baacf237bd5",
+        "SKILL.md": "30b5100268ac7a7d0e5f74d0719008eac22d8c60fca258ec775265b957d634da"
       }
     },
     {
       "id": "game-ui-asset-production",
-      "source": "../game-ui-production-skills/skills/game-ui-asset-production",
+      "source": "skills/game-ui-asset-production",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "98a64143e9e04f12343425a7c340fd432a1cde3efe59e0ab0bc1db684220fa35",
-        "SKILL.md": "83d77d0f1aba174213dfdbd39d79177845864fccdc8ec560ceb2d6c244cb6214"
+        "references/output-contract.md": "f6533e3ef9e4cac61fb53c0879e5da4aaa3dcf23b30fa720e782036c60d134e2",
+        "SKILL.md": "401b09804c45db2012a8ba981c22fcb182401ae80a0b89a1667ae80b7e1ad5f8"
       }
     },
     {
       "id": "game-ui-component-system",
-      "source": "../game-ui-production-skills/skills/game-ui-component-system",
+      "source": "skills/game-ui-component-system",
       "contractVersion": "2026-09-12",
       "files": {
         "references/component-catalog.schema.json": "6b2e0882468edc44eb00efe5fb03e15acf1b92300b4f2a81fe8f078931d43763",
-        "references/output-contract.md": "6f08652083c4d08c5c4a3b8dfc10011405a4a8a5ffa39ffe412d385462a9f9d7",
+        "references/output-contract.md": "aa37541e64c03896f61f898cf0f4f503ddd627c98e31e16136e0d2d72c6d335e",
         "scripts/validate_component_catalog.py": "0b4d0299dc528a7348cc234a65d641d5c748eb0df5473cc081f258af0e7a1765",
-        "SKILL.md": "2d5d5c64c0729f01865909c423b637eba1741f2d4ed7ea095c3697391f75b32f"
+        "SKILL.md": "aa2b55f07ca55302d92971c798b30524c050bd29b89da587d690c03d29f0adc7"
       }
     },
     {
       "id": "game-ui-handoff",
-      "source": "../game-ui-production-skills/skills/game-ui-handoff",
+      "source": "skills/game-ui-handoff",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "1546481390522ab23662c9a4c692688412ef8054ed97cb536ae5904e195d798c",
-        "SKILL.md": "5188b93839f3ab6e5c242361f119e986f8c64b248117d84348d28216bc39f6fa"
+        "references/output-contract.md": "1d1781572bbd5d5b767bcb72f55a2b74463ec75756d305fc43c304f460bdc413",
+        "SKILL.md": "4e0a736be1e18b1d93c9d313be1096996c98747bc43f859e8551c9159ce9e7b4"
       }
     },
     {
       "id": "game-ui-implementation",
-      "source": "../game-ui-production-skills/skills/game-ui-implementation",
+      "source": "skills/game-ui-implementation",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "1858be95cfc9bfa414fd6f45fa0f9e300db3f4fc1ee72234665ba69f8b80c682",
-        "SKILL.md": "3620a88934f2ce9bd40e4f2ea55e26b94973a0a278fc36c47611641854d5eaa5"
+        "references/output-contract.md": "5cae7ddede667f576e4e3672f75fe03e4cc31f3a1c584d30b863a95ca8dcef84",
+        "SKILL.md": "a0b9b11d6089b0e46d91fc9f6a99e3cfff534665b027a42dd22498e5f9ea0de9"
       }
     },
     {
       "id": "game-ui-mockup",
-      "source": "../game-ui-production-skills/skills/game-ui-mockup",
+      "source": "skills/game-ui-mockup",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "8b497bd9f36326c628228d687c8572041225477de7de36eb4f38571f27ae5233",
-        "SKILL.md": "2311c6231da98110d354eec7214b4f4976f00b0d5a59ce2c8c06215385e6ebdc"
+        "references/output-contract.md": "109e74844b334714ceee3d01631ff5b18d223668fe2866b837c053dbb78c674a",
+        "SKILL.md": "a8b36c1760d9f8bc997182a689058fa64fd935c825a505b38fcd09bbf0612f52"
       }
     },
     {
       "id": "game-ui-runtime-validation",
-      "source": "../game-ui-production-skills/skills/game-ui-runtime-validation",
+      "source": "skills/game-ui-runtime-validation",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "55c99609d32bb9ebcf02ca3ace9c22e7176a676cd319f62e3ae7c38cdf2ed766",
-        "SKILL.md": "4a3f1858f32fbc3c369b5dc8a187c966b6a909592552de6ed63e2703d8bb9767"
+        "references/output-contract.md": "2316d996cd73f3e610010235328f457cf7185df99a8e4cd95681f8fe89d01554",
+        "SKILL.md": "e79f5938789ffd93f44ffb0e9e3bb6a3bcb7b7071a76e7f93dead5dbd1dd50ee"
       }
     },
     {
       "id": "game-ui-screen-spec",
-      "source": "../game-ui-production-skills/skills/game-ui-screen-spec",
+      "source": "skills/game-ui-screen-spec",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "52d8c4113b7a4ae80b501299980b3d8fdfbeed8c186e60e7f57db5fcc2f50868",
-        "SKILL.md": "fd793750e487c78c1570c9ce92d5316d915bc144c7e8d74e749c960346c677cc"
+        "references/output-contract.md": "ad1e20e8a5f4e2d690dd3c2e07d75e914c44b4666db5314bf4071e562ccbf155",
+        "SKILL.md": "938d929682b035be70a8acc73f2896081d8a296d8af8d8614674609bd1ec99e7"
       }
     },
     {
@@ -306,7 +306,7 @@
       "contractVersion": "2026-09-13",
       "files": {
         "assets/routing-template.md": "212b22db6e93eb77cb7d4abb8f3c8a17b8fbf3ff85ac817d71a09f856d483646",
-        "SKILL.md": "1718217657aa95c98a04ff3bcb97bd8aacddf6096fdf38fc5b5f124f94821dc7"
+        "SKILL.md": "18640f2b5b1b0894353a0a60ab4e162a51a7413ac8ae6c4ff7b0ecc027069594"
       }
     },
     {

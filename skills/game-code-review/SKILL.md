@@ -13,5 +13,7 @@ Apply the [shared coding decisions](../game-task-planning/references/delivery-co
 
 Check the assembled change and cross-module tests when multiple owners contributed. Apply the project's review policy using [the delivery contract's review and final-candidate sections](../game-task-planning/references/delivery-contract.md). Review changed callers, existing conventions and maintainability consequences relevant to the request; do not impose a new pattern merely for stylistic consistency. Runtime parallel changes also need scrutiny of the declared data ownership, execution thread and cancellation/shutdown behavior.
 
+Before judging, apply [current-state and prior-record review](../game-task-planning/references/verification-scope.md#review-the-current-state-before-alleging-a-defect): inspect relevant implementation and available wiki/decision/review records, check counterevidence, and report no findings when warranted. Do not expand scope or manufacture defects.
+
 ## Required contracts
 Apply [role, output, language and independent verification rules](../game-task-planning/references/role-contract.md) even for direct invocation. Read only your role card and output type.

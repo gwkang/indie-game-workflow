@@ -1,68 +1,39 @@
 # Indie Game Workflow
 
-소규모 인디게임 개발에 사용하는 범용 에이전트 스킬 모음입니다. **워크플로우 26개 + 외부 UI 스킬 10개**로 구성합니다. 개발·개선·버그 수정을 분리하며 프로토타입 단계를 강제하지 않습니다.
+버전 `0.6.0-integrated-ui`. 게임 개발 26개와 UI 10개를 **한 묶음의 36개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다.
 
-## 주요 규칙
+## 구성과 사용
 
-- 프로젝트 프로필에 엔진, 2D/3D, 대상 환경, 명령, 선호 언어를 기록합니다. 기본 언어는 한국어입니다.
-- 사용자 의도와 확정·제안·위임·미정 상태를 보존합니다.
-- 산출물마다 형식·소비 규칙·통과 기준·수정 범위를 고정합니다.
-- 작성자와 다른 서브에이전트가 검증합니다. 오류는 작성자가 수정하고 별도 검증자가 재검증합니다.
-- 검증 중 발견한 범위 밖 문제는 기록만 하며, 작업이나 필수 검사로 추가하지 않습니다.
-- 필요한 역할만 실행합니다. 독립 작업만 병렬화하며 감독자는 입력·소유권·자원·합류를 관리합니다.
-
-## 구성
-
-| 영역 | 스킬 |
-| --- | --- |
-| 접수·진입·감독 | game-workflow, indie-game-development, indie-game-improvement, indie-game-bugfix, game-workflow-supervision |
-| 설정·명세·분석·계획 | game-project-profile, game-feature-spec, game-improvement-assessment, game-bug-reproduction, game-bug-diagnosis, game-task-planning, game-technical-design |
-| 구현 | game-rule-implementation, game-input-implementation, game-movement-implementation, game-camera-implementation, game-session-implementation, game-content-loading, game-save-implementation, game-platform-integration |
-| 측정·검증·패키징 | game-performance-profiling, game-test-design, game-test-infrastructure, game-functional-verification, game-code-review, game-build-packaging |
-
-UI는 [game-ui-production-skills](https://github.com/gwkang/game-ui-production-skills)의 10개 역할을 재사용합니다. 이 저장소에 UI 원본을 중복 포함하지 않습니다. 설치에는 아래 고정 버전의 UI 저장소도 필요합니다.
+- `game-workflow`가 요청을 분류하고 개발·개선·버그 수정 흐름을 선택합니다. 진입 스킬 직접 호출도 가능합니다.
+- 프로젝트 프로필에 엔진, 2D/3D, 대상 환경, 명령과 선호 언어를 기록합니다. 기본 언어는 한국어입니다.
+- 필요한 역할만 실행하며 프로토타입을 강제하지 않습니다. 역할별 책임·양식·전문 판단은 각 SKILL.md와 연결 참조에 있습니다.
+- UI 결정은 기존 승인 재사용 → 범위 안의 자율 판단·명시적 위임 → 남은 필수 질문 순으로 처리합니다. 빌드마다 사람 승인을 새로 요구하지 않으며 독립 검증은 유지합니다.
+- UI도 [공통 역할 계약](skills/game-task-planning/references/role-contract.md)을 사용하며 원래 표·승인·커버리지·수명 관리 조건을 유지합니다.
+- 모든 산출물은 작성자와 별도 서브에이전트가 고정 범위에서 검증합니다. 반환된 오류만 수정·재검증하고 범위 밖 관측은 새 작업이나 gate로 만들지 않습니다.
 
 ## 설치
 
-Python 3.12 이상과 Git이 필요합니다. 두 저장소를 같은 상위 폴더에 받습니다.
+Python 3.12 이상이 필요합니다. 이 폴더만 준비하고, 대상 에이전트가 읽는 기존 스킬 폴더의 절대 경로를 지정합니다.
 
 ```sh
-git clone https://github.com/gwkang/indie-game-workflow.git
-git clone https://github.com/gwkang/game-ui-production-skills.git
-git -C game-ui-production-skills checkout 350c2e7cc731c5e0c038da814b63622e3cbfd624
-cd indie-game-workflow
 python -B tools/install_bundle.py --target "ABSOLUTE_EXISTING_SKILL_DIRECTORY"
 python -B tools/install_bundle.py --target "ABSOLUTE_EXISTING_SKILL_DIRECTORY" --apply
 ```
 
-`ABSOLUTE_EXISTING_SKILL_DIRECTORY`는 대상 에이전트가 읽는 기존 스킬 폴더의 절대 경로로 바꿉니다. 첫 명령은 미리보기이고 `--apply`가 36개 스킬과 필요한 참조·양식을 설치합니다. 설치기는 네트워크 다운로드를 하지 않습니다.
+첫 명령은 미리보기, 두 번째는 36개 스킬과 참조·양식·도구 설치입니다. 설치기는 오프라인이며 모든 입력을 이 묶음의 `skills/`에서만 읽고 `bundle.lock.json`의 전체 파일 해시를 확인합니다.
 
-전체 파일 해시가 맞아야 설치됩니다. 기존 스킬이 다르면 덮어쓰지 않고 중단합니다. 자동 업그레이드는 지원하지 않으며 사용자 변경을 별도로 조정해야 합니다. UI 저장소의 최신 main 대신 명시된 커밋을 사용하세요. `.gitattributes`는 운영체제별 줄바꿈 때문에 해시가 달라지는 일을 방지합니다.
+기존 동일 폴더는 재사용하고, 내용이 다른 폴더는 덮어쓰지 않습니다. 기존 UI 개별 설치와 충돌하면 사용자 변경을 먼저 보존·조정해야 합니다. 자동 업그레이드나 다른 스킬 위치의 중복 제거는 하지 않습니다. 실패 시 자기 설치분만 복구하며 외부 변경은 보존합니다. 중단 후 남은 잠금/임시 폴더는 소유 상태를 확인한 뒤 처리해야 합니다.
 
-설치 성공은 파일 배치 완료입니다. 대상 런타임에서 스킬을 발견하는지 별도로 확인해야 하며, 엔진·DCC·플랫폼 SDK는 이 설치기가 설치하지 않습니다.
+파일 배치 성공은 런타임 발견이나 게임 실행 검증이 아닙니다. 엔진·SDK·DCC는 설치하지 않습니다.
 
-## 사용
+## 유지보수와 검증
 
-요청과 함께 `game-workflow`를 호출하거나 개발·개선·버그 수정 진입 스킬을 직접 선택합니다. 기존 문서와 코드를 먼저 사용하고, 필요한 제품 결정만 대화로 보충합니다. 사용자가 미리 긴 명세를 작성할 필요는 없습니다.
-
-> 기존 저장 형식은 유지하면서 일시정지 기능을 추가해줘. 버튼 모양은 기존 UI 스타일 안에서 결정해도 돼. 검증은 일시정지·복귀와 해당 입력 경계로 제한해줘.
-
-각 스킬 본문에는 핵심 책임을 두고 상세 규칙은 참조로 연결했습니다. 시작점은 [공통 역할 계약](skills/game-task-planning/references/role-contract.md), [산출물 양식](skills/game-task-planning/references/artifact-contract.md), [범위 제한 검증](skills/game-task-planning/references/verification-scope.md)입니다.
-
-## 이번 보완
-
-공통 구현 기준에 책임·캡슐화·의존성·복잡도·테스트 가능성을 연결했습니다. 작은 정적 UI 배치 수정은 적절한 관측 증거를 사용할 수 있으며, 상태·입력의 회귀 검증과 독립 검증은 유지합니다. 새 문서나 품질 gate를 일률적으로 추가하지 않습니다.
-
-## 검증과 한계
-
-현재 버전은 `0.5.1-implementation-quality`입니다. 36개 스킬의 지침·인계 계약을 별도 서브에이전트로 검토했습니다. 이는 실제 게임 제작 품질이나 모든 엔진에서의 실행 성공을 보증하지 않습니다.
-
-감독은 지침과 Markdown 기록으로 동작합니다. 트랜잭션 그래프 실행기, 원자적 자원 예약, 자동 장애 복구, 백그라운드 서비스는 포함하지 않습니다. 오디오·3D 에셋 제작 등 별도 전문 역할이 필요한 작업은 그 능력을 추가로 확인해야 합니다.
-
-설치기 검증:
+통합 UI 원본은 이 묶음의 `skills/game-ui-*` 및 `skills/art-asset-review`입니다. 이전 별도 UI 저장소는 기존 버전 보존용이며 통합 설치에서 읽지 않습니다. UI 변경 시 이 묶음의 해시를 함께 갱신합니다. UI 기여자의 MIT 저작권 고지는 LICENSE에 유지했습니다.
 
 ```sh
 python -B -m unittest discover -s tests -v
 ```
 
-프로젝트 코드·게임 에셋·개인 작업 로그는 배포에 포함하지 않습니다. MIT 라이선스입니다.
+감독은 지침과 Markdown 기록으로 동작합니다. 트랜잭션 실행기·원자적 자원 예약·자동 장애 복구·백그라운드 서비스는 포함하지 않습니다. 오디오·3D 에셋 제작 등 별도 전문 역할의 가용성도 따로 확인해야 합니다. 정적 지침 검증을 실제 게임 제작 품질의 증거로 간주하지 않습니다.
+
+공개 배포본입니다. 사용자 스킬 설치는 위 설치 명령으로 별도 수행합니다.

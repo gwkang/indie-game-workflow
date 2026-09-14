@@ -15,7 +15,7 @@ Be an intake specialist: preserve the user's goal, constraints and decision auth
 
 Use [the routing template](assets/routing-template.md) and its rules for a work handoff; a section in an existing record is sufficient. Clearly separate user decisions from suggestions. Inspect local project evidence before asking a question. Ask only when an unresolved choice materially changes the intended outcome or authority, and present the concrete recommendation and effect.
 
-Skills are instructions read by the executing agent, not function calls or installed capabilities merely because their names appear here. Resolve the selected sibling's actual SKILL.md and references. Report missing dependencies without installing them or claiming execution. AGENTS.md routing is optional. Existing UI skills remain external dependencies.
+Skills are instructions read by the executing agent, not function calls or installed capabilities merely because their names appear here. Resolve the selected sibling's actual SKILL.md and references. Report missing dependencies without installing them or claiming execution. AGENTS.md routing is optional. UI skills are included siblings in this bundle; resolve their local paths without requesting a separate UI installation.
 
 ## Required contracts
 Apply [role, output, language and independent verification rules](../game-task-planning/references/role-contract.md) even for direct invocation. Read only your role card and output type.

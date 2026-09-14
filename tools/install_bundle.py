@@ -47,8 +47,7 @@ def read_bundle(root):
         if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', name) or name in names:
             raise InstallError(f'Invalid or duplicate skill ID: {name}')
         names.add(name)
-        allowed = {f'skills/{name}', f'../game-ui-production-skills/skills/{name}'}
-        if entry['source'] not in allowed:
+        if entry['source'] != f'skills/{name}':
             raise InstallError(f'Unexpected source: {entry["source"]}')
         files = entry['files']
         if 'SKILL.md' not in files:

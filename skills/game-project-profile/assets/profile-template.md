@@ -15,6 +15,7 @@ Record only applicable settings. Unknown values remain unknown; this template su
 - Platforms, inputs, locales:
 - Work record location:
 - Acceptance owners and required decisions:
+- UI decision policy: existing approvals, delegated choices and limits, decision owner, and explicit human-only conditions (cite authority; reuse conversation records rather than asking again):
 - Existing approved UI profile/catalog references:
 
 ## Targets

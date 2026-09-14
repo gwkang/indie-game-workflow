@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import shutil
 from pathlib import Path
 import tempfile
 import unittest
@@ -104,16 +105,29 @@ class InstallerTests(unittest.TestCase):
             installer.install(self.root, self.target, True)
         self.assertEqual('other process', guard.read_text())
 
-    def test_real_core_and_ui_bundle(self):
-        root = MODULE.parents[1]
+    def test_external_ui_source_rejected(self):
+        self.lock['entries'][0]['source'] = '../game-ui-production-skills/skills/core-one'
+        self.write_lock()
+        with self.assertRaisesRegex(installer.InstallError, 'Unexpected source'):
+            installer.install(self.root, self.target, True)
+        self.assertEqual([], list(self.target.iterdir()))
+
+    def test_real_core_and_ui_bundle_without_sibling(self):
+        source = MODULE.parents[1]
+        root = self.base / 'standalone'
+        root.mkdir()
+        for name in ('bundle.json', 'bundle.lock.json'):
+            shutil.copy2(source / name, root / name)
+        shutil.copytree(source / 'skills', root / 'skills')
+        self.assertFalse((self.base / 'game-ui-production-skills').exists())
         manifest = json.loads((root / 'bundle.json').read_text(encoding='utf-8'))
-        expected = set(manifest['skills']) | {item['id'] for item in manifest['uiDependencies']}
+        expected = set(manifest['skills'])
+        self.assertEqual(36, len(expected))
+        self.assertNotIn('uiDependencies', manifest)
         lock, entries = installer.read_bundle(root)
         self.assertEqual(manifest['bundleVersion'], lock['bundleVersion'])
         self.assertEqual(expected, {name for name, _, _ in entries})
         self.assertEqual(set(manifest['skills']), {path.name for path in (root / 'skills').iterdir() if path.is_dir()})
-        for dependency in manifest['uiDependencies']:
-            self.assertEqual(dependency['skillSha256'], installer.digest(root / dependency['source'] / 'SKILL.md'))
         result = installer.install(root, self.target, True)
         self.assertEqual(expected, set(result['install']))
         self.assertTrue((self.target / 'game-project-profile/assets/profile-template.md').is_file())
