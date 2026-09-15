@@ -13,6 +13,8 @@ Use agreed requirements or diagnosis, acceptance IDs and the target project prof
 3. **Specify:** settle the changed data/invariants, core algorithm, ownership, interfaces and state transitions. Include boundary inputs, ordering, commit points, failure/retry and compatibility where affected. Name actual owners and allowed writers; keep semantic reward/damage decisions in the rule owner. Use the target's engine, coordinates, units and clock. Leave routine coding choices to implementers.
 4. **Challenge:** walk concrete normal and risk-selected counterexamples through the design. Map each acceptance ID to a mechanism and observable result; check producer/consumer agreement and invariant preservation. For discarded async work, specify who releases its reservation, how retry becomes possible, and why old cleanup cannot clear newer work. A walkthrough is not an executed test.
 
+When persistence, Undo or reward changes need an explicit reversible/durable boundary, use the optional [state-transition worksheet](references/state-transition-worksheet.md). Reuse an adequate existing table; ordinary tuning does not require this worksheet.
+
 Read [runtime concurrency](references/runtime-concurrency.md) only for worker/job/thread or shared-state concurrency changes. Ordinary async I/O does not require multithreading.
 
 ## Write

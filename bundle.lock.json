@@ -13,9 +13,9 @@
     {
       "id": "indie-game-improvement",
       "source": "skills/indie-game-improvement",
-      "contractVersion": "2026-09-13",
+      "contractVersion": "2026-09-15",
       "files": {
-        "SKILL.md": "afaf5181739a0423034a678bb1c5b285b6ce57f73613a1850fb1cae34435beff"
+        "SKILL.md": "401a89d2cfc679fd59aeb242efd5ba1d2e0cb074f75b6c7eef64dbdcccd4214f"
       }
     },
     {
@@ -50,9 +50,10 @@
     {
       "id": "game-improvement-assessment",
       "source": "skills/game-improvement-assessment",
-      "contractVersion": "2026-09-12",
+      "contractVersion": "2026-09-15",
       "files": {
-        "SKILL.md": "d2bc1e1b74f4247330e2db3863d8abb05da7dee068c131bbf10cc9baba397251"
+        "references/balance-experiments.md": "cdb72a5d22309c138880f033d9fdfddc4a0a1ef9c31d63c3565b6630612f9976",
+        "SKILL.md": "76aa8f66e9cbd2f29723e9a2aebc35a93b288e25715b66f50cb4d2c3c3cf6d7e"
       }
     },
     {
@@ -113,11 +114,12 @@
     {
       "id": "game-technical-design",
       "source": "skills/game-technical-design",
-      "contractVersion": "2026-09-13",
+      "contractVersion": "2026-09-15",
       "files": {
         "assets/technical-design-template.md": "eaa794eee4814271a1b195706fd07997beddde193f1e7bb4bdc096e1926725a4",
         "references/runtime-concurrency.md": "714e08df69b409e9929660448cf7f9549105132ccf08b3034d3904f16372abb6",
-        "SKILL.md": "b3484051616a6c8d3368d359b294b92b5e37c637379f150db869feea07a8ce46"
+        "references/state-transition-worksheet.md": "a7ea7b33fec77e23c54a0ea39b38d7f464e2d1fa51ded08f38e29579124b5502",
+        "SKILL.md": "2f0034e4464972ef9e75bcc1af98be18eaa7cefd1e500298037ad26ceffc111b"
       }
     },
     {
