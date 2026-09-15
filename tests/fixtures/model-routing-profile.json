@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "revision": "portable-test-fixture",
+  "tiers": {
+    "highest-judgment": {
+      "preferredModels": ["model-judgment", "model-complex"],
+      "reasoningEffort": "high"
+    },
+    "complex-execution": {
+      "preferredModels": ["model-complex", "model-judgment", "model-balanced"],
+      "reasoningEffort": "high"
+    },
+    "balanced-execution": {
+      "preferredModels": ["model-balanced", "model-complex", "model-volume"],
+      "reasoningEffort": "medium"
+    },
+    "high-volume": {
+      "preferredModels": ["model-volume", "model-balanced"],
+      "reasoningEffort": "low"
+    }
+  }
+}

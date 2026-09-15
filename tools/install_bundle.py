@@ -38,9 +38,15 @@ def inventory(path):
 def read_bundle(root):
     root = Path(root).absolute()
     reject_links(root)
+    manifest = json.loads((root / 'bundle.json').read_text(encoding='utf-8'))
     lock = json.loads((root / 'bundle.lock.json').read_text(encoding='utf-8'))
     if lock.get('lockVersion') != 1 or not lock.get('entries'):
         raise InstallError('Unsupported or empty lock')
+    if manifest.get('bundleVersion') != lock.get('bundleVersion'):
+        raise InstallError('Manifest and lock versions differ')
+    manifest_skills = manifest.get('skills')
+    if not isinstance(manifest_skills, list) or len(manifest_skills) != len(set(manifest_skills)):
+        raise InstallError('Manifest skills must be a unique list')
     entries, names = [], set()
     for entry in lock['entries']:
         name = entry['id']
@@ -61,6 +67,11 @@ def read_bundle(root):
         if inventory(source) != files:
             raise InstallError(f'Source content differs from lock: {name}')
         entries.append((name, source.resolve(), files))
+    if set(manifest_skills) != names:
+        raise InstallError('Manifest and lock skill sets differ')
+    source_names = {path.name for path in (root / 'skills').iterdir() if path.is_dir()}
+    if source_names != names:
+        raise InstallError('Source and lock skill sets differ')
     return lock, entries
 
 

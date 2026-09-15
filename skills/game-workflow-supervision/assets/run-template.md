@@ -4,16 +4,24 @@ Rules: required fields must be populated or explicitly not-applicable with reaso
 
 ## Identity
 - Run ID / plan revision / overall executor:
+- Run status / goal revision / prior goal revision:
+- Registry locator / conversation key if available / match basis:
 - Original request / authority / intent / selected entry flow:
 - Workspace / target / existing changes to preserve:
 - Skill and input paths/revisions:
 - Resolved conversation/artifact language and source/override:
-- Mode / isolation or confirmed single writer / resource limits:
+- Mode / isolation or confirmed single writer / resource limits / model-routing profile:
 - Repair limit / relevant project commands and review policy:
 
+## Clarification
+| Decision ID | Known evidence and current recommendation | Alternatives and player/product effect | Owner | Affected tasks | State |
+| --- | --- | --- | --- | --- | --- |
+
+Use `clear`, `needs-clarification` or `resolved`. Silence does not resolve a decision. Ask one question at a time unless the decisions are inseparable, and continue only unaffected authorized tasks.
+
 ## Tasks
-| Task ID | Skill/owner/supervisor | Inputs/revisions | Output template/rules/location | Predecessors/result conditions | Read/write/resources | Integration owner | State/attempt/executor |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| Task ID | Skill/owner/supervisor | Inputs/revisions | Output template/rules/location | Predecessors/result conditions | Read/write/resources | Capability tier/reasoning/resolution/fallback | Integration owner | State/attempt/executor/model evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ## Artifact verification
 Use [the bounded verification rules](../../game-task-planning/references/verification-scope.md). Each selected artifact has a row or an inline record with the same fields. Freeze before checking; do not add criteria during repair. Producer and verifier executor IDs must differ. Author self-checks do not close verification; producer repairs and the separate verifier rechecks.
@@ -35,10 +43,11 @@ Out-of-scope observations create no task or gate. A necessary change beyond auth
 | Event ID | Task/attempt/dispatch | Observation and evidence | Decision/authority | Affected work and next action |
 | --- | --- | --- | --- | --- |
 
-Use pending/ready/running/completed/failed/blocked/cancelled/skipped for task execution, pass/fail/inconclusive/not-applicable for verdict, current/stale/unknown for evidence. State explicitly when a dispatch is uncertain. A completed check with fail does not enable its pass branch.
+Use pending/ready/running/completed/failed/blocked/cancelled/skipped for task execution, pass/fail/inconclusive/not-applicable for verdict, current/stale/unknown for evidence. Run control may also be `needs-clarification` or `needs-reconciliation`. State explicitly when a dispatch is uncertain. A completed check with fail does not enable its pass branch.
 
 ## Worker result envelope
-- Run / task / attempt / dispatch / actual executor:
+- Run / task / attempt / dispatch / actual executor / acknowledged model:
+- Capability tier / reasoning class / resolution source / override support / fallback reason:
 - Consumed inputs and revisions:
 - Produced artifacts and [type/version envelope](../../game-task-planning/references/artifact-contract.md), format/rule locator/revision, consumer:
 - Role card ID/version; decision states/source IDs; selected reference card/decision/verification links (or no-reference reason):

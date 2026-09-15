@@ -4,7 +4,7 @@ description: Coordinate a small indie-game feature from an existing request to v
 ---
 
 ## Inputs and output
-Read the request, relevant project profile fields, existing feature artifacts and working-tree constraints. Own development flow selection and its completion/failure policy, not specialist decisions. Apply [game-workflow-supervision](../game-workflow-supervision/SKILL.md) to own the execution record, dispatch, joins and final report. The procedure below supplies that supervisor's development policy; do not create a second supervisor or route back to game-workflow.
+Read the request, routing record, relevant project profile fields, existing feature artifacts and working-tree constraints. Own development flow policy, not specialist decisions. Use the already active [game-workflow-supervision](../game-workflow-supervision/SKILL.md), or activate it when the routed request requires supervision. The procedure below supplies its development policy; never create a second supervisor or route back to game-workflow.
 
 ## Execute
 1. Reuse an adequate feature specification; otherwise apply game-feature-spec. Do not require a prototype stage.

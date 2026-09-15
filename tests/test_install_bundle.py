@@ -29,6 +29,8 @@ class InstallerTests(unittest.TestCase):
             entries.append({'id': name, 'source': f'skills/{name}',
                             'files': installer.inventory(source)})
         self.lock = {'lockVersion': 1, 'bundleVersion': 'test', 'entries': entries}
+        self.manifest = {'bundleVersion': 'test', 'skills': ['core-one', 'core-two']}
+        (self.root / 'bundle.json').write_text(json.dumps(self.manifest))
         self.write_lock()
 
     def write_lock(self):
@@ -62,6 +64,16 @@ class InstallerTests(unittest.TestCase):
         with self.assertRaises(installer.InstallError):
             installer.install(self.root, self.target, True)
         self.assertEqual([], list(self.target.iterdir()))
+
+    def test_manifest_version_and_skill_set_mismatch_rejected(self):
+        self.manifest['bundleVersion'] = 'other'
+        (self.root / 'bundle.json').write_text(json.dumps(self.manifest))
+        with self.assertRaisesRegex(installer.InstallError, 'versions differ'):
+            installer.read_bundle(self.root)
+        self.manifest = {'bundleVersion': 'test', 'skills': ['core-one']}
+        (self.root / 'bundle.json').write_text(json.dumps(self.manifest))
+        with self.assertRaisesRegex(installer.InstallError, 'skill sets differ'):
+            installer.read_bundle(self.root)
 
     def test_partial_commit_failure_rolls_back_owned_only(self):
         user = self.target / 'unrelated'

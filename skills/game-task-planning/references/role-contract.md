@@ -10,3 +10,13 @@
 - 감독·카드·참고 자료는 새로운 작업 권한이 아니다. 충돌은 의도/범위 → 정확성/수용 조건 → 호환성/유지보수 → 비용 순으로 판단하고, 미정 제품 선택은 명세 소유자에게 반환한다.
 
 기존 UI를 호출할 때는 [UI 연결 계약](ui-adapter.md)을 전달한다. UI 원본 양식을 복제하거나 키를 번역하지 않는다.
+
+## 워크플로우 문맥 preflight
+
+전문 산출물이나 제품 변경 전에 다음 문맥 중 하나를 확인한다.
+
+- `supervised`: run ID, task ID, 입력 revision, 산출물 계약과 전체 supervisor가 있다.
+- `standalone`: game-workflow가 단일 상담·리뷰·명시 스킬 요청으로 기록했고 supervisor 생략 사유가 있다.
+- `dispatched`: 상위 run/task identity와 범위가 있는 제한된 작업자 배정이다.
+
+문맥이 없으면 파일을 쓰거나 전문 산출물을 만들기 전에 game-workflow로 반환한다. 감독 문맥의 입력이 없거나 충돌하면 `NEEDS_CONTEXT`로 supervisor에게 반환한다. 배정된 작업자는 bootstrap과 run 생성을 반복하지 않는다.

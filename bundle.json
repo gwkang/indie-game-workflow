@@ -1,5 +1,5 @@
 {
-  "bundleVersion": "0.6.0-integrated-ui",
+  "bundleVersion": "0.8.0-capability-tier-routing",
   "status": "published-source",
   "skills": [
     "indie-game-development",
@@ -45,6 +45,6 @@
     "mode": "instruction-driven",
     "transactionalRunnerImplemented": false,
     "allArtifactTemplatesImplemented": false,
-    "runtimeDiscovery": "not-verified"
+    "runtimeDiscovery": "verified-18-of-18-2026-09-15"
   }
 }

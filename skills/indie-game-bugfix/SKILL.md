@@ -4,7 +4,7 @@ description: Coordinate reproduction, diagnosis, owner-specific repair and regre
 ---
 
 ## Inputs and output
-Require expectation source and confirmed decision state (or authorized delegated selection). Missing/conflicting expectations return to game-feature-spec without blocking observation collection. Start with expected/actual behavior, environment and any existing reproduction. Own defect flow policy and resolution conditions. Apply [game-workflow-supervision](../game-workflow-supervision/SKILL.md) for the execution record, dispatch, joins and final report; do not create a second supervisor or route back to game-workflow.
+Require the routing record, expectation source and confirmed decision state (or authorized delegated selection). Missing/conflicting expectations return to game-feature-spec without blocking observation collection. Start with expected/actual behavior, environment and any existing reproduction. Own defect flow policy and resolution conditions. Use the already active [game-workflow-supervision](../game-workflow-supervision/SKILL.md), or activate it when the routed request requires supervision; never create a second supervisor or route back to game-workflow.
 
 ## Execute
 Reuse current reproduction or apply game-bug-reproduction; then apply game-bug-diagnosis. An unconfirmed hypothesis is not an established cause. Route repair to the cause owner using game-task-planning: rule, input, movement, camera, session, loading, save or platform implementation as appropriate; existing UI implementation owns UI defects. Missing specialties remain explicit prerequisites.

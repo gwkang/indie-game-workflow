@@ -1,21 +1,30 @@
 ---
 name: game-workflow
-description: Route an indie-game request to development, improvement, bugfix, or bounded specification/review work while preserving user intent and an existing run.
+description: Use when starting or resuming indie-game work to reconnect an existing run, route the request, and activate supervision before stateful or multi-stage specialist work.
 ---
 
 ## Responsibility
-Be an intake specialist: preserve the user's goal, constraints and decision authority. Own only the routing decision, not planning, product design or execution supervision.
+Be the game-work bootstrap and intake specialist. Preserve the user's goal, constraints and decision authority. Own run discovery and routing, not planning, product design or execution supervision.
+
+## Bootstrap
+Apply this skill before the first substantive response, question, repository inspection or other game skill for a new or resumed game request. If a dispatched specialist already has a `dispatched` context marker with parent run/task identity, follow that assignment without restarting routing.
+
+Read the project profile's `workflowRunRegistryPath` when stateful work may exist. Reconnect one matching open run before treating the latest message as a new goal. An explicit run ID is authoritative: if it is absent from the open registry, record `not-found` and resolve that identity instead of falling back to conversation, target or goal matches. With multiple plausible matches, ask the user to select one; with a stale pointer, record `needs-reconciliation` instead of creating a duplicate. Preserve an explicit skill choice and record it as standalone or supervised according to the task shape.
 
 ## Route
 1. Read the request, relevant supplied documents and current work record. Distinguish consultation, specification, review and execution. Feature words alone do not authorize implementation.
-2. Honor an explicit skill choice; do not bounce a direct entry invocation back here. Reuse an active run for its corrections, status questions and follow-ups. Create a new run only for a genuinely separate goal.
+2. Reuse an active run for corrections, status questions, answers and follow-ups. Increment its goal revision when the intended outcome changes. Create a new run only for a genuinely separate goal.
 3. Select development for new behavior, improvement for better existing experience/quality, bugfix for a violation of expected behavior. If the expected behavior is unclear, route evidence gathering or specification first; do not invent it.
-4. For an execution request, read the matching sibling skill: indie-game-development, indie-game-improvement or indie-game-bugfix. Hand off the request and routing record. That flow delegates execution control to game-workflow-supervision.
-5. For specification use game-feature-spec when applicable; improvement assessment and bug reproduction use their actual specialist skills. A consultation needs only an answer. For review select an available matching reviewer and preserve read-only scope. Do not start the full implementation graph for these intents.
+4. Activate game-workflow-supervision before a specialist when work requests repository/product mutation, has dependent stages, resumes or redirects an open run, needs multiple specialists or independent verification, or contains a decision that can invalidate downstream work. Pass the selected development/improvement/bugfix flow as policy; do not create a second supervisor.
+5. A simple consultation, isolated read-only review or explicitly bounded standalone artifact may finish without supervision when the routing record states why. Preserve explicit skill choice. Specification uses game-feature-spec when applicable; improvement assessment and bug reproduction use their actual specialists.
 
-Use [the routing template](assets/routing-template.md) and its rules for a work handoff; a section in an existing record is sufficient. Clearly separate user decisions from suggestions. Inspect local project evidence before asking a question. Ask only when an unresolved choice materially changes the intended outcome or authority, and present the concrete recommendation and effect.
+For visible UI or player-facing copy, apply the [UI change classification](../game-task-planning/references/ui-adapter.md) to the intended result, not the implementation size. Record the relevant design and copy owners or a supported reuse reason.
 
-Skills are instructions read by the executing agent, not function calls or installed capabilities merely because their names appear here. Resolve the selected sibling's actual SKILL.md and references. Report missing dependencies without installing them or claiming execution. AGENTS.md routing is optional. UI skills are included siblings in this bundle; resolve their local paths without requesting a separate UI installation.
+Use [the routing template](assets/routing-template.md) for a handoff. The router asks only when route or authority cannot be determined. After supervision begins, the supervisor owns later clarification. Ask only when an unresolved choice materially changes the outcome or authority, and present the recommendation and effect.
+
+For supervised work, propose an initial portable capability tier from task risk and shape; do not name a concrete model. The supervisor resolves each actual dispatch using the project model-routing profile and current host capabilities.
+
+Skills are instructions read by the executing agent, not function calls. Resolve the selected sibling's actual SKILL.md and references. Report missing dependencies without installing them. Project AGENTS.md may require this bootstrap but must not duplicate its routing procedure.
 
 ## Required contracts
 Apply [role, output, language and independent verification rules](../game-task-planning/references/role-contract.md) even for direct invocation. Read only your role card and output type.

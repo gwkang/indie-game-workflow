@@ -10,6 +10,8 @@ Revision: <revision>. Keep only applicable rows, translate prose into the artifa
 | Game locale | | |
 | communication.preferredLanguage | ko unless explicitly overridden | User preference or workflow default |
 | communication.artifactLanguage | Omit unless different from preferredLanguage | |
+| workflowRunRegistryPath | Exact project-relative path when stateful workflow reuse is supported | |
+| modelRoutingProfilePath | Exact project-relative mapping when capability-tier model routing is supported | |
 
 ## Commands
 
