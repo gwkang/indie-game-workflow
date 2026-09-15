@@ -31,10 +31,10 @@
       "source": "skills/game-project-profile",
       "contractVersion": "2026-09-13",
       "files": {
-        "assets/profile-template.md": "c8c93791dc28542c8859e418567e686d323e1fe55372805ff2438c318ea01dc7",
+        "assets/profile-template.md": "303f6774f5567eb0ce1a786f3588da3ae458f7f808fb87324935f08fd5ed3fd7",
         "references/artifact-language.md": "0c0626ac7406e1202f949d685bda08480810427b052d563a70f2279a9fdd8e9a",
-        "references/profile-contract.md": "9f6d00daa0e88e5e2b1187614ae4616d06060d15843fca8ef936fa5fc3e1110a",
-        "SKILL.md": "7ff36ef5d198dbca8d55e30961f86e160a017f2319f55e29e1d95876e23ce50e"
+        "references/profile-contract.md": "335dd99103fcea862f05f0342233cd961e13ddac456c774d839a98f6d61df775",
+        "SKILL.md": "1baf5ceef8d89f09963d69f44df4ad948a36256af8efd82ea55102ffa358e237"
       }
     },
     {
@@ -76,13 +76,13 @@
       "source": "skills/game-task-planning",
       "contractVersion": "2026-09-13",
       "files": {
-        "references/artifact-contract.md": "5601be0bac4fda873be7db5f7d213a77335bf7802bf9fa829219b816d9bc90b4",
+        "references/artifact-contract.md": "aa23f9f1a3e3dc2d0ce0f366b55013c2285f884ec0e88070931a2852d2e7cf1d",
         "references/delivery-contract.md": "99118d52d6a5ed1dde257cd81818a1eb8d0c35691cd43caa7289d02e79cce9b3",
         "references/professional-references.md": "d0fb417a90b09689d7a70140a4d73b2296487c5467ccfe9596819e25527c3625",
         "references/role-cards.md": "2f076e9d85e1cb469e78259d33ad5813ce8b52fd0d8b5551c176689dc62cc5d8",
-        "references/role-contract.md": "2c3944609001bfdf82a2141987f8b9539c3db37c2db94ba20045dc71c58a2e31",
+        "references/role-contract.md": "34fc387154d8619f3e257434355522d572e66cbe46a097f3229e02c534d87e12",
         "references/ui-adapter.md": "81c7a57ab440c493ed36602e00ea40164cfe7975aab88c8b1424fd3818cf8962",
-        "references/verification-scope.md": "2e45241c2bd4d0dc3c03042690df3315748b64e51e2d694ae9c0f7ff7451b234",
+        "references/verification-scope.md": "60de36c82a76cad7d1d1eb70eb7ab8205c62c08f43f93e3cb16eb46cf1d704c9",
         "SKILL.md": "a8a0f33c31fc4afe164cce1921be44a519d614110e2eb6a6523904c3dc83b786"
       }
     },
@@ -315,7 +315,7 @@
       "contractVersion": "2026-09-13",
       "files": {
         "assets/run-template.md": "4a7c6dd8216a86604197ad8bc8db2b2d64b355f7e5b7ad005a8543748002fa6d",
-        "references/execution-supervision.md": "2014390f986805b62f920e01541df72631e44644466339079aaa2910f0ea187e",
+        "references/execution-supervision.md": "8dd9436344a2d5b0d6f0b4ebd987092e84e2e62f78da20b7dd42e4012c241fe3",
         "SKILL.md": "efa41dd8b46553cd0606a07ac101997b5d2b2155f8b3657977d894a6992a5bec"
       }
     }

@@ -2,6 +2,7 @@
 
 직접 호출에도 적용한다. 자기 역할의 [카드](role-cards.md) 한 항목과 [산출물 규격](artifact-contract.md)의 해당 유형만 읽는다. 카드 ID/version과 실제 executor ID는 별개다.
 
+- 산출물을 쓰기 전에 담당 스킬과 해당 템플릿·내용 규칙을 실제로 읽고 기존 인계 기록에 locator/revision을 연결한다. 설치·정리 중 부수적으로 만드는 문서에도 적용한다. 감독이 임의 요약으로 전문 산출물을 대신하지 않으며, 현재 작업 범위 밖의 산출물은 만들지 않는다.
 - [언어](../../game-project-profile/references/artifact-language.md): 기본 한국어, 명시적 override 우선. schema key·ID·원본 증거는 보존한다.
 - [검증](verification-scope.md): 작성자와 별도 서브에이전트, 고정 기준·수정 범위, 한도 있는 수정→재검증. 자기 점검은 준비일 뿐 독립 검증이 아니다.
 - 근거가 판단을 바꾸는 경우에만 [전문 자료](professional-references.md)를 선택한다. 자료 불필요도 사유와 함께 허용한다.

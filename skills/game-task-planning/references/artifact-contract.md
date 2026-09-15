@@ -13,6 +13,8 @@
 | decision states, source links, blockers/return owner | 사실·제안·확정·위임·미정을 구분. 해당 사항 없음은 사유 필요 |
 | verification contract, separate verifier executor, result/evidence | 고정 범위·허용 수정·한도 및 현재 검증. 미실행은 unverified; 작성자와 같은 executor는 거부 |
 
+프로필은 설정표와 정확한 참조만 본문에 둔다. 위 envelope의 작업·작성자·검증 정보는 기존 인계/검증 기록에 연결하며 본문에 반복하지 않는다. 프로필 전용 JSON·전체 출처 해시·별도 승인 문서를 필수로 만들지 않는다.
+
 ## 유형별 본문
 
 각 행은 최소 작성 양식이다. 필수 내용은 채우거나 적용 제외 이유를 적는다. 스킬 본문의 전문 규칙과 전용 템플릿은 그대로 추가 적용한다.
@@ -20,7 +22,7 @@
 | 역할 / type@version | 필수 내용 / 원본 양식 | 소비·반환 기준 |
 | --- | --- | --- |
 | game-workflow / routing@1 | routing-template의 원문·범위·의도·선택·다음 경로 | 요청 범위가 바뀌면 라우터 반환 |
-| game-project-profile / profile@1 | profile-template의 target·2D/3D·엔진·제약·언어·도구 | 필수 target 미정은 해당 실행 차단 |
+| game-project-profile / profile@1 | profile-template의 적용 가능한 공통 설정·실제 명령·기존 기준 참조 | 정확성·충분성·조회 용이성 확인; 미정 값은 의존 작업만 차단 |
 | game-feature-spec / specification@1 | feature-spec-template의 의도·상태·수용 기준·보존 조건 | proposed/unresolved에 의존하는 구현 차단 |
 | game-workflow-supervision, 세 indie-game 진입 / run@1 | run-template의 작업·사건·검증·수용·최종 상태 | 미충족 필수 기준은 완료 불가 |
 | game-task-planning / plan@1 | run-template Tasks/Acceptance: 소유자·입출력·의존·읽기/쓰기·자원·join | 입력/실행자/양식 미정은 해당 dispatch 차단 |

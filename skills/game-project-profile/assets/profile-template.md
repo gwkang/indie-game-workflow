@@ -1,38 +1,24 @@
-# Game project profile
+# Project profile
 
-Record only applicable settings. Unknown values remain unknown; this template supplies no engine or game defaults.
+Revision: <revision>. Keep only applicable rows, translate prose into the artifact language, and retain machine keys. Values are current unless marked unknown, conflicting or proposed.
 
-- Profile revision:
-- Product authority:
-- communication.preferredLanguage: ko (한국어; workflow default, explicit user override allowed)
-- communication.artifactLanguage: (optional override; otherwise preferredLanguage; source/status)
-- Engine/version and source:
-- Runtime/build/test commands and verification status:
-- Required focused/final checks and applicable stages:
-- Code-review policy, permitted trivial-change exemptions and independence requirements:
-- Delegation authority and available execution tools (unknown is not permission):
-- Shared execution resources and supported isolation, when relevant:
-- Platforms, inputs, locales:
-- Work record location:
-- Acceptance owners and required decisions:
-- UI decision policy: existing approvals, delegated choices and limits, decision owner, and explicit human-only conditions (cite authority; reuse conversation records rather than asking again):
-- Existing approved UI profile/catalog references:
+| Setting | Value | Source |
+| --- | --- | --- |
+| Engine/version; 2D/3D | | |
+| Platform | | |
+| Display/input | Value or exact existing settings reference | |
+| Game locale | | |
+| communication.preferredLanguage | ko unless explicitly overridden | User preference or workflow default |
+| communication.artifactLanguage | Omit unless different from preferredLanguage | |
 
-## Targets
+## Commands
 
-Language settings govern human-facing conversation and workflow artifacts, not game localization. Apply references/artifact-language.md. Translate human-readable template headings and prose into the resolved artifact language while preserving machine field names and identifiers.
+Working directory: <path>. State whether definitions were inspected or execution tested; keep logs elsewhere.
 
-| Target ID | Domain (world/screen_ui) | Defaults reference | Asset group | Explicit values | Source/status |
-| --- | --- | --- | --- | --- | --- |
+| Purpose | Command |
+| --- | --- |
+| Run / build / relevant checks | | |
 
-## Scoped defaults
+## References
 
-Keep world cameras/physics, screen UI coordinates/scaling, and asset formats/animation in separate groups. Declare each referenced group before use.
-
-## Tools and evidence
-
-List available execution/capture/measurement tools and limitations. A tool's presence is not proof of successful game execution.
-
-## Conflicts and planned changes
-
-Separate observed configuration from desired changes. Profile edits do not apply those changes to the engine.
+Link existing product criteria, UI settings and workflow policy as needed. Do not copy their rules. Add only unresolved settings that affect upcoming work; omit this section if there are none. Keep source hashes, reviewer identity and detailed results in the existing handoff, not this settings table.
