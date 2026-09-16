@@ -58,6 +58,9 @@ Use pending/ready/running/completed/failed/blocked/cancelled/skipped for task ex
 - Defects, return owner and next required action:
 - Deferred out-of-scope observations (no automatic work or gate):
 
+## Optional knowledge integration
+When enabled, record policy/index locators, selected page scope, required/optional/not-applicable classification and authority, writer, sources/revisions, and applied/no-change/deferred/blocked outcome with verification evidence. Reuse Tasks and Artifact verification rows rather than duplicate them. A deferred required update remains unmet.
+
 ## Acceptance coverage
 | Criterion ID | Intent/source | Artifact/candidate | Scenario/result/evidence | Review/decision if required | Current status |
 | --- | --- | --- | --- | --- | --- |

@@ -1,1 +1,6 @@
 * text=auto eol=lf
+
+# Preserve locked skills and archived verification byte identities.
+skills/** -text
+bundle.lock.json -text
+verification/project-knowledge/** -text -whitespace

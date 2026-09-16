@@ -134,7 +134,7 @@ class InstallerTests(unittest.TestCase):
         self.assertFalse((self.base / 'game-ui-production-skills').exists())
         manifest = json.loads((root / 'bundle.json').read_text(encoding='utf-8'))
         expected = set(manifest['skills'])
-        self.assertEqual(36, len(expected))
+        self.assertEqual(37, len(expected))
         self.assertNotIn('uiDependencies', manifest)
         lock, entries = installer.read_bundle(root)
         self.assertEqual(manifest['bundleVersion'], lock['bundleVersion'])

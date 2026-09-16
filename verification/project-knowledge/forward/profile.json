@@ -1,0 +1,9 @@
+{
+  "knowledge": {
+    "enabled": true,
+    "projectName": "comet",
+    "root": "comet-wiki/",
+    "indexPath": "comet-wiki/README.md",
+    "policyPath": "policy.md"
+  }
+}

@@ -1,6 +1,6 @@
 # Indie Game Workflow
 
-버전 `0.8.0-capability-tier-routing`. 게임 개발 26개와 UI 10개를 **한 묶음의 36개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다.
+버전 `0.9.0-project-knowledge`. 게임 개발 27개와 UI 10개를 **한 묶음의 37개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다.
 
 ## 구성과 사용
 
@@ -12,6 +12,10 @@
 - UI도 [공통 역할 계약](skills/game-task-planning/references/role-contract.md)을 사용하며 원래 표·승인·커버리지·수명 관리 조건을 유지합니다.
 - 모든 산출물은 작성자와 별도 서브에이전트가 고정 범위에서 검증합니다. 반환된 오류만 수정·재검증하고 범위 밖 관측은 새 작업이나 gate로 만들지 않습니다.
 
+## 선택적 프로젝트 위키
+
+`<project-name>-wiki/`를 프로젝트 프로필로 연결합니다. 조회·근거 재확인·필수/선택 반영은 [지식 계약](skills/game-task-planning/references/knowledge-contract.md)을 따릅니다. 기존 위키 생성·이전은 자동 실행하지 않습니다. `game-knowledge-maintenance`가 허용된 위키 변경을 맡고, 최종 후보 검증에 포함합니다.
+
 ## 설치
 
 Python 3.12 이상이 필요합니다. 이 폴더만 준비하고, 대상 에이전트가 읽는 기존 스킬 폴더의 절대 경로를 지정합니다.
@@ -21,7 +25,7 @@ python -B tools/install_bundle.py --target "ABSOLUTE_EXISTING_SKILL_DIRECTORY"
 python -B tools/install_bundle.py --target "ABSOLUTE_EXISTING_SKILL_DIRECTORY" --apply
 ```
 
-첫 명령은 미리보기, 두 번째는 36개 스킬과 참조·양식·도구 설치입니다. 설치기는 오프라인이며 모든 입력을 이 묶음의 `skills/`에서만 읽고 `bundle.lock.json`의 전체 파일 해시를 확인합니다.
+첫 명령은 미리보기, 두 번째는 37개 스킬과 참조·양식·도구 설치입니다. 설치기는 오프라인이며 모든 입력을 이 묶음의 `skills/`에서만 읽고 `bundle.lock.json`의 전체 파일 해시를 확인합니다.
 
 기존 동일 폴더는 재사용하고, 내용이 다른 폴더는 덮어쓰지 않습니다. 기존 UI 개별 설치와 충돌하면 사용자 변경을 먼저 보존·조정해야 합니다. 자동 업그레이드나 다른 스킬 위치의 중복 제거는 하지 않습니다. 실패 시 자기 설치분만 복구하며 외부 변경은 보존합니다. 중단 후 남은 잠금/임시 폴더는 소유 상태를 확인한 뒤 처리해야 합니다.
 

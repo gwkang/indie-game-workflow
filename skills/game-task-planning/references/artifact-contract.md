@@ -22,6 +22,7 @@
 | 역할 / type@version | 필수 내용 / 원본 양식 | 소비·반환 기준 |
 | --- | --- | --- |
 | game-workflow / routing@1 | routing-template의 원문·범위·의도·선택·다음 경로 | 요청 범위가 바뀌면 라우터 반환 |
+| game-knowledge-maintenance / knowledge-delta@1 | 대상 페이지/주장, 출처와 revision·적용 범위·확인 상태, 필수/선택 구분, 변경 또는 생략 이유, 의미·문서 검증 결과, 미해결 충돌 | 원본 보존, 현재 근거 일치, 필수 갱신 검증 완료; 관련 없는 정리는 보류 |
 | game-project-profile / profile@1 | profile-template의 적용 가능한 공통 설정·실제 명령·기존 기준 참조 | 정확성·충분성·조회 용이성 확인; 미정 값은 의존 작업만 차단 |
 | game-feature-spec / specification@1 | feature-spec-template의 의도·상태·수용 기준·보존 조건 | proposed/unresolved에 의존하는 구현 차단 |
 | game-workflow-supervision, 세 indie-game 진입 / run@1 | run-template의 작업·사건·검증·수용·최종 상태 | 미충족 필수 기준은 완료 불가 |

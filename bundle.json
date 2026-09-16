@@ -1,5 +1,5 @@
 {
-  "bundleVersion": "0.8.0-capability-tier-routing",
+  "bundleVersion": "0.9.0-project-knowledge",
   "status": "published-source",
   "skills": [
     "indie-game-development",
@@ -37,7 +37,8 @@
     "game-ui-implementation",
     "game-ui-mockup",
     "game-ui-runtime-validation",
-    "game-ui-screen-spec"
+    "game-ui-screen-spec",
+    "game-knowledge-maintenance"
   ],
   "installationImplemented": true,
   "installationScope": "local-content-locked-install-no-upgrade",

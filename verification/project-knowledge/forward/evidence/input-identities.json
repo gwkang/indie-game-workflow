@@ -1,0 +1,7 @@
+{
+  "profile.json": "25c822291209f958c34cecb2f74f1e2abf43ee36c2c4006d0d4a6b9efc25e60e",
+  "policy.md": "4f16294e2be03ce1ab6e05a09144564624ce7c7a5c654cf7ace4c77a9bcdb11f",
+  "spec/save.md": "8747eb595ee504d75917921f45dd7ba57bc4b512eee37f211b752bd79abab205",
+  "src/save.mjs": "d1996ef727d23fb98adaf7c5e511e4af9d2d005156dbeee3da21f0da28b7cb13",
+  "test/save.test.mjs": "eae5bdfc8c983c55e2be4fc06eaadf83ec988ddee201990222984cf982157fb9"
+}
