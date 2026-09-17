@@ -1,6 +1,6 @@
 # Output and acceptance rules
 
-Before each stage, read its rules below. Exact headers, tables, approvals and recovery routes are binding.
+The rules below apply to formal mockup candidates. Exploratory editable screens use the separate draft record and limits in [fast iteration](../../game-task-planning/references/ui-fast-iteration.md); Review-only compositor/layout source may be created or edited for both exploratory and formal candidates; preserve approved snapshots and freeze each new formal composite from its source revision. Drafts cannot satisfy formal approval, fidelity or readiness. For formal candidates, exact headers, tables, approvals and recovery routes remain binding.
 
 ## Tool routing
 
@@ -61,7 +61,7 @@ Return one **Mockup candidate packet** containing:
 ## Scope boundary
 
 - Do not load a full-screen mockup as a runtime texture or production atlas.
-- Do not create production assets, manifests, scene code, layout code, or invisible input regions.
+- Do not create production assets, manifests, product scene/input/layout code, or invisible runtime input regions. Review-only compositor/layout source is allowed; it is not a product implementation or a replacement for formal candidate requirements.
 - Do not continue into handoff, asset production, implementation, runtime validation, or approval review.
 - Do not create, revise, approve, or version a component catalog from mockup work.
 - Do not treat visual similarity, generation success, or the author's preference as approval.

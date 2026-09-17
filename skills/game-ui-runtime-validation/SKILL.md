@@ -4,7 +4,7 @@ description: Use when an implemented game UI needs actual-runtime evidence for r
 ---
 
 ## Role
-Validate an unchanged build in its actual runtime. Static tests do not prove rendered fidelity, loaded assets, content boundaries, or usable input geometry.
+Validate a frozen candidate in its actual runtime. For partial revisions, use the [incremental runtime evidence rules](../game-task-planning/references/ui-fast-iteration.md#부분-변경의-runtime-증거) to distinguish current observations from independently justified historical reuse; keep full required coverage. Static tests do not prove rendered fidelity, loaded assets, content boundaries, or usable input geometry.
 
 ## Inputs
 - Approved screen specification, mockup, handoff comparison map, asset verdict, and implementation evidence.
@@ -14,12 +14,12 @@ Validate an unchanged build in its actual runtime. Static tests do not prove ren
 
 Use the declared browser/engine/emulator/simulator/device/harness. Record environment, scale, target dimensions, safe area, fixture, state, locale, timestamp and fingerprint; recheck fingerprint after capture.
 
-Separate design identity from capture freshness: code changes need not erase historical design approval, but that approval proves nothing about the current build. Review changed design authorities for relevance. Before requesting current approval, run the declared freshness/readiness check on current source/build, not archived evidence. Scoped PASS or author readiness cannot override overall BLOCKED, missing coverage/raw evidence or changed inputs. Without an executable check, explicitly compare complete locked source/build inventories and required coverage with raw evidence. Unresolved/stale evidence remains BLOCKED from acceptance and the runtime decision.
+Separate design identity from capture freshness: code changes need not erase historical design approval, but that approval proves nothing about the current build. Review changed design authorities for relevance. Before requesting current approval, run the declared freshness/readiness check on current source/build, not archived evidence. Scoped PASS or author readiness cannot override overall BLOCKED, missing coverage/raw evidence or changed inputs. Without an executable check, explicitly compare complete locked source/build inventories and required coverage with raw evidence. Historical evidence is applicable only through the linked incremental record; unresolved/stale or unjustified evidence remains BLOCKED from acceptance and the runtime decision. Never relabel a historical raw capture as current.
 
 Keep the repository read-only. Use normal runtime controls and isolated fixtures; do not fix code/assets/data/evidence or self-approve.
 
 ## Work and handoff
-1. Observe an unchanged candidate in its actual runtime using selected screen/state/viewport coverage and source identity.
+1. Observe affected coverage on the frozen current candidate and verify any historical reuse under the incremental rules, retaining all required screen/state/viewport rows and source identities.
 2. Follow [output and approval rules](references/output-contract.md) for this stage; preserve exact schemas and required coverage.
 3. Return raw observations and coverage verdicts for acceptance review. Do not repair product or evidence during verification.
 

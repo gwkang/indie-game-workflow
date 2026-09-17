@@ -13,7 +13,7 @@ Decide whether the shipped screen matches approved visual, content, state, input
 - Runtime decision under the shared UI decision rules, bound to the exact build fingerprint and cited side-by-side evidence.
 - Verified source parity, passing full-screen art fidelity, current build/commit fingerprint, working-tree state, and author/reviewer identities.
 
-The reviewer must be independent of mockup, asset, and implementation authorship. Recompute current locks and reproduce critical or high-risk samples; do not trust summaries alone. All evidence must share the submitted fingerprint.
+The reviewer must be independent of mockup, asset, and implementation authorship. Recompute current locks and reproduce critical or high-risk samples; do not trust summaries alone. The runtime/acceptance decisions must identify the submitted fingerprint. Raw evidence must either match it or retain its original identity with independently verified HISTORICAL_REUSE under the [incremental runtime evidence rules](../game-task-planning/references/ui-fast-iteration.md#부분-변경의-runtime-증거). Keep complete coverage and reject relabeled historical captures.
 
 Review is read-only. Do not edit code, assets, documents, data, or evidence. A current product-owner fidelity objection reopens prior approval.
 

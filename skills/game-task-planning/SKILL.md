@@ -33,7 +33,7 @@ Check each selected skill's availability and actual inputs. This table covers th
 | Test execution and functional verdict | game-functional-verification |
 | Read-only technical findings | game-code-review |
 
-UI work uses this bundle's integrated UI chain and its approval/coverage contracts. Audio, art, animation, AI, navigation and other specialists must be checked separately; do not assign their production work to the nearest programming role. Do not select build packaging unless a candidate package is part of the requested outcome.
+UI work uses this bundle's integrated UI chain and its approval/coverage contracts. For early screen feedback and bounded revisions, plan the [editable draft and impact-based path](references/ui-fast-iteration.md); do not make every aesthetic decision a prerequisite for an exploratory screen. Audio, art, animation, AI, navigation and other specialists must be checked separately; do not assign their production work to the nearest programming role. Do not select build packaging unless a candidate package is part of the requested outcome.
 
 ## Required contracts
 Apply [role, output, language and independent verification rules](references/role-contract.md) even for direct invocation. Read only your role card and output type.
