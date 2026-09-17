@@ -2,6 +2,10 @@
 
 Before each stage, read its rules below. Exact headers, tables, approvals and recovery routes are binding.
 
+## Code-native runtime-source preparation before asset readiness
+
+For the bounded mode in [game-ui-implementation](../SKILL.md), produce a source-preparation result, not an implementation evidence packet or `READY` integration matrix. Lock the approved handoff/catalog binding and fingerprint, exact declared adapter contract and intended source locator, allowed inputs, protected properties, required states, target, fixture and intended consumer. Record the source's pre-state as its actual hash or `ABSENT` when uncreated; never invent a pre-hash. Record changed source/fixture files and their produced hashes, focused checks, and actual target-size renders with original build/source identity before separate verification and asset parity. A separate verifier checks this scoped result; game-ui-asset-production determines source parity and packet readiness. Missing actual source or target-size render remains `BLOCKED`; missing or conflicting declared contract/locator blocks preparation. The preparation neither authorizes screen integration nor claims runtime validation or visual acceptance.
+
 ## Component runtime integration contract
 
 Emit the exact undecorated plain-text title once, immediately before its header:
@@ -14,7 +18,7 @@ Use the exact header once, without outer pipes:
 
 Use ten-cell rows. Copy the approved handoff matrix's first eight cells verbatim, preserving reuse: prefixes, identifiers and list order; add no notes. Cell 9 maps project-declared tests/probes/capabilities to implementation evidence; cell 10 is READY/OPEN/BLOCKED only.
 
-- `READY` means the consumer uses the exact declared adapter for the same catalog identity and fingerprint, passes only the allowed instance inputs, preserves every protected property, maps all required states one-to-one, and has passing current evidence from the focused tests or scoped observations selected under the Implementation contract. This is integration readiness, not rendered-fidelity acceptance.
+- `READY` means the consumer uses the exact declared adapter for the same catalog identity and fingerprint, passes only the allowed instance inputs, preserves every protected property, maps all required states one-to-one, has passing current evidence from the focused tests or scoped observations selected under the Implementation contract, and retains the asset packet's current source parity. This is integration readiness, not rendered-fidelity acceptance.
 - `OPEN` is only an optional internal implementation choice that cannot alter identity, adapter, inputs, protected properties, states, or behavior.
 - `BLOCKED` covers an added or undeclared input, any protected-property override, a substituted or renamed helper, a missing state or probe, a stale fingerprint, or evidence that does not map to the declared catalog capability.
 
@@ -38,6 +42,8 @@ Inspect repository impacts and preserve unrelated changes using project-provided
 2. For a defect, observe the pre-change failure when reproducible. Record unavailable RED evidence honestly; never invent it or build a harness just to fill the packet.
 3. Implement the smallest complete change. For a small static layout edit, existing target-size before/after captures and scoped runtime observation may suffice; do not duplicate coordinate literals in tests merely to obtain RED/GREEN.
 4. Recheck affected criteria on the current candidate. Preserve valid unaffected evidence and existing mandatory project gates. Runtime fidelity still belongs to runtime validation; independent verification is not waived.
+
+Before returning the full implementation packet, compare the current code-native source/build hash and relevant render dependencies (including the fixture where applicable) with the exact source and target-size parity evidence accepted by asset production. Record the compared identities in the implementation packet. A changed source, stale fixture, or changed relevant dependency makes the affected binding and packet readiness `BLOCKED`: return it to game-ui-asset-production to record the disposition, recheck target-size parity and obtain independent verification, then repeat the affected integration checks on the restored ready packet. Keep unaffected evidence only where the impact rules support it. Do not dispatch runtime validation while any required binding or packet is blocked.
 
 Keep public operations invariant-safe; expose no mutable internals or hidden globals that bypass ownership/inputs. Separate layout, live-data binding and effects where responsibility becomes clearer. Reuse adapters; avoid speculative inheritance/interfaces or unrelated per-frame work.
 
@@ -70,4 +76,4 @@ Maintain an **implementation evidence packet** with:
 - Confirm every handoff row has a runtime consumer and no extra UI or behavior was introduced.
 - Run project-required test/build/audit commands, but do not claim rendered fidelity before runtime validation.
 
-Missing approval, parity, measurements, states, assets or product authority blocks work; so does an out-of-scope contract change. After selected checks pass on current evidence, send the unchanged build to runtime validation. Observations are neither unexecuted test results nor final visual acceptance.
+For full implementation, missing approval, parity, measurements, states, assets or product authority blocks work; so does an out-of-scope contract change. After selected checks pass on current evidence, send the unchanged build to runtime validation. Observations are neither unexecuted test results nor final visual acceptance.

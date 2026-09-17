@@ -55,12 +55,12 @@ If the handoff row is absent, not `READY`, or bound to a different catalog finge
 
 After the matrix, report these two scopes separately:
 
-- `Binding downstream: READY_FOR_IMPLEMENTATION` when the row is `REUSE_CANONICAL` or `ASSET_NOT_REQUIRED`, or when `NEW_PRODUCTION` is complete and its output hashes, protected-property and required-state evidence, source parity, and required independent asset review have passed. Otherwise emit `Binding downstream: BLOCKED` and name the unfinished production evidence.
+- `Binding downstream: READY_FOR_IMPLEMENTATION` when the row is `REUSE_CANONICAL`, `ASSET_NOT_REQUIRED` with its exact declared source and target-size rendered parity verified, or `NEW_PRODUCTION` with complete output hashes, protected-property and required-state evidence, source parity, and required independent asset review. Otherwise emit `Binding downstream: BLOCKED` and name the unfinished production evidence.
 - `Packet downstream: READY_FOR_IMPLEMENTATION` only when every visible art family and source-parity gate is ready and an independent approved verdict covers every produced or file-backed art family. The independent-verdict requirement is `NOT APPLICABLE` only when the packet has no produced or file-backed art. Otherwise emit `Packet downstream: BLOCKED` and name the missing packet evidence or verdict.
 
 Packet downstream is always READY_FOR_IMPLEMENTATION or BLOCKED, never NOT APPLICABLE. For ASSET_NOT_REQUIRED, only the binding art-review field may be NOT APPLICABLE; packet/visible-family evidence remains required, including declared target-size rendered source parity for code-native/native-widget components.
 
-A ready binding cannot bypass a blocked packet. Resolve in order: `packet evidence -> implementation -> runtime validation`.
+A ready binding cannot bypass a blocked packet. For `ASSET_NOT_REQUIRED` only, the game-ui-implementation owner may prepare the exact catalog-declared code-native/native-widget runtime source and a target-size render fixture before packet readiness, solely to supply source-parity evidence. Asset production checks that evidence against the approved handoff, catalog source and intended runtime consumer; absent, stale or mismatched source/render keeps the binding or packet `BLOCKED`. This preparation is not full screen integration and cannot set the implementation matrix `READY`. Resolve in order: `bounded runtime-source preparation when needed -> packet evidence and required review -> full implementation -> runtime validation`.
 
 Binding disposition must not require post-implementation runtime evidence. Carry states/evidence locators forward as runtime-validation obligations.
 
