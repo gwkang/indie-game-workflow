@@ -14,7 +14,9 @@
 
 ## 선택적 프로젝트 위키
 
-`<project-name>-wiki/`를 프로젝트 프로필로 연결합니다. 조회·근거 재확인·필수/선택 반영은 [지식 계약](skills/game-task-planning/references/knowledge-contract.md)을 따릅니다. 기존 위키 생성·이전은 자동 실행하지 않습니다. `game-knowledge-maintenance`가 허용된 위키 변경을 맡고, 최종 후보 검증에 포함합니다.
+`<project-name>-wiki/`를 프로젝트 프로필로 연결합니다. 조회·근거 재확인·필수/선택 반영은 [지식 계약](skills/game-task-planning/references/knowledge-contract.md)을 따릅니다. 위키 사용을 요청하지 않은 프로젝트와 명시적인 비활성 결정은 유지하며, 기존 위키 이전은 자동 실행하지 않습니다. `game-knowledge-maintenance`가 허용된 위키 변경을 맡고, 최종 후보 검증에 포함합니다.
+
+설치기는 스킬 파일만 배치합니다. 사용자가 위키 연동이나 다른 프로젝트에 해당 연동 적용을 요청했다면, 기존 권한 안에서 프로필의 5개 지식 설정, 실제 목차·정책, 출처가 있는 관련 지식을 연결하고 조회·갱신·완료 경로까지 검증해야 합니다. 파일 설치 성공이나 `knowledge.enabled=false` 상태를 연동 완료로 보고하지 않습니다. 중요한 적용 범위가 불명확할 때만 확인합니다.
 
 ## 설치
 

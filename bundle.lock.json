@@ -34,7 +34,7 @@
         "assets/profile-template.md": "23a621cd60502abe610c153549237f5de55238b9a389e8014ef411960e305f38",
         "references/artifact-language.md": "0c0626ac7406e1202f949d685bda08480810427b052d563a70f2279a9fdd8e9a",
         "references/profile-contract.md": "4160a89d1b621e95506af72cf87ea64e6534f11b368028a57c854feeb9bd6182",
-        "SKILL.md": "1baf5ceef8d89f09963d69f44df4ad948a36256af8efd82ea55102ffa358e237"
+        "SKILL.md": "d85aca0ae6ecc6b217e38453c8fe009b8b413d38e864ca947d1681ba9c48e175"
       }
     },
     {
@@ -79,7 +79,7 @@
       "files": {
         "references/artifact-contract.md": "e0dcf4284c7dce1c8a8c522f05ada2ac5f2b9a1fba2314b666db7694a818216e",
         "references/delivery-contract.md": "99118d52d6a5ed1dde257cd81818a1eb8d0c35691cd43caa7289d02e79cce9b3",
-        "references/knowledge-contract.md": "10eef32e927607040a2843be73602bece0de222d5c8695459a4cae8a46e5714f",
+        "references/knowledge-contract.md": "8d7e475201696a5aafa418b53f7f51fa1371203058bd624e00c44a72bd5d930e",
         "references/professional-references.md": "d0fb417a90b09689d7a70140a4d73b2296487c5467ccfe9596819e25527c3625",
         "references/role-cards.md": "55e3e0016922c41c82e432afbf00c64db4be6672161ad785777fa21119b2a69b",
         "references/role-contract.md": "7c91c091dd335a6b5bf1c88d14d65ee81226eaa680fe31b3b7ae6ba755762f6d",
@@ -220,7 +220,7 @@
         "assets/routing-template.md": "48668022f93be7262769c04434523800d89fa369b61e7f7ff730313e4164708a",
         "references/workflow-run-registry.schema.json": "9878e2bc17c06692884dcd14f9397942d0116eab5d3f7d78f1dfc4c1db389cd2",
         "scripts/workflow_run_registry.py": "457caddeddf42ed019a9ffa65dee47bb29434f0709e18e3413c9985aa9c256e1",
-        "SKILL.md": "0a78372ba89a18ffc64a089820f27784948532cb0e9e6dd7d358f27d1db53093"
+        "SKILL.md": "bf36e85b475eb767653cddd4b2a823181dfc0501e75b024937ea6cd08db1297e"
       }
     },
     {
@@ -233,7 +233,7 @@
         "references/model-routing.md": "3db0dad0379c6c759a1ce3318aacd1033d382cc0866753e7cd2aa4ed315c4176",
         "references/run-registry.md": "2d41a6c7c547bbc0926d2d97a936776b9a8807d4cfc5b8a9421f4736bae7fdd2",
         "scripts/resolve_model_route.py": "90a182d1fc966ec5c56f15a519fa635ee790122518029a546506ea02970fb68f",
-        "SKILL.md": "5442fdcdf3c79d4746e43010c1601c450d9bf203af0effa03ba913b27ba2eddb"
+        "SKILL.md": "9d5c02f6c721bae5d4fc637f0ca4f57e1777be97822006315174008417b6ae66"
       }
     },
     {

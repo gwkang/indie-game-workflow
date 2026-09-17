@@ -5,6 +5,13 @@ Knowledge integration is optional. The project profile holds `knowledge.enabled`
 
 Absent/disabled settings leave the ordinary workflow intact. Enabled but incomplete settings require reconciliation only for knowledge-dependent work; do not silently disable a selected required output. Creating a wiki requires authorized setup. A legacy wiki can still be read through existing project references, but a root-name mismatch does not authorize renaming, moving or creating a competing wiki. Return the configuration/migration decision to its owner.
 
+## Requested setup and adoption
+Distinguish skill installation from a request to use or integrate project knowledge. Installation alone does not authorize activation. When the user requests wiki integration, including applying that integration to another project, carry that outcome through setup; do not silently finish with skills installed and `knowledge.enabled=false`. Reuse existing authorization instead of asking again. Preserve an explicit decision to keep knowledge disabled unless the current request changes it; resolve material ambiguity about the requested outcome through the supervisor.
+
+For authorized integration, the profile owner sets all five knowledge fields above, with `knowledge.enabled=true`, and the supervisor assigns bounded wiki setup/maintenance: establish a real index and policy, then link or synthesize relevant available knowledge from current sources. Reuse existing wiki structure and decisions. Missing project facts remain unknown; neither empty scaffolding nor invented knowledge establishes use. This authority does not include unrelated migration or cleanup.
+
+Before reporting integration complete, a separate verifier follows the configured locators to read a relevant claim and its source, checks how an authorized correction reaches game-knowledge-maintenance, and confirms required knowledge work is accounted for before completion under Return and integrate below. Use the existing handoff/run evidence and project document checks; no new ledger or game execution is required. If setup or required content remains blocked, report integration as incomplete rather than treating installation as acceptance.
+
 ## Read and reuse
 At intake, pass the configured index/policy locators to the owner without loading the whole wiki. During planning and specialist work, read only relevant pages and source dependencies. A wiki is a synthesis, not approval or unquestionable truth. Distinguish normative requirements from observed implementation; a discrepancy goes to the existing product/technical owner instead of allowing code or wiki text to silently override intent.
 

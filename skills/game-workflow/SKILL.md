@@ -26,7 +26,7 @@ For supervised work, propose an initial portable capability tier from task risk 
 
 Skills are instructions read by the executing agent, not function calls. Resolve the selected sibling's actual SKILL.md and references. Report missing dependencies without installing them. Project AGENTS.md may require this bootstrap but must not duplicate its routing procedure.
 
-For optional project knowledge, pass configured index/policy locators during intake under the [knowledge contract](../game-task-planning/references/knowledge-contract.md). Missing wiki settings never require wiki creation.
+For optional project knowledge, pass configured index/policy locators during intake under the [knowledge contract](../game-task-planning/references/knowledge-contract.md). Distinguish installation-only requests from requested wiki integration using its setup/adoption rules; missing settings alone do not authorize creation, and must not silently downgrade an authorized integration to installation only.
 
 ## Required contracts
 Apply [role, output, language and independent verification rules](../game-task-planning/references/role-contract.md) even for direct invocation. Read only your role card and output type.

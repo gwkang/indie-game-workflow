@@ -20,7 +20,7 @@ At dispatch, repair and join, compare actual visible/copy changes with the recor
 
 Minimize human intervention: reuse decisions, inspect facts, resolve ordinary scoped choices internally, and continue unaffected work. Ask only for material product decisions or genuinely missing authority after preparing a concrete result/recommendation. Do not ask permission at every stage.
 
-For enabled project knowledge, apply the [knowledge contract](../game-task-planning/references/knowledge-contract.md): classify required/optional updates within authority, assign bounded maintenance, and include required verified deltas before final candidate freeze.
+For enabled project knowledge or requested integration, apply the [knowledge contract](../game-task-planning/references/knowledge-contract.md): coordinate authorized setup when needed, classify required/optional updates within authority, assign bounded maintenance, and include required verified deltas before final candidate freeze. Keep installation status separate from integration acceptance; disabled or missing settings do not satisfy a requested integration.
 
 ## Capability boundary
 This version is an instruction-driven supervisor with a Markdown run record, not the planned transactional graph engine. It provides no atomic locks, cross-run reservation, automatic crash recovery or persistent background monitoring. Use a confirmed single-writer workspace or isolation. If activity ownership is uncertain, block affected writes until reconciled. Record unsupported automation instead of simulating guarantees.
