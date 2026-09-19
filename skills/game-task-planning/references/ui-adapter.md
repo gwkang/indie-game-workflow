@@ -14,7 +14,7 @@ UI 문서의 approved/selected 및 fidelity decision은 이 규칙으로 충족�
 
 ## 초기 화면과 수정 반복
 
-[빠른 수정 경로](ui-fast-iteration.md)는 시각 선택이 미정이어도 알려진 실제 내용/target/상태의 편집 가능한 화면 초안을 허용한다. 정식 승인 입력은 formal candidate 진입에 적용하며 초안을 차단하지 않는다. 부분 runtime 검증에서는 현재 재관측과 검증된 역사적 증거 재사용을 구분하고 전체 필수 coverage와 원래 raw identity를 유지한다.
+[빠른 수정 경로](ui-fast-iteration.md)는 시각 선택이 미정이어도 알려진 실제 내용/target/상태의 편집 가능한 화면 초안을 허용한다. 정식 승인 입력은 formal candidate 진입에 적용하며 초안을 차단하지 않는다. 부분 runtime 검증에서는 현재 재관측과 검증된 역사적 증거 재사용을 구분하고 전체 필수 coverage와 원래 raw identity를 유지한다. 게임 기능을 먼저 플레이 가능하게 만드는 임시 제품 UI는 이 탐색 초안과 구분한다. 승인된 기능·입력 계약을 바탕으로 game-ui-implementation의 playable functional interface 모드에서 실제 target runtime에 구현·기능 검증하며, 최종 시각 승인과 fidelity 수용은 후속 정식 UI 경로로 남긴다.
 
 ## 기존 인계 기록에 남길 값
 

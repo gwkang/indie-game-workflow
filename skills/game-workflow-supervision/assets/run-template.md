@@ -19,9 +19,22 @@ Rules: required fields must be populated or explicitly not-applicable with reaso
 
 Use `clear`, `needs-clarification` or `resolved`. Silence does not resolve a decision. Ask one question at a time unless the decisions are inseparable, and continue only unaffected authorized tasks.
 
+## Current checkpoint
+
+Keep this short; update it at dispatch/return/repair and before context compaction. Link history rather than copying it. On resume verify it against current files, input identities and active workers before dispatch.
+
+- Goal revision / authorized outcome / current slice and acceptance IDs:
+- Current candidate and relevant input revisions / target runtime and reference roles:
+- Active task IDs, owners and stable read/write/resource boundaries:
+- Current verdict and evidence locators / leading blocker and exact next owner/action:
+- Failure-lineage IDs with remaining attempts / run time-token budget and progress since last checkpoint:
+- Last reconciliation time / uncertain or stale facts:
+
 ## Tasks
 | Task ID | Skill/owner/supervisor | Inputs/revisions | Output template/rules/location | Predecessors/result conditions | Read/write/resources | Capability tier/reasoning/resolution/fallback | Integration owner | State/attempt/executor/model evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+Each dispatch brief links one task row and states the observable result, acceptance IDs, exact required inputs/revisions, environment, read/write/excluded scope, check, result locator, budget and stop condition. Send those fields and only necessary context to the worker; do not paste this entire record. Compatible outputs may share one separate verifier dispatch on a stable candidate, while each artifact keeps its own verdict.
 
 ## Artifact verification
 Use [the bounded verification rules](../../game-task-planning/references/verification-scope.md). Each selected artifact has a row or an inline record with the same fields. Freeze before checking; do not add criteria during repair. Producer and verifier executor IDs must differ. Author self-checks do not close verification; producer repairs and the separate verifier rechecks.
@@ -30,7 +43,7 @@ Use [the bounded verification rules](../../game-task-planning/references/verific
 | --- | --- | --- | --- | --- | --- | --- |
 
 ## Repair and deferred observations
-| Finding/evidence | Artifact/criterion or out-of-scope reason | Repair owner/allowed change or deferred only | Attempt/hypothesis | Affected rechecks/result | Blocker/minimum scope proposal if necessary |
+| Finding/evidence | Artifact/criterion or out-of-scope reason | Repair owner/allowed change or deferred only | Lineage ID, remaining budget, attempt/hypothesis | Affected rechecks/result | Blocker/minimum scope proposal if necessary |
 | --- | --- | --- | --- | --- | --- |
 
 Out-of-scope observations create no task or gate. A necessary change beyond authority blocks only dependent criteria pending explicit scope authorization. Keep unchanged criteria and still-valid evidence across retries.
@@ -56,6 +69,7 @@ Use pending/ready/running/completed/failed/blocked/cancelled/skipped for task ex
 - Verdict / evidence validity / limitations:
 - Verification contract / in-scope failing criterion IDs / repair attempt and affected rechecks:
 - Defects, return owner and next required action:
+- Interim context handoff, when unfinished: consumed input revisions; candidate/changed paths; completed checks and raw locators; current blocker; next action and remaining budget. This is not a completed result or approval.
 - Deferred out-of-scope observations (no automatic work or gate):
 
 ## Optional knowledge integration

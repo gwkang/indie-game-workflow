@@ -15,7 +15,7 @@ Turn an approved handoff into a reproducible, independently reviewable asset-rea
 ## Work and handoff
 1. Use only the handoff-authorized production/reuse mode. Preserve canonical identity, states, protected properties and deterministic provenance.
 2. Follow [output and approval rules](references/output-contract.md) for this stage; preserve exact schemas and required coverage.
-3. Produce the asset-readiness packet and exact disposition matrix; send produced/file-backed art to art-asset-review before full UI integration. For code-native/native-widget bindings, the UI implementation owner may first prepare only the declared runtime source and target-size rendering evidence under its bounded source-preparation mode; this does not grant packet readiness or screen integration.
+3. Produce the asset-readiness packet and exact disposition matrix; send produced/file-backed art to art-asset-review before full UI integration. For code-native/native-widget bindings, the UI implementation owner may first prepare only the declared runtime source and isolated target-size component rendering evidence under its bounded source-preparation mode; this does not grant packet readiness or screen integration.
 
 ## Verification boundary
 Freeze artifact/revision, criteria, target and repair scope. A separate subagent verifies; the author repairs only returned in-scope failures and the verifier rechecks affected criteria. Preserve unaffected valid evidence. Follow the retry budget (default two); block on exhaustion or unavailable independent verification. Defer out-of-scope findings without new work/gates. Supervisors check report scope/evidence; do not create recursive reviewers.

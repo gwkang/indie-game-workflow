@@ -14,6 +14,8 @@ Reuse the routed run and increment goal revision when user steering changes the 
 ## Execute
 Select only ready tasks. Perform bounded roles sequentially where appropriate. For genuinely independent work, delegate specialist tasks when applicable authorization and host tools permit; keep the actual executor and scope in the record. Separate reviewers from authors when independence is required. Do not claim role switching is independent review.
 
+Before dispatch, choose one observable result and its smallest sufficient verification slice. Maintain the run template's current checkpoint for the overall run; hand workers a bounded brief instead of the conversation or full run history. Apply the task-sizing, context-handoff and no-progress rules in [execution supervision](references/execution-supervision.md). A new task or stage does not reset the run's failure lineage or resource budget.
+
 Collect each result, validate its input/candidate identity and template, route defects to their owners, and join selected branches on one candidate. Read [the shared delivery contract](../game-task-planning/references/delivery-contract.md) for write/read isolation, integration, review and final gates. Follow the current entry flow's failure routes. Do not stop at a worker's success statement.
 
 At dispatch, repair and join, compare actual visible/copy changes with the recorded [UI classification](../game-task-planning/references/ui-adapter.md). Return new visual composition or changed meaning to its design/copy owner and retain only still-valid evidence.

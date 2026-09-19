@@ -13,7 +13,7 @@
 
 컴포넌트 표현, 스타일 값, 실제 내용과 state fixtures를 분리해 한 값이나 가족을 바꾸면 해당 초안에 반영되게 한다. 기존 프로젝트 도구/구조를 사용하며 새 프레임워크·설치·공용 디자인 시스템을 의무화하지 않는다. 초안과 정식 시안 모두 검토용 compositor/layout source 작성·수정을 허용한다. 정식 시안의 간격 수정도 이 원본에서 처리하고 새 composite를 고정한다. 제품 scene/input 코드 구현 권한은 아니다.
 
-호환되면 preview와 runtime이 같은 승인된 컴포넌트 원본·스타일 값·fixtures를 소비하도록 인계한다. 검토용 selector와 제품 입력/데이터 연결은 분리한다. renderer/엔진 차이로 직접 재사용할 수 없으면 source locator/revision과 대응 runtime 값·adapter, 단위/폰트/배치/상태 차이 및 검증할 차이만 기존 handoff의 관련 슬롯에 기록한다. 엔진이 아직 없으면 mapping을 OPEN으로 둔다. 초안 source 재사용은 catalog 승인·asset readiness·runtime 검증을 대체하지 않는다.
+호환되면 preview와 runtime이 같은 승인된 컴포넌트 원본·스타일 값·fixtures를 소비하도록 인계한다. 검토용 selector와 제품 입력/데이터 연결은 분리한다. renderer/엔진 차이로 직접 재사용할 수 없으면 source locator/revision과 대응 runtime 값·adapter, 단위/폰트/배치/상태 차이 및 검증할 차이만 기존 handoff의 관련 슬롯에 기록한다. 이때 preview는 시각 의도, 제품 runtime은 실제 동작 증거라는 역할과 비교 가능한 속성·허용 차이를 먼저 정한다. 다른 renderer의 픽셀 일치나 preview의 정지 화면으로 제품 모션 합격을 요구하지 않는다. 엔진이 아직 없으면 mapping을 OPEN으로 둔다. 초안 source 재사용은 catalog 승인·asset readiness·runtime 검증을 대체하지 않는다.
 
 초안을 정식 후보로 전환할 때는 미정 선택을 권한에 따라 해소하고 screen-spec·component·mockup 원래 필수 계약을 충족한다. 수정 가능한 원본을 버리고 다시 제작할 필요는 없다. 원본 revision에서 정식 composite를 재현해 immutable 경로/hash로 고정하며, 승인된 snapshot은 덮어쓰지 않는다. handoff는 이 source와 runtime 재사용/mapping을 연결하고 implementation은 승인된 범위에서 이를 소비한다.
 
@@ -28,7 +28,7 @@
 | 화면 배치 | screen-spec/handoff가 해당 화면의 배치·responsive 규칙을 수정하고 mockup 원본에 반영. 영향 target, 내용 경계와 hit 영역을 확인 |
 | 의미·동작·구조 | screen-spec과 해당 제품/입력/규칙/세션 소유자로 반환. 바뀐 명세·상태·회귀 기준을 확정한 뒤 영향 구현과 runtime 검증을 수행 |
 
-초안은 같은 source에서 수정·비교한다. 정식 산출물도 바뀐 가족·화면·상태의 증거만 다시 만들며, 작은 수정에 전체 시안 재제작·모든 선택 재승인·전체 구현을 요구하지 않는다. 제품 변경은 기존 승인·asset/implementation 준비 조건이 충족된 뒤 implementation 소유자가 수행한다. 시각 조정도 사용자가 직접 남긴 승인 조건은 그대로 지킨다.
+초안은 같은 source에서 수정·비교한다. 정식 산출물도 바뀐 가족·화면·상태의 증거만 다시 만들며, 작은 수정에 전체 시안 재제작·모든 선택 재승인·전체 구현을 요구하지 않는다. 정식 시안의 제품 반영은 기존 승인·asset/implementation 준비 조건이 충족된 뒤 implementation 소유자가 수행한다. 별도 playable functional interface 모드의 임시 제품 UI는 승인된 기능·입력 계약과 실제 runtime 기능 검증을 따르며 이 탐색 시안을 제품으로 승격하는 경로가 아니다. 시각 조정도 사용자가 직접 남긴 승인 조건은 그대로 지킨다.
 
 현재 revision/hash와 변경→소비자→영향 기준/증거를 기존 기록에 연결한다. 공통 값이 여러 화면에 쓰이면 그 소비 범위를 확인하고, 재사용할 근거는 변경에 영향받지 않았음을 설명한다. hash가 바뀐 artifact의 옛 MATCH/READY를 새 것으로 복사하지 않는다. 영향 없는 결정을 유지하면서 변경된 downstream lock/matrix를 현재 identity로 재연결하고 해당 증거를 재검증한다. 기존 packet의 영향 슬롯/행만 갱신하고, 변경 없는 packet 전체를 재작성하거나 새로운 승인 단계를 만들지 않는다. runtime 변경이 있으면 현재 build의 영향 화면·상태에서 runtime-validation/독립 수용을 거친다. 초안 캡처나 문서 검사는 게임 동작·수정 속도 개선 실측이 아니다.
 

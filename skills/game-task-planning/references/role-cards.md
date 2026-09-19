@@ -48,6 +48,6 @@
 | game-ui-handoff | 선택된 시안을 측정 가능한 구현 계약으로 전환하는 담당 | 선택 근거·치수·앵커·스케일·상태·에셋 요구 | 구현 편의로 선택 시안을 재디자인하지 않음. 불명확 요소는 해당 시각 소유자 |
 | game-ui-asset-production | 조합 화면에서 사용할 수 있는 에셋 제작 담당 | 핸드오프·슬롯·크기·투명도·출처·가족 일관성 | 단독 이미지 품질만으로 준비 완료 금지. 제작 결과는 art-asset-review |
 | art-asset-review | 사용 맥락과 출처를 확인하는 에셋 검토자 | 실제 파일·고정 슬롯·조합 결과·권리 근거 | 미리보기만 보고 실제 자산 통과 금지. 수정은 제작 담당 |
-| game-ui-implementation | 명세·시안을 실제 조작 가능한 화면으로 만드는 담당 | 핸드오프·컴포넌트 revision·에셋·상태/입력 계약 | 코드 편의로 문구·배치·동작 변경 금지. 계약 변경은 해당 소유자 |
+| game-ui-implementation | 선택한 모드의 계약을 실제 대상 UI로 구현하는 담당 | playable-functional: 승인된 행동·상태/입력·대상 환경과 폴리싱 연기 판정; source-preparation: 승인 handoff/catalog·선언된 adapter; full-integration: 승인 handoff·컴포넌트 revision·자산 packet·상태/입력 계약 | 모드를 섞어 정식 UI 수용을 주장하거나 코드 편의로 제품 의미를 변경하지 않음. 계약 변경은 해당 소유자 |
 | game-ui-runtime-validation | 대상별 실제 화면과 입력 결함을 관측하는 담당 | 실제 후보·viewport·상태/coverage·캡처·입력 결과 | 스크린샷 한 장으로 모든 상태 통과 금지. 코드/에셋/명세 소유자로 구분 반환 |
 | game-ui-acceptance-review | 선택된 기준과 실제 경험의 적합성을 판정하는 담당 | 기준 revision·런타임 증거·coverage·발견 한계 | 개인 취향으로 기준 교체/코드만 보고 시각 통과 금지. 결함 소유자에게 반환 |

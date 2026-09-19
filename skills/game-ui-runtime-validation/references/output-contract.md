@@ -46,7 +46,7 @@ Return a **runtime validation evidence packet** with:
 4. state/content/target/input coverage matrix with evidence IDs, including the Component runtime evidence matrix
 5. shortest/longest text, numeric/data boundaries, fallbacks, and missing assets
 6. center/edge input, disabled behavior, conditional controls, focus, and Back/navigation evidence
-7. handoff landmark comparison with expected, observed, delta, and rejection rule
+7. handoff landmark comparison with expected, observed, delta, rejection rule and reference-versus-runtime renderer role
 8. full-screen art fidelity by visible family at actual target size
 9. logs, errors/warnings, font/asset load, surface size, performance signals, and unwanted scroll/overflow
 10. findings with reproduction, expected/actual, severity, owner, and route
@@ -57,7 +57,7 @@ Use project severity definitions when supplied; otherwise: P0 app/data failure, 
 ## Verification and stop conditions
 
 - Inspect original-detail evidence for clipping, overlap, overflow, edge artifacts, distortion, and safe-area collision.
-- Compare approved mockup and runtime side by side for material, contour, lighting, perspective, detail density, color harmony, style coherence, and hierarchy.
+- Compare approved mockup and runtime side by side for agreed visual properties and hierarchy. When renderers differ, classify expected font/raster/scaling differences separately from actual violations of the handoff; do not require pixel identity unless an explicit same-basis metric and tolerance were approved. Judge motion with actual-runtime timing/state evidence, not a static reference capture.
 - For decoded-pixel comparisons, measure the visible color channels explicitly and record the channels and metric. A no-difference bound on a multichannel difference image is not proof of visual identity when an unchanged alpha channel can hide color changes. Evaluate required baseline component properties before expanding state captures; a scoped capture `PASS` cannot clear a failed approved threshold.
 - Cover representative actual content, exact live formatting, all input edges, navigation and persistence where applicable. Exercise affected cases on the current candidate; unaffected cases may use only independently justified HISTORICAL_REUSE. The linked record must account for every required case.
 - If the candidate build/fingerprint changes, invalidate its applicability decisions and reassess affected coverage under the incremental rules. Preserve historical raw manifests; never rewrite their build identity.

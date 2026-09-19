@@ -1,6 +1,6 @@
 # 공통 역할 계약 · v1
 
-직접 호출에도 적용한다. 자기 역할의 [카드](role-cards.md) 한 항목과 [산출물 규격](artifact-contract.md)의 해당 유형만 읽는다. 카드 ID/version과 실제 executor ID는 별개다.
+직접 호출에도 적용한다. 자기 역할의 [카드](role-cards.md) 한 항목과 [산출물 규격](artifact-contract.md)의 해당 유형만 읽는다. 다중 모드 역할은 배정 또는 직접 호출 기록에 선택한 모드를 명시하고, 카드·산출물 규격의 그 모드에 해당하는 입력과 본문 규칙을 적용한다. 다른 모드의 선행 조건을 합쳐 요구하지 않는다. 카드 ID/version과 실제 executor ID는 별개다.
 
 - 산출물을 쓰기 전에 담당 스킬과 해당 템플릿·내용 규칙을 실제로 읽고 기존 인계 기록에 locator/revision을 연결한다. 설치·정리 중 부수적으로 만드는 문서에도 적용한다. 감독이 임의 요약으로 전문 산출물을 대신하지 않으며, 현재 작업 범위 밖의 산출물은 만들지 않는다.
 - [언어](../../game-project-profile/references/artifact-language.md): 기본 한국어, 명시적 override 우선. schema key·ID·원본 증거는 보존한다.

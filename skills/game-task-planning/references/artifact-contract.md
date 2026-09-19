@@ -37,6 +37,8 @@
 | game-build-packaging / package@1 | 입력 후보·도구/설정·target·재현 명령·출력 manifest/hash·패키지 검사 | 패키징을 기능 통과나 공개로 소비하지 않음 |
 | game-functional-verification / verification@1 | criterion/scenario별 후보·실행/관측·환경·원본 증거·pass/fail/inconclusive·유효성·반환 | 미실행/변경 중 입력은 통과 불가 |
 | game-code-review / review@1 | 후보·작성자/리뷰어·고정 범위·발견 위치/발생 조건/영향/수정 소유자·판정/한계 | 근거 없는 취향은 결함 아님; 자기 리뷰는 독립 판정 불가 |
-| UI 10역할 / ui.<skill-name>@1 | 원본 UI 출력 규격의 locator와 파일 hash; 기존 표/coverage/승인 기록 | ui-adapter 계약과 원본 소비 검사 함께 적용 |
+| UI 10역할 / ui.<skill-name>@1 | 선택한 모드의 원본 UI 출력 규격 locator와 파일 hash; 정식 모드의 필수 표/coverage/승인 기록 | ui-adapter 계약과 선택한 모드의 원본 소비 검사 함께 적용 |
+
+game-ui-implementation은 같은 역할/type을 유지하고 배정 기록에 `playable-functional`, `source-preparation`, `full-integration` 중 하나를 명시한다. `playable-functional`에는 [기능 인계](../../game-ui-implementation/references/output-contract.md#playable-functional-interface), `source-preparation`에는 [원본 준비 결과](../../game-ui-implementation/references/output-contract.md#code-native-runtime-source-preparation-before-asset-readiness), `full-integration`에는 정식 구현 packet·matrix를 적용한다. 정식 표/coverage/승인 기록을 다른 두 모드의 가짜 값으로 채우지 않는다. 공통 envelope·독립 검증은 세 모드 모두에 적용한다.
 
 구현 8역할은 rule/input/movement/camera/session/content-loading/save/platform이다. 소비자는 공통 envelope의 입력·상태·현재 증거와 해당 유형의 실제 의미를 검사한다. 형식 또는 내용 누락은 그 산출물 소유자에게 반환하며 검증 범위를 늘리지 않는다.

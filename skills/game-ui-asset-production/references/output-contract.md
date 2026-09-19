@@ -55,18 +55,18 @@ If the handoff row is absent, not `READY`, or bound to a different catalog finge
 
 After the matrix, report these two scopes separately:
 
-- `Binding downstream: READY_FOR_IMPLEMENTATION` when the row is `REUSE_CANONICAL`, `ASSET_NOT_REQUIRED` with its exact declared source and target-size rendered parity verified, or `NEW_PRODUCTION` with complete output hashes, protected-property and required-state evidence, source parity, and required independent asset review. Otherwise emit `Binding downstream: BLOCKED` and name the unfinished production evidence.
+- `Binding downstream: READY_FOR_IMPLEMENTATION` when the row is `REUSE_CANONICAL`, `ASSET_NOT_REQUIRED` with its exact declared source and isolated target-size component parity verified, or `NEW_PRODUCTION` with complete output hashes, protected-property and required-state evidence, source parity, and required independent asset review. Otherwise emit `Binding downstream: BLOCKED` and name the unfinished production evidence.
 - `Packet downstream: READY_FOR_IMPLEMENTATION` only when every visible art family and source-parity gate is ready and an independent approved verdict covers every produced or file-backed art family. The independent-verdict requirement is `NOT APPLICABLE` only when the packet has no produced or file-backed art. Otherwise emit `Packet downstream: BLOCKED` and name the missing packet evidence or verdict.
 
-Packet downstream is always READY_FOR_IMPLEMENTATION or BLOCKED, never NOT APPLICABLE. For ASSET_NOT_REQUIRED, only the binding art-review field may be NOT APPLICABLE; packet/visible-family evidence remains required, including declared target-size rendered source parity for code-native/native-widget components.
+Packet downstream is always READY_FOR_IMPLEMENTATION or BLOCKED, never NOT APPLICABLE. For ASSET_NOT_REQUIRED, only the binding art-review field may be NOT APPLICABLE; packet/visible-family evidence remains required. Before integration, code-native/native-widget parity is the declared source in an isolated target-size component fixture covering its protected properties and required states. Whole composed-screen and interactive fidelity are runtime-validation and acceptance obligations after integration, not packet prerequisites.
 
-A ready binding cannot bypass a blocked packet. For `ASSET_NOT_REQUIRED` only, the game-ui-implementation owner may prepare the exact catalog-declared code-native/native-widget runtime source and a target-size render fixture before packet readiness, solely to supply source-parity evidence. Asset production checks that evidence against the approved handoff, catalog source and intended runtime consumer; absent, stale or mismatched source/render keeps the binding or packet `BLOCKED`. This preparation is not full screen integration and cannot set the implementation matrix `READY`. Resolve in order: `bounded runtime-source preparation when needed -> packet evidence and required review -> full implementation -> runtime validation`.
+A ready binding cannot bypass a blocked packet. For `ASSET_NOT_REQUIRED` only, the game-ui-implementation owner may prepare the exact catalog-declared code-native/native-widget runtime source and an isolated target-size component render fixture before packet readiness, solely to supply source-parity evidence. Asset production checks that evidence against the approved handoff, catalog source and intended runtime consumer; absent, stale or mismatched source/render keeps the binding or packet `BLOCKED`. This preparation is not full screen integration and cannot set the implementation matrix `READY`. Resolve in order: `bounded runtime-source preparation when needed -> packet evidence and required review -> full implementation -> runtime validation`.
 
 Binding disposition must not require post-implementation runtime evidence. Carry states/evidence locators forward as runtime-validation obligations.
 
 ## Fidelity and source parity
 
-Inventory every visible art family as `new production`, `verified reuse`, or `missing`. Reuse requires target-size composed-screen evidence against the approved mockup; technical validity or zero byte cost is insufficient. Compare material, contour, lighting, perspective, detail density, color harmony, and optical weight across combined families.
+Inventory every visible art family as `new production`, `verified reuse`, or `missing`. File-backed reuse requires target-size composed-screen evidence against the approved mockup using the intended runtime bytes; technical validity or zero byte cost is insufficient. For code-native/native-widget families, verify the declared source and isolated component fixture before integration and carry whole-screen composition to runtime validation. For file-backed pre-integration composition, compare material, contour, lighting, perspective, detail density, color harmony and optical weight across the visible families available in that composition. Judge code-native cross-family composition in the integrated runtime and acceptance review; isolated protected-property/state parity remains required before packet readiness.
 
 For each family, record classification, runtime destination/current source hash, mockup/QA input/hash, candidate output, consumer and provenance. Reuse evidence must read exact runtime bytes; new-production evidence must read the exact candidate destined there. Any disagreement blocks readiness.
 
@@ -80,7 +80,7 @@ Return a `DRAFT` **asset-readiness packet** with:
 4. generation record, or `NOT APPLICABLE`
 5. deterministic transform and hash procedure, or `NOT APPLICABLE`
 6. intrinsic/visible bounds, padding, pivot, crop safety, stretch region, and fit mode
-7. isolated-pixel and composed-screen visual QA
+7. isolated-pixel and, for file-backed art, composed-screen visual QA; code-native whole-screen fidelity remains a runtime obligation
 8. per-file and total bundle impact against the approved budget
 9. provenance record in the project-owned registry
 10. open defects and reviewed inputs for `game-ui-implementation`
@@ -92,7 +92,7 @@ Use REVIEW_READY only after reproducibility and visual QA pass. Independent art-
 - Do not change content, live typography, input, layout, or scene code.
 - Do not redesign the approved mockup or delete superseded assets; migration owns cleanup.
 - Regenerate changed outputs and compare hashes; in reuse modes recompute runtime hashes without inventing production work.
-- Inspect original pixels and target-size composites over relevant backgrounds at every supported target.
+- Inspect file-backed original pixels and target-size composites over relevant backgrounds at every supported target; inspect code-native source and isolated target-size fixture for declared protected properties and states.
 - Verify alpha/edge artifacts, aspect, padding, pivot, state distinction, text clearance, frame isolation, and source parity.
 - Require independent asset review before implementation for produced or file-backed art; record it `NOT APPLICABLE` for `ASSET_NOT_REQUIRED` bindings.
 

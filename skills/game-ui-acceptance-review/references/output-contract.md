@@ -47,7 +47,7 @@ APPROVE UI requires the applicable asset verdict, passing full-screen art fideli
 ## Verification and stop conditions
 
 - Recompute the fingerprint and confirm no file changes during review.
-- Inspect original-detail runtime evidence beside exact approved composites.
+- Inspect original-detail runtime evidence beside exact approved composites. Apply the handoff's property-level comparison when the reference and product use different renderers; do not turn pixel differences or capture-tool limitations into defects without a violated approved property. Require actual-runtime evidence for states, input and motion.
 - Trace every screen-spec field, state, action, and required target to evidence.
 - Reproduce critical/high-risk samples on the current candidate; independently check historical reuse dependencies and widen current observation when uncertain. Reproduce a risk-based sample of boundaries, center/edge inputs, disabled behavior, navigation, persistence, logs, fonts, and assets.
 - Reject missing families, craft/style mismatch, stale runtime approval, parity conflict, or approval for another fingerprint.
