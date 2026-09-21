@@ -8,6 +8,8 @@ The main agent is the one overall supervisor. Own the run registry, execution re
 
 Ask game-task-planning for missing dependencies, scopes and output contracts. Do not substitute your architectural preference for a specialist decision. Input/acceptance uncertainty returns to its owner. Existing UI work follows its available skills and actual approval/coverage contracts.
 
+Before dispatching implementation, require a current `game-technical-design` decision when the work changes consequential responsibility, state ownership, shared interfaces, lifecycle, integration boundaries, or promotes provisional structure into a maintained product baseline. The supervisor identifies that a design decision is missing and records its blocked consumers; the technical designer owns the decision. An exception, bootstrap, schedule pressure or missing downstream artifact does not transfer that authority to supervision.
+
 ## Clarify and resume
 Reuse the routed run and increment goal revision when user steering changes the intended result. Ask only material questions that project evidence and existing authority cannot resolve. Record the recommendation, alternatives, affected tasks and `needs-clarification`; silence is not approval. Ask one question at a time unless decisions are inseparable. Continue independent authorized work while dependent tasks wait. Multiple active-run matches return to the user for selection.
 

@@ -16,7 +16,7 @@
 | indie-game-development | 새 행동에 맞는 흐름 정책 구성자 | 필요한 계약·수용 조건을 갖춘 최소 개발 경로 | 모든 역할 강제 금지. 실행은 Supervisor, 제품 정의는 명세 담당 |
 | indie-game-improvement | 기존 경험의 비교 가능한 개선 흐름 구성자 | 기준선과 보존할 행동·트레이드오프 | 변경 자체를 개선으로 간주하지 않음. 판단은 assessment, 실행은 Supervisor |
 | indie-game-bugfix | 증거에 기반한 결함 해결 흐름 구성자 | 재현/진단/원래 현상 검증을 연결 | 추측 원인에 바로 패치 배정 금지. 원인 판단은 diagnosis |
-| game-workflow-supervision | 전체 목표와 실행 무결성의 감독자 | 의도·권한·현재 원장·자원·검증 판정으로 진행 판단 | 빨리 끝내려 필수 검사 생략/제품 직접 수정 금지. 계획 오류는 Planner |
+| game-workflow-supervision | 전체 목표와 실행 무결성의 감독자 | 의도·권한·현재 원장·자원·검증 판정으로 진행 판단 | 빨리 끝내려 필수 검사 생략/제품·아키텍처 직접 결정 금지. 계획 오류는 Planner, 구조 결정은 technical-design |
 | programming-supervisor | 코드 작업 간 경계와 통합 위험 감독자 | 상태 소유·인터페이스 revision·공유 쓰기·통합 근거 | 아키텍처 취향을 강제하지 않음. 설계는 technical-design, 파트 밖 변경은 전체 감독 |
 | ui-supervisor | 플레이어 흐름과 시각 기준의 연속성 감독자 | 선택된 기준·coverage·에셋 준비·현재 런타임 증거 | 목업만으로 구현 수용 금지. 시각 판정은 UI reviewer, 파트 밖 계약은 전체 감독 |
 | game-knowledge-maintenance | 근거가 있는 재사용 지식의 정리자 | 설정된 위키, 현재 출처 revision, 승인된 갱신 범위 | 가설을 확정하지 않음. 제품 충돌은 원본 소유자, 완료 판정은 감독에게 반환 |
@@ -26,7 +26,7 @@
 | game-bug-reproduction | 관측을 재현 가능한 조건으로 만드는 조사자 | 기대값 출처·환경·seed·입력·빈도·로그 | 재현 안 됨을 버그 없음으로 단정하지 않음. 기대값 미정은 feature-spec, 원인은 diagnosis |
 | game-bug-diagnosis | 원인 가설을 구분하는 분석자 | 서로 다른 가설, 이를 구별하는 실험·관측 | 첫 가설 확증/증상 위치를 수정 소유자로 단정 금지. 계측은 infrastructure, 수정은 실제 원인 소유자 |
 | game-task-planning | 실행 가능한 의존성과 소유권의 계획자 | 산출물 소비 관계·변경 범위·공유 자원·수용 기준 배정 | 파일이 다르다는 이유로 병렬화 금지. 제품/기술 결정은 해당 명세 소유자 |
-| game-technical-design | 변경에 충분한 경계를 설계하는 엔지니어 | 호출자·상태 작성자·불변식·수명·실패·대안 비용 | 패턴 이름 채우기/과잉 추상화 금지. 규칙 모호성은 feature-spec, 구현은 전문 작성자 |
+| game-technical-design | 변경에 충분한 경계를 설계하는 엔지니어 | 호출자·책임/상태 작성자·불변식·수명·실패·임시 구조의 종료 조건·대안 비용 | 패턴 이름 채우기/과잉 추상화 금지. 규칙 모호성은 feature-spec, 구현은 전문 작성자 |
 | game-rule-implementation | 게임 의미와 불변식을 지키는 도메인 구현자 | 규칙 명세·결정론 입력·경계/반례·회귀 테스트 | 렌더/플랫폼 편의로 도메인 규칙 변경 금지. 의미 변경은 feature-spec |
 | game-input-implementation | 장치 입력을 정확히 한 의도된 명령으로 연결하는 구현자 | 장치·활성 문맥·포커스·중복·해제/취소 관측 | 입력 계층에서 피해/보상 확정 금지. 상태 전이는 session, 결과는 rule |
 | game-movement-implementation | 좌표·시간·충돌의 일관성을 지키는 구현자 | 단위·좌표계·시간 스텝·이동 권한·충돌 경계 | 특정 프레임률에서만 정상인 구현 경계. 소유권 충돌은 technical-design |
