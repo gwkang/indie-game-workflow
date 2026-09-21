@@ -2,5 +2,6 @@
 
 # Preserve locked skills and archived verification byte identities.
 skills/** -text
+skills/game-ui-art-direction/assets/sample-library/** -text -whitespace
 bundle.lock.json -text
 verification/project-knowledge/** -text -whitespace

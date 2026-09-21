@@ -1,6 +1,6 @@
 {
   "lockVersion": 1,
-  "bundleVersion": "0.9.0-project-knowledge",
+  "bundleVersion": "0.9.4-playful-motion",
   "entries": [
     {
       "id": "indie-game-development",
@@ -259,8 +259,26 @@
       "source": "skills/game-ui-art-direction",
       "contractVersion": "2026-09-17",
       "files": {
-        "references/output-contract.md": "aaec3f1ca31975feb7d61ac9af3197b1868665bf13e02a2153172baacf237bd5",
-        "SKILL.md": "996fd53049bf2add212bea81f80bfbf1b2f394e13e2fa81defd714efbadf09df"
+        "assets/sample-library/button-shapes/1.0.0/B01.svg": "547f57154bce35e5ef9835c829b922917a7c4f4830d724b34238fd9c17442e98",
+        "assets/sample-library/button-shapes/1.0.0/B02.svg": "433e3425a7a5c09196c2516b68df9eaac37996af47c29491afe4ac6343db6d73",
+        "assets/sample-library/button-shapes/1.0.0/B03.svg": "957d2b92f42de5f0333f1aa336498d8cd44d694f3090d5a2e1001f501b7c7aaf",
+        "assets/sample-library/button-shapes/1.0.0/B04.svg": "cfd1fae540e3dc6363fa03dc906e98039d46b2ba5e197427c5c2d4013cef8e29",
+        "assets/sample-library/button-shapes/1.0.0/index.html": "e1bc07e8bc0865102e3af4d58d08031232e68cb12f053b3acf9fb3d843c8b77f",
+        "assets/sample-library/button-shapes/1.0.0/style.css": "9ee4388d4122f55036dd363cc7212a67010055bcb430ebeaafc426ba8aa9e5ca",
+        "assets/sample-library/manifest.json": "c5272e6194544e2040daa587f1d01ba3a36c1fca67f4c62175f2676c7229c754",
+        "assets/sample-library/playful-ui-motion/1.0.0/index.html": "75064f049e00f8fb177d9f5139294af32fbfe4d0cb626911ab62db0135c8aca0",
+        "assets/sample-library/playful-ui-motion/1.0.0/motion.js": "690679d9292d454ea9a24e8b1032b398b320999682b7b8a66f8053713f216d4d",
+        "assets/sample-library/playful-ui-motion/1.0.0/style.css": "1d8ae779f02cdc9f0a44040f92a7b117bc71c358e2e14b84db07c6adc8491839",
+        "assets/sample-library/square-motion/1.0.0/gallery.js": "1d27e8fcaa72a3f31cffe1a748666b74e78ccc2920cc7569661563c726419e46",
+        "assets/sample-library/square-motion/1.0.0/index.html": "cada758d3e577244f9b2859fe216ba58d31aa3a8d0ff05db566ddd3c6d2a4671",
+        "assets/sample-library/square-motion/1.0.0/motion.js": "4a6d8391c83f6f0b8c2572e7de7dc56ee078efffeb858731faf3de99187a567b",
+        "assets/sample-library/square-motion/1.0.0/style.css": "d9b4ae3937190795e7bdbccaddeb644fda829a75fd5d29d5b826e610146f6957",
+        "assets/sample-library/square-motion/1.0.0/tile.png": "bdd1e3131d11e1a4d41884022e2a36d90d3b8dd7a486fcc8acd31ec99e0c09cd",
+        "references/independent-samples.md": "711526dd73e08fe972cab0299cdc4f86d7f53a9abcb1acaa6562ea1b388a04f6",
+        "references/output-contract.md": "5642d1e12a81598d0a49a28501cf3d7521bc644c2190d58746bf802d3799fb4e",
+        "references/sample-library.md": "5b9402166e1f38a549e937a4473623b6d4e1e2f477b6fbb5997a4e8184e31f99",
+        "scripts/validate_sample_library.py": "fc92de672adf2d0e3ee3171f7e4b1d2eacaf9021876372852732d5f880675136",
+        "SKILL.md": "fab99fc7cad5751f40dd9faf2ff4405610d47fe1bd5317f96ba034626bc6b273"
       }
     },
     {

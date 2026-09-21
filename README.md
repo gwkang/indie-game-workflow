@@ -1,6 +1,6 @@
 # Indie Game Workflow
 
-버전 `0.9.0-project-knowledge`. 게임 개발 27개와 UI 10개를 **한 묶음의 37개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다.
+버전 `0.9.4-playful-motion`. 게임 개발 27개와 UI 10개를 **한 묶음의 37개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다. `game-ui-art-direction`에는 독립 검증된 선택용 모션·버튼 형태 샘플 라이브러리가 포함됩니다.
 
 ## 구성과 사용
 

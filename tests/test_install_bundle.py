@@ -124,6 +124,26 @@ class InstallerTests(unittest.TestCase):
             installer.install(self.root, self.target, True)
         self.assertEqual([], list(self.target.iterdir()))
 
+    def test_nested_sample_asset_install_reuse_and_preserve(self):
+        source=self.root/'skills/core-one/assets/sample-library/square/1.0.0'
+        source.mkdir(parents=True);(source/'tile.png').write_bytes(b'sample')
+        self.lock['entries'][0]['files']=installer.inventory(self.root/'skills/core-one');self.write_lock()
+        installer.install(self.root,self.target,True)
+        copied=self.target/'core-one/assets/sample-library/square/1.0.0/tile.png'
+        self.assertEqual(b'sample',copied.read_bytes())
+        self.assertEqual([],installer.install(self.root,self.target,True)['install'])
+        copied.write_bytes(b'project-owned modification')
+        with self.assertRaises(installer.InstallError):installer.install(self.root,self.target,True)
+        self.assertEqual(b'project-owned modification',copied.read_bytes())
+
+    def test_nested_sample_source_tamper_rejected(self):
+        source=self.root/'skills/core-one/assets/sample-library/square/1.0.0'
+        source.mkdir(parents=True);(source/'tile.png').write_bytes(b'sample')
+        self.lock['entries'][0]['files']=installer.inventory(self.root/'skills/core-one');self.write_lock()
+        (source/'tile.png').write_bytes(b'changed')
+        with self.assertRaises(installer.InstallError):installer.install(self.root,self.target,True)
+        self.assertEqual([],list(self.target.iterdir()))
+
     def test_real_core_and_ui_bundle_without_sibling(self):
         source = MODULE.parents[1]
         root = self.base / 'standalone'
