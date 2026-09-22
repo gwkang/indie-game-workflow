@@ -20,7 +20,7 @@ If an approved input is missing or conflicting, stop and mark it `OPEN` or `BLOC
 ## Work and handoff
 1. Confirm style/motion selection and required component templates are resolved before full-screen composition. Compose full-screen candidates using approved content and canonical templates; return a missing or incompatible family to game-ui-component-system instead of drawing an untracked substitute.
 2. Represent the persona's primary, secondary, and disclosed information as distinct visual priorities across representative states. Use progressive disclosure, scrolling, or state-specific omission when the screen would otherwise become overloaded; do not remove required content without recording where it is revealed.
-3. Before expensive formal rendering, run the bounded [formal-capture preflight](references/formal-capture-preflight.md). A preflight is a fail-fast readiness check, not formal coverage or approval evidence.
+3. Before expensive formal rendering, run the bounded [formal-capture preflight](references/formal-capture-preflight.md) and validate its JSON result with the linked script. A preflight is a fail-fast readiness check, not formal coverage or approval evidence.
 4. Follow [output and approval rules](references/output-contract.md) for this stage; preserve exact schemas and required coverage.
 5. Return immutable candidate hashes and fidelity evidence. Keep DRAFT until exact selection under the shared UI decision rules; never turn a mockup into a runtime texture.
 

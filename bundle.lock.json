@@ -324,9 +324,10 @@
       "source": "skills/game-ui-mockup",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/formal-capture-preflight.md": "a20a9a566a5f9b4655c267069859eea5d87139548b609fb073e1eb83466fa2be",
+        "references/formal-capture-preflight.md": "9e61b4d2c68eb8dd24b1b06ba924f442dd1b680d31b7e581b4a9e5bce2306cda",
         "references/output-contract.md": "bd0e399695f2dbd5f2d535071bef3bd61c5a6670d05c8a0b1576852b814f8f3a",
-        "SKILL.md": "e361c768cb9c5a41208482a2de5f0fe50ed86979a78fd29e42eb1f6ccf1e8294"
+        "scripts/validate_capture_preflight.py": "9d499297b814e365970b8ccf7d3e06ad4bb315c0ab0a151ce02085eb5e534cc9",
+        "SKILL.md": "a3afc55658e21612cb7c26adacfbd607d19a65643a1bff775d55e08a54e01166"
       }
     },
     {
