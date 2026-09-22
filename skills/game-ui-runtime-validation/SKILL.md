@@ -8,6 +8,7 @@ Validate a frozen candidate in its actual runtime. For partial revisions, use th
 
 ## Inputs
 - Approved screen specification, mockup, handoff comparison map, asset verdict, and implementation evidence.
+- The screen specification's persona-derived priority and disclosure rules.
 - The implementation packet's current `Component runtime integration matrix` and matching catalog artifact fingerprint.
 - Exact build fingerprint, launch/capture method, fixture data, expected states, targets, locales, and safe areas.
 - Approved composite hashes and source-parity records.
@@ -24,6 +25,8 @@ Keep the repository read-only. Use normal runtime controls and isolated fixtures
 3. Return raw observations and coverage verdicts for acceptance review. Do not repair product or evidence during verification.
 
 Before judging, apply [current-state and prior-record review](../game-task-planning/references/verification-scope.md#review-the-current-state-before-alleging-a-defect): inspect relevant implementation and available wiki/decision/review records, check counterevidence, and report no findings when warranted. Do not expand scope or manufacture defects.
+
+For each representative runtime state, verify that the primary task and first-read region are discoverable without scanning every panel, that secondary content is disclosed according to the screen contract, and that text/controls do not create avoidable density or competition. Record a failure when the implementation is functionally correct but violates the persona-derived information priority.
 
 ## Verification boundary
 Freeze artifact/revision, criteria, target and repair scope. A separate subagent verifies; the author repairs only returned in-scope failures and the verifier rechecks affected criteria. Preserve unaffected valid evidence. Follow the retry budget (default two); block on exhaustion or unavailable independent verification. Defer out-of-scope findings without new work/gates. Supervisors check report scope/evidence; do not create recursive reviewers.

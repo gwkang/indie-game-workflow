@@ -4,19 +4,21 @@ description: Use when multiple game screens should share a UI component, a reusa
 ---
 
 ## Role
-Decide whether repeated UI belongs to an approved reusable family. The core rule is: reuse is a versioned, evidence-backed contract, not a visual resemblance or a convenient shared helper.
+Decide whether repeated UI belongs to an approved reusable family and maintain visible component design templates in the selected style. Reuse is a versioned, evidence-backed contract, not a visual resemblance or a convenient shared helper.
 
 ## Inputs
 - The current project's approved profile, including catalog location, supported representations, runtime adapter, evidence capabilities, presentation roles, and approval authority.
 - Current authoritative references and their fingerprints.
+- The exact selected style and motion identity when appearance is in scope; unresolved style or motion blocks new appearance templates.
 - The proposed consumers, states, accessibility requirements, and known exceptions.
 
 Keep missing values `OPEN` or `BLOCKED`. Never infer component roles, dimensions, locale, input modality, rendering technology, evidence tools, tolerances, commands, build/source identity fields, signing mechanisms, or approval identities from conventions.
 
 ## Work and handoff
-1. Resolve family identity/version, allowed inputs, protected properties and reproducible evidence capabilities.
-2. Follow [output and approval rules](references/output-contract.md) for this stage; preserve exact schemas and required coverage.
-3. Produce the catalog/decision packet under its schema; do not self-approve, design screens or implement components.
+1. Inventory actual consumer needs. Reuse compatible approved templates; add or revise only missing or incompatible components. Do not remake the library because one family is absent.
+2. Resolve identity/version, allowed inputs, protected properties and evidence capabilities. For every new or changed visible family, create representative design templates covering its required states and relevant motion from the selected style. Keep these distinct from production assets and runtime code.
+3. Follow [output and approval rules](references/output-contract.md) for this stage; preserve exact schemas and required coverage.
+4. Produce the catalog/decision packet and template evidence; do not self-approve, design screens or implement runtime components.
 
 ## Verification boundary
 Freeze artifact/revision, criteria, target and repair scope. A separate subagent verifies; the author repairs only returned in-scope failures and the verifier rechecks affected criteria. Preserve unaffected valid evidence. Follow the retry budget (default two); block on exhaustion or unavailable independent verification. Defer out-of-scope findings without new work/gates. Supervisors check report scope/evidence; do not create recursive reviewers.

@@ -8,6 +8,7 @@ Decide whether the shipped screen matches approved visual, content, state, input
 
 ## Inputs
 - Approved art direction, screen specification, mockup, handoff, and matching independent asset-review disposition.
+- The persona-derived priority, information budget, and disclosure rules recorded by the screen specification.
 - Implementation evidence and complete runtime-validation packet.
 - The implementation packet's current `Component runtime integration matrix` and the runtime packet's current `Component runtime evidence matrix`.
 - Runtime decision under the shared UI decision rules, bound to the exact build fingerprint and cited side-by-side evidence.
@@ -23,6 +24,8 @@ Review is read-only. Do not edit code, assets, documents, data, or evidence. A c
 3. Return a scoped acceptance verdict. Tests or isolated asset approval cannot substitute for composed-screen fidelity; do not change the candidate.
 
 Before judging, apply [current-state and prior-record review](../game-task-planning/references/verification-scope.md#review-the-current-state-before-alleging-a-defect): inspect relevant implementation and available wiki/decision/review records, check counterevidence, and report no findings when warranted. Do not expand scope or manufacture defects.
+
+Acceptance must include a composed-screen readability check: the primary task is visually dominant, the first-read region is apparent, secondary information is not competing in the default state, and required details remain reachable through the declared disclosure or scroll rules. Do not pass a screen merely because every component is present and individually readable.
 
 ## Verification boundary
 Freeze artifact/revision, criteria, target and repair scope. A separate subagent verifies; the author repairs only returned in-scope failures and the verifier rechecks affected criteria. Preserve unaffected valid evidence. Follow the retry budget (default two); block on exhaustion or unavailable independent verification. Defer out-of-scope findings without new work/gates. Supervisors check report scope/evidence; do not create recursive reviewers.

@@ -75,16 +75,15 @@
     {
       "id": "game-task-planning",
       "source": "skills/game-task-planning",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-16",
       "files": {
         "references/artifact-contract.md": "65d327989fad4637e5e0b33ac69cbe6a3258ded9f3d16f90e0500bd55bb9ba88",
         "references/delivery-contract.md": "99118d52d6a5ed1dde257cd81818a1eb8d0c35691cd43caa7289d02e79cce9b3",
         "references/knowledge-contract.md": "8d7e475201696a5aafa418b53f7f51fa1371203058bd624e00c44a72bd5d930e",
         "references/professional-references.md": "d0fb417a90b09689d7a70140a4d73b2296487c5467ccfe9596819e25527c3625",
-        "references/role-cards.md": "0f9439385b18cb17aafb99a4dbdba2bd0d31a4789d226719bb0859eed7d09bcd",
+        "references/role-cards.md": "e77760c3f2394dd7fcca89c5f903038765000072a0ed62c3a79698d925265bfc",
         "references/role-contract.md": "ee99ebac82be72766066e2abedb1d28bc7ed105caf8dfff499b0db80920263de",
-        "references/ui-adapter.md": "211baf5da136c8a1208fa1e6361b71d3811170b7094554b39d1115725cb0965d",
-        "references/ui-fast-iteration.md": "8c690a466ee6a5294176631ac2eb40c5c2b37239106f37df2c698ba401137dab",
+        "references/ui-adapter.md": "a427927011ef773f9d5f2db38ee57b39fa4cdb736d77d0ff5cd1f9db6cfa1eb4",
         "references/verification-scope.md": "c687c2edae39573965e8a33b90d6925092e9f57f328b466326bd91c046fa39d2",
         "SKILL.md": "fed0f91b69914c5640d1f6c57975e42b773d49871e04e8fa8c98d43a49739cee"
       }
@@ -248,16 +247,16 @@
     {
       "id": "game-ui-acceptance-review",
       "source": "skills/game-ui-acceptance-review",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
         "references/output-contract.md": "5e9aa3c0ef9f88d6054ad1b75833dfa885419d3a2af0967e78eeef28f484d4c1",
-        "SKILL.md": "c38e0e4138fa257c9f4796fe05daf77dd58d281f7e5498484e9db0f0183b025a"
+        "SKILL.md": "be7ce43adba1a2e340d88a445d3bf66918604c37ae6fdc537f75dd1d89b0d049"
       }
     },
     {
       "id": "game-ui-art-direction",
       "source": "skills/game-ui-art-direction",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
         "assets/sample-library/button-shapes/1.0.0/B01.svg": "547f57154bce35e5ef9835c829b922917a7c4f4830d724b34238fd9c17442e98",
         "assets/sample-library/button-shapes/1.0.0/B02.svg": "433e3425a7a5c09196c2516b68df9eaac37996af47c29491afe4ac6343db6d73",
@@ -275,10 +274,10 @@
         "assets/sample-library/square-motion/1.0.0/style.css": "d9b4ae3937190795e7bdbccaddeb644fda829a75fd5d29d5b826e610146f6957",
         "assets/sample-library/square-motion/1.0.0/tile.png": "bdd1e3131d11e1a4d41884022e2a36d90d3b8dd7a486fcc8acd31ec99e0c09cd",
         "references/independent-samples.md": "711526dd73e08fe972cab0299cdc4f86d7f53a9abcb1acaa6562ea1b388a04f6",
-        "references/output-contract.md": "5642d1e12a81598d0a49a28501cf3d7521bc644c2190d58746bf802d3799fb4e",
+        "references/output-contract.md": "b98bc52f8e7c0903358474e1fc98e65c68f1fce6f7620ee1b329fff3b4661906",
         "references/sample-library.md": "5b9402166e1f38a549e937a4473623b6d4e1e2f477b6fbb5997a4e8184e31f99",
         "scripts/validate_sample_library.py": "fc92de672adf2d0e3ee3171f7e4b1d2eacaf9021876372852732d5f880675136",
-        "SKILL.md": "fab99fc7cad5751f40dd9faf2ff4405610d47fe1bd5317f96ba034626bc6b273"
+        "SKILL.md": "9646f63a13dff47ff5c62c3095e1243326ad0d1a6cec7d814724e84d4230d3b1"
       }
     },
     {
@@ -293,57 +292,58 @@
     {
       "id": "game-ui-component-system",
       "source": "skills/game-ui-component-system",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
         "references/component-catalog.schema.json": "6b2e0882468edc44eb00efe5fb03e15acf1b92300b4f2a81fe8f078931d43763",
-        "references/output-contract.md": "aa37541e64c03896f61f898cf0f4f503ddd627c98e31e16136e0d2d72c6d335e",
+        "references/output-contract.md": "dded80e14d97e6b9ad1223123d7420447e702d5a452d12358c2b06ab4671cfe9",
         "scripts/validate_component_catalog.py": "0b4d0299dc528a7348cc234a65d641d5c748eb0df5473cc081f258af0e7a1765",
-        "SKILL.md": "dc5644fa404fbef9bae46eaafe5729d843d307e986ca40eca63063d5e8bd4f6a"
+        "SKILL.md": "ad0f9fd0266dd92238cace3850a49f8c346ad53062f88f3c9c86db92430f672f"
       }
     },
     {
       "id": "game-ui-handoff",
       "source": "skills/game-ui-handoff",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
         "references/output-contract.md": "1d1781572bbd5d5b767bcb72f55a2b74463ec75756d305fc43c304f460bdc413",
-        "SKILL.md": "d780777268b9c115a4409753b13a0b9e2c9da1a66c78cbd84229f909d1fe0d1d"
+        "SKILL.md": "576d0858fa728e5cd13708c9334f48cfb9a9d130477d9e690ed99724e1c28517"
       }
     },
     {
       "id": "game-ui-implementation",
       "source": "skills/game-ui-implementation",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
         "references/output-contract.md": "467f35fdd453b39bfb45b0fcd1266e9ddb23cf558b3767437ed9ea34d6954cbc",
-        "SKILL.md": "0ee554a6acf675b3aecc5d5a69b6b322ad287cff7576e8e02a76f8676dce482e"
+        "SKILL.md": "112393766eafa30fa2e41fde5476b78a242a4f33109acf2acb9327d5c8120cd9"
       }
     },
     {
       "id": "game-ui-mockup",
       "source": "skills/game-ui-mockup",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "920ea76a98832389f5305b80b5e2ffd23e7f3b2b0b5637d6662e6ff828351c8d",
-        "SKILL.md": "3884cfb1971baba6021a03d23a6ec690a657e9033dd33af943efb0b3e54b2209"
+        "references/output-contract.md": "5475cae737889691717adf575cfa6f077a0dd5731aefcca5d904a0b88728df71",
+        "SKILL.md": "165439bd74bc1e73b37c5f045c65c9bb67ecb0f59f6d41d1bdf1aabf69153394"
       }
     },
     {
       "id": "game-ui-runtime-validation",
       "source": "skills/game-ui-runtime-validation",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
         "references/output-contract.md": "5d6ed4dae2ebc6c34fcf2e8ecb420a65236f0cb46dc341ef051b34d1b470b719",
-        "SKILL.md": "7e79ece9bbf557b62c7467e0a6b03f287a85836faeff901c16c3b8a009903643"
+        "SKILL.md": "062578e166a2df5d255807dd4adf8c1c822647883aaf9aff5c808670de24c665"
       }
     },
     {
       "id": "game-ui-screen-spec",
       "source": "skills/game-ui-screen-spec",
-      "contractVersion": "2026-09-17",
+      "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "c95fb6c3ad6ef75a8024d8202b20ab879236afd64ede2020a208cde9aa311cdc",
-        "SKILL.md": "cf8cac96868224db98874d4eca95efcab15e8f127d33521d2c8db078e3b3576a"
+        "references/output-contract.md": "895411ceaf1571e4e96c3e7f9771f1147f0d794525235b041e760b2283925e57",
+        "references/persona-contract.md": "c6f94c89f1dc1cb085f16953fedc2f87e502323af77dd395ad39b95b89dba041",
+        "SKILL.md": "67704382973e20652ea686cf420d30a0c6a1de248b4744f0e1eb07624ddf9253"
       }
     },
     {

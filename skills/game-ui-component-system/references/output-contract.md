@@ -20,26 +20,27 @@ Similarity, majority usage, averaged values, shared primitives or partial eviden
 Produce one concise **Component catalog decision** containing:
 
 1. **Authority ledger** — current, supporting, superseded, conflicting, `OPEN`, and `BLOCKED` sources.
-2. **Family inventory** — proposed stable ID, semantic version, representation kind, variants, consumers, and exceptions.
+2. **Family inventory** — proposed stable ID, semantic version, representation kind, variants, consumers, exceptions, and reuse/add/revision disposition. Inventory actual needs such as buttons, frames, labels, banners or dialogs; do not create unused families to complete a generic list.
 3. **Contract** — structure, allowed instance inputs, protected properties, states, and accessibility invariants.
 4. **Adapter binding** — the project-declared implementation adapter and fallback owner.
-5. **Evidence map** — declared capabilities, protected-property coverage, landmarks or probes, and project-owned tolerances.
-6. **Compatibility** — covered presentation roles, consumers, and explicit incompatibilities.
-7. **Decision and approval** — one classification per family plus the exact artifact fingerprint and approval status.
-8. **Next route** — the smallest upstream decision or downstream owner allowed to proceed.
+5. **Component template evidence** — exact selected form/style and motion identities for each required family, including selected typography, text-density/disclosure and motion variants plus supported-language evidence and any recorded cross-family compatibility constraints; do not flatten partial selections into a globally approved style or silently restore unselected font/density defaults. Investigate compatible existing templates per family and add or revise only missing or incompatible coverage. For each required family, a compatible approved template locator and fingerprint or a new reusable design source plus preview covering required states and motion where relevant. Record the source fingerprint, allowed instance inputs and how a downstream screen reproduces each state. Show new component examples before freezing protected appearance. A screenshot or catalog description alone is not a reusable template.
+6. **Evidence map** — declared capabilities, protected-property coverage, landmarks or probes, and project-owned tolerances.
+7. **Compatibility** — covered presentation roles, consumers, and explicit incompatibilities.
+8. **Decision and approval** — one classification per family plus the exact artifact fingerprint and approval status.
+9. **Next route** — the smallest upstream decision or downstream owner allowed to proceed.
 
 Use [the catalog schema](component-catalog.schema.json) for machine-readable catalogs. Run `scripts/validate_component_catalog.py CATALOG.json PROFILE.json` to check profile, evidence coverage, identity and approval invariants across fields.
 
 ## Scope boundary
 
-- Do not design screen composition, invent product content, measure an unapproved reference, produce assets, or implement runtime components.
+- Do not design screen composition, invent product content, measure an unapproved reference, produce production assets, or implement runtime components. Component design templates are review evidence, not runtime assets.
 - Do not convert a conflicting family into a new standard by averaging values.
 - Do not approve the catalog you authored or treat approval of one version as approval of another.
 - Do not claim visual fidelity from evidence that fails to cover every protected property and required state.
 
 ## Verification and stop conditions
 
-Require source-ledger traceability for each value, an evidence capability for every protected property and approval matching the exact catalog fingerprint. Missing required authority/capability/compatibility/approval blocks implementation. After approval, route measurements to handoff, applicable representation readiness to asset production, integration to implementation, and observed drift to runtime validation/independent acceptance.
+Require source-ledger traceability for each value, an evidence capability for every protected property and approval matching the exact catalog fingerprint. Inspect every new or revised template at usable size, including relevant states and playable motion, and compare it with the selected style. Reproduce at least one instance from its declared source and allowed inputs; a preview without working reusable source is incomplete. Missing selected style, required template evidence, authority, capability, compatibility or approval blocks downstream screen composition. After approval, route measurements to handoff, applicable representation readiness to asset production, integration to implementation, and observed drift to runtime validation/independent acceptance.
 
 ## Common mistakes
 

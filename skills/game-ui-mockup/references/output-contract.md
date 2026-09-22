@@ -6,7 +6,7 @@ The rules below apply to formal mockup candidates. Exploratory editable screens 
 
 Use an available image tool only for bitmap generation/editing required by approved direction. Inspect references first; follow tool rights/editing rules.
 
-If existing assets/code-native primitives suffice, record `concept-not-required` and make deterministic production-representative composites only. Do not generate to fill a slot.
+If existing assets/code-native primitives suffice for the already selected style and component templates, record `concept-not-required` and make deterministic production-representative composites only. This flag only omits new bitmap concept generation at the mockup stage; it never waives unresolved style/motion selection or missing visible component templates. Do not generate to fill a slot.
 
 ## Candidate contract
 
@@ -19,7 +19,7 @@ Only a production-representative composite can receive mockup approval or enter 
 
 ### Component reuse fidelity
 
-Preserve bound catalog identity/version, protected properties and required states. Vary only approved screen-owned inputs and placement.
+Preserve bound catalog identity/version, reusable template source identity, visible appearance, protected properties and required states. Reuse templates for each compatible family and vary only approved screen-owned inputs and placement. Record every screen-specific exception; do not redraw a reusable control for convenience.
 
 Generated appearance may explore surroundings but never proves reuse or replaces, retouches, averages or approximates the canonical component. Helpers, screenshots and visual matches count only when the same-fingerprint catalog declares that evidence capability.
 
@@ -68,7 +68,7 @@ Return one **Mockup candidate packet** containing:
 
 ## Verification and approval
 
-- Inspect every retained image at original detail; verify dimensions, hashes, crop safety, text, data, controls, and protected-content parity.
+- Inspect every retained image at original detail; verify dimensions, hashes, crop safety, text, data, controls, protected-content parity, and visible template reuse. Compare the composed hierarchy and motion evidence with the selected style; technical fidelity alone is not a visual-quality verdict.
 - Reproduce deterministic composites and require identical output hashes.
 - Trace every visible requirement to the approved screen specification; there must be no orphan content or controls.
 - Keep every candidate `DRAFT` until its exact composite hashes have a resolved selection under the shared UI decision rules.

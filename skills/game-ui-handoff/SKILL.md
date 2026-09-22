@@ -8,7 +8,8 @@ Translate approved visual evidence into measurable geometry, ownership, scaling,
 
 ## Inputs
 - Approved `game-ui-art-direction`, `game-ui-screen-spec`, and `game-ui-mockup` artifacts.
-- The approved mockup's `Component reuse-fidelity matrix`, with a current `MATCH` row for every reusable binding.
+- The screen specification's persona-derived information priority and disclosure rules; carry them into measurable region/state ownership instead of flattening all content into simultaneous visibility.
+- The approved mockup's `Component reuse-fidelity matrix`, with a current `MATCH` row for every reusable binding, plus each selected component template's reusable source identity and allowed instance inputs.
 - Exact selected composite paths, dimensions, hashes, represented states, provenance, and resolved selection authority.
 - Protected-content and source-parity records.
 - Supported targets, safe areas, reusable components, and current implementation evidence when available.
@@ -16,7 +17,7 @@ Translate approved visual evidence into measurable geometry, ownership, scaling,
 Stop when an input is missing, stale, conflicting, or bound to a different hash.
 
 ## Work and handoff
-1. Measure approved references and transfer catalog state IDs plus mockup evidence into the binding contract.
+1. Measure approved references and transfer catalog state IDs, reusable template source identities and allowed instance inputs, plus mockup evidence into the binding contract. Preserve reusable families instead of converting them to one-off screen drawings.
 2. Follow [output and approval rules](references/output-contract.md) for this stage; preserve exact schemas and required coverage.
 3. Produce geometry, ownership and state rules with the exact binding matrix. Do not produce assets/code; unresolved bindings return to component-system.
 

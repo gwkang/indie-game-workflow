@@ -2,8 +2,6 @@
 
 Before each stage, read its rules below. Exact headers, tables, approvals and recovery routes are binding.
 
-For preliminary content/target/state work, use [fast iteration](../../game-task-planning/references/ui-fast-iteration.md). Keep the existing specification slots and unknowns; the blocking routes below prevent formal candidates, not a scoped exploratory draft. The screen-spec author still does not produce the screen.
-
 ## Source and certainty rule
 
 For every requirement, record its source and one certainty:
@@ -12,7 +10,7 @@ For every requirement, record its source and one certainty:
 - `DERIVED` — calculated from cited evidence; include the derivation and assumptions.
 - `OPEN` — not yet authorized or measurable.
 
-Authority: product owns content/behavior; art direction owns visual intent; catalog owns reusable identity/version, protected properties, states and allowed inputs. Screen-spec owns authorized consumer content/actions/placement/responsiveness. Runtime/captures evidence current behavior, not permission to preserve defects. Baked text/numbers/icons are illustrative unless another authority makes them exact.
+Authority: product owns content/behavior; art direction owns selected visual and motion language; catalog and its visible templates own reusable identity/version, protected properties, states and allowed inputs. Screen-spec owns authorized consumer content/actions/placement/responsiveness. Runtime/captures evidence current behavior, not permission to preserve defects. Baked text/numbers/icons are illustrative unless another authority makes them exact.
 
 A state/control name alone does not authorize transitions, side effects, scope, timing or recovery. Keep unspecified fields OPEN.
 
@@ -52,7 +50,7 @@ Use this row shape for inventories: `ID | visible content or action | source | s
 - Confirm every output slot is present and no downstream artifact was produced.
 - Keep the specification `DRAFT` until its decision is resolved under the shared UI decision rules. Art-direction or mockup approval alone does not approve this contract.
 
-Conflicting authorities or missing required product values need a product decision. Missing/stale/conflicting catalog decisions/fingerprints, or uncovered consumers/inputs/property changes/states, return to game-ui-component-system before mockup. Stop after the draft; only resolved, approved inputs enter the formal game-ui-mockup candidate path.
+Conflicting authorities or missing required product values need a product decision. Missing/stale/conflicting selected style or motion returns to game-ui-art-direction. Missing/stale/conflicting component templates or catalog decisions/fingerprints, or uncovered consumers/inputs/property changes/states, return to game-ui-component-system before mockup. Stop after the draft; only resolved, approved inputs enter game-ui-mockup.
 
 ## Runtime coverage map contract
 
