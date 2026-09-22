@@ -8,6 +8,8 @@ Use an available image tool only for bitmap generation/editing required by appro
 
 If existing assets/code-native primitives suffice for the already selected style and component templates, record `concept-not-required` and make deterministic production-representative composites only. This flag only omits new bitmap concept generation at the mockup stage; it never waives unresolved style/motion selection or missing visible component templates. Do not generate to fill a slot.
 
+The formal candidate contract is not reduced by preflight. Smoke captures are non-retained readiness evidence only; the packet must still contain exactly the requested candidates, every named target viewport and all required coverage rows.
+
 ## Candidate contract
 
 Produce two distinct artifact types when generation is required:

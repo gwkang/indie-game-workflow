@@ -84,6 +84,7 @@
         "references/role-cards.md": "e77760c3f2394dd7fcca89c5f903038765000072a0ed62c3a79698d925265bfc",
         "references/role-contract.md": "ee99ebac82be72766066e2abedb1d28bc7ed105caf8dfff499b0db80920263de",
         "references/ui-adapter.md": "a427927011ef773f9d5f2db38ee57b39fa4cdb736d77d0ff5cd1f9db6cfa1eb4",
+        "references/ui-fast-iteration.md": "8c690a466ee6a5294176631ac2eb40c5c2b37239106f37df2c698ba401137dab",
         "references/verification-scope.md": "c687c2edae39573965e8a33b90d6925092e9f57f328b466326bd91c046fa39d2",
         "SKILL.md": "fed0f91b69914c5640d1f6c57975e42b773d49871e04e8fa8c98d43a49739cee"
       }
@@ -228,7 +229,7 @@
       "contractVersion": "2026-09-16",
       "files": {
         "assets/run-template.md": "6ddeb36d0e755f07b0b4982e198b24f20ea85c94e8c35647a0766232273eb00c",
-        "references/execution-supervision.md": "328c8e48721e30ceb9d9897349567ef7b563b2541c3d3e9822257add11990a3b",
+        "references/execution-supervision.md": "56b5248fc054205136970b79d72178d811249a3485ef850be2aa44f327a80225",
         "references/model-routing.md": "3db0dad0379c6c759a1ce3318aacd1033d382cc0866753e7cd2aa4ed315c4176",
         "references/run-registry.md": "2d41a6c7c547bbc0926d2d97a936776b9a8807d4cfc5b8a9421f4736bae7fdd2",
         "scripts/resolve_model_route.py": "90a182d1fc966ec5c56f15a519fa635ee790122518029a546506ea02970fb68f",
@@ -323,8 +324,9 @@
       "source": "skills/game-ui-mockup",
       "contractVersion": "2026-09-12",
       "files": {
-        "references/output-contract.md": "5475cae737889691717adf575cfa6f077a0dd5731aefcca5d904a0b88728df71",
-        "SKILL.md": "165439bd74bc1e73b37c5f045c65c9bb67ecb0f59f6d41d1bdf1aabf69153394"
+        "references/formal-capture-preflight.md": "a20a9a566a5f9b4655c267069859eea5d87139548b609fb073e1eb83466fa2be",
+        "references/output-contract.md": "bd0e399695f2dbd5f2d535071bef3bd61c5a6670d05c8a0b1576852b814f8f3a",
+        "SKILL.md": "e361c768cb9c5a41208482a2de5f0fe50ed86979a78fd29e42eb1f6ccf1e8294"
       }
     },
     {
