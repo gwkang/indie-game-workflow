@@ -1,5 +1,5 @@
 {
-  "bundleVersion": "0.9.4-playful-motion",
+  "bundleVersion": "0.9.5-ux-audit",
   "status": "published-source",
   "skills": [
     "indie-game-development",
@@ -28,6 +28,7 @@
     "game-test-design",
     "game-workflow",
     "game-workflow-supervision",
+    "game-workflow-audit",
     "art-asset-review",
     "game-ui-acceptance-review",
     "game-ui-art-direction",
@@ -38,6 +39,7 @@
     "game-ui-mockup",
     "game-ui-runtime-validation",
     "game-ui-screen-spec",
+    "game-ui-ux-design",
     "game-knowledge-maintenance"
   ],
   "installationImplemented": true,

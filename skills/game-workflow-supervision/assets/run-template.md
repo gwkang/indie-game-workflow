@@ -24,9 +24,14 @@ Use `clear`, `needs-clarification` or `resolved`. Silence does not resolve a dec
 Keep this short; update it at dispatch/return/repair and before context compaction. Link history rather than copying it. On resume verify it against current files, input identities and active workers before dispatch.
 
 - Goal revision / authorized outcome / current slice and acceptance IDs:
+- Authority cursor: latest explicit user turn or event / superseded decision IDs / resumed branches / still-deferred branches:
+- Checkpoint revision or last-incorporated event ID:
 - Current candidate and relevant input revisions / target runtime and reference roles:
+- Current candidate digest / drift from the last frozen candidate:
 - Active task IDs, owners and stable read/write/resource boundaries:
 - Current verdict and evidence locators / leading blocker and exact next owner/action:
+- Structural-design trigger: `required`, `not-required` or `unresolved` / owner, rationale and decision revision:
+- Formal UI UX prerequisite: affected screen/task IDs / resolved decision ID and revision plus separate verification, or exact compatible approved reuse and unchanged-scope evidence / blocked consumers when missing:
 - Failure-lineage IDs with remaining attempts / run time-token budget and progress since last checkpoint:
 - Last reconciliation time / uncertain or stale facts:
 
@@ -47,6 +52,20 @@ Use [the bounded verification rules](../../game-task-planning/references/verific
 | --- | --- | --- | --- | --- | --- |
 
 Out-of-scope observations create no task or gate. A necessary change beyond authority blocks only dependent criteria pending explicit scope authorization. Keep unchanged criteria and still-valid evidence across retries.
+
+For audits and status reports, label each finding `confirmed-defect`, `recording-gap`, `operational-risk` or `efficiency-loss`. An older checkpoint conflicting with later explicit user steering is a recording gap pending reconciliation, not evidence of unauthorized work. Candidate movement inside an owned active attempt is normal; only affected evidence becomes stale until the candidate is frozen and rechecked. A finding alone creates no task, gate, edit, retry or blocker.
+
+## Optional workflow audit
+
+Use only for an event-driven shadow audit selected under the supervision contract. Omit this section when no audit is justified.
+
+| Audit ID/event | Trigger and expected benefit | Run/task/candidate and source revisions | Actual consumed skills and adjacent handoffs | Read/excluded scope | Time/token/slot budget and stop condition | Auditor executor / state / actual cost | Output locator |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+| Finding ID/class | Observation/evidence | Leading cause layer/confidence/alternatives | Existing contract comparison | Impact | Owner/disposition | Limited-improvement eligibility/proposal locator |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Cause layer is one of `product`, `environment-tooling`, `evidence-recording`, `execution-handoff` or `skill-contract`. Disposition is `observe-only`, `return-to-owner` or `limited-improvement-proposal`. A proposal remains advice until a separately authorized authoring task exists. Record auditor, author and verifier as different executor IDs; the verifier checks the original case and an unrelated compatible burden/regression case. Do not use static or walkthrough evidence as proof of product quality or realized time savings.
 
 ## Supervisor assignments
 | Assignment/plan revision | Executor/role card | Task set and read/write/resource boundary | Remaining shared retry budget | Previous owner stopped / retirement / activation evidence | Inherited results and input/criterion validity |
