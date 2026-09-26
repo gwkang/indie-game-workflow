@@ -45,6 +45,19 @@ Use only these results:
 - `DRIFT` — evidence exists but a protected property, state, identity, fingerprint, or allowed-input boundary differs. Reject that composite.
 - `BLOCKED` — required binding, fingerprint, canonical representation, state, evidence capability, or protected-property evidence is absent, stale, or conflicting. Do not claim fidelity or select the composite.
 
+### Selection scope and readiness
+
+Before asking for selection, define the candidate's **selection scope** as the exact surface/state families and targets that the decision would make selectable. Bind that scope to one candidate fingerprint covering its manifest and exact composite hashes; identify affected, unchanged and expressly excluded surfaces. A finding for one dialog, state or target never widens the selection scope or promotes the rest of a full-screen candidate.
+
+The author packet and a separate verifier each report both outcomes below for the same fingerprint and selection scope. The author records its own evidence and outcome; the verifier independently inspects the retained originals and records a separate outcome rather than inheriting the author's conclusion. Use `PASS`, `FAIL` or `INCONCLUSIVE` for each outcome and each materially distinct surface in scope, then derive the scope-local aggregate:
+
+- `CONTRACT_COMPLIANCE` — verify exact region geometry or an authorized tolerance; every required control's identity and control kind; every visible string's product or screen authority; required state, phase and focus truth; and component protected-property evidence. A passive label cannot satisfy a required control, viewport containment cannot satisfy exact geometry, and an art-direction, catalog, fixture or debug token cannot satisfy visible-copy authority.
+- `VISUAL_DECISION_READINESS` — make a positive, evidence-linked judgment at original detail for task focus, hierarchy, density and empty-space balance, type roles, material realization, control affordance, state distinction and target-specific response. Deterministic hashes, counts, bounds, clipping, glyph coverage and mere visibility may support this judgment but cannot establish it.
+
+Byte identity to a rejected, unselected, exploratory, `DRAFT` or otherwise unapproved historical candidate proves only unchanged pixels and any still-applicable technical evidence; it never confers positive visual readiness. A prior visual-readiness verdict may be reused only for an exact selected or approved baseline when the baseline surface/composite fingerprint and selection authority are cited, the surface scope is unchanged, and an explicit impact proof shows that the current change does not alter visual style, layout, copy, control kind or other judged visual properties. In that compatible case, rerun only affected contract evidence and validate the impact proof; do not require new imagery, alternate layouts or another user decision solely because nonvisual technical evidence changed.
+
+Any `FAIL`, `INCONCLUSIVE`, missing surface, missing independent outcome, stale or mismatched fingerprint, or selection-scope mismatch makes only the affected requested scope `DRAFT_NOT_SELECTABLE`. Keep unaffected or expressly excluded scope unchanged; do not use a surface-local `PASS` to promote a broader candidate. These readiness outcomes establish eligibility to enter the shared UI decision rules, not selection or approval by themselves.
+
 - Build prompts and compositions only from approved inputs; label each reference as composition, style, subject, or edit target.
 - Produce exactly the requested candidate count and every target viewport named by the screen specification. Do not infer one target from another.
 - Show one identified representative state per image. A candidate does not prove states it does not show.
@@ -63,10 +76,11 @@ Return one **Mockup candidate packet** containing:
 2. exact prompt or deterministic composition procedure, with reference roles and the concise pre-composition layout decision for each materially different family
 3. screen-spec compliance matrix mapping each required region, content family, and represented state to visible evidence
 4. component reuse-fidelity matrix for every reusable binding
-5. observed defects, rejected candidates, and intentional differences
+5. selection scope bound to the exact candidate fingerprint, followed by the author's separate `CONTRACT_COMPLIANCE` and `VISUAL_DECISION_READINESS` outcomes and evidence for each materially distinct surface
+6. observed defects, rejected candidates, and intentional differences
    - For a revision of an existing screen, include a same-target, same-content/state comparison with the available current or approved reference for layout, readability, hierarchy, and interaction affordances. Label the reference's authority and limitations; an old implementation is evidence, not automatic design authority. Explain any material regression or approved departure instead of silently passing it.
-6. provenance, hashes, and current/superseded status
-7. selection record under the shared UI decision rules; include a question only for a remaining required user decision
+7. provenance, hashes, and current/superseded status
+8. selection record under the shared UI decision rules; include a question only for a remaining required user decision
 
 ## Scope boundary
 
@@ -80,6 +94,7 @@ Return one **Mockup candidate packet** containing:
 
 - Inspect every retained image at original detail; verify dimensions, hashes, crop safety, text, data, controls, protected-content parity, and visible template reuse. Compare the composed hierarchy and motion evidence with the selected style; technical fidelity alone is not a visual-quality verdict.
 - Judge settled-state legibility and visual hierarchy separately from counts and clipping: inspect whether content, controls, empty space, backdrop visibility, and target-specific scale support the intended task. Record an evidence-linked finding or an explicit no-finding verdict for each affected surface. If a material visual regression is unexplained, keep the candidate `DRAFT` and not selectable even when all technical probes pass; return structural incompatibility to game-ui-component-system and screen-owned layout/content conflicts to game-ui-screen-spec.
+- The separate verifier must reproduce the declared selection scope and candidate fingerprint, then report its own `CONTRACT_COMPLIANCE` and `VISUAL_DECISION_READINESS` outcomes under the rules above. Missing or mismatched scope, identity or surface coverage fails closed as `DRAFT_NOT_SELECTABLE` for that requested scope; do not collapse the two outcomes into one readiness label.
 - Reproduce deterministic composites and require identical output hashes.
 - Trace every visible requirement to the approved screen specification; there must be no orphan content or controls.
 - Keep every candidate `DRAFT` until its exact composite hashes have a resolved selection under the shared UI decision rules.

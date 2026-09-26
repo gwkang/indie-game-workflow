@@ -1,6 +1,6 @@
 {
   "lockVersion": 1,
-  "bundleVersion": "0.9.5-ux-audit",
+  "bundleVersion": "0.9.6-quality-gates",
   "entries": [
     {
       "id": "indie-game-development",
@@ -75,13 +75,13 @@
     {
       "id": "game-task-planning",
       "source": "skills/game-task-planning",
-      "contractVersion": "2026-09-24",
+      "contractVersion": "2026-09-26",
       "files": {
-        "references/artifact-contract.md": "7cd98ab1ff4667310490a7db25822503b10360d04709e7b968e1ed9e94589ed2",
+        "references/artifact-contract.md": "077a4d7ce49a6023ff429035a2ca7b459a1712dca1bf57069e4d64e95d20d598",
         "references/delivery-contract.md": "99118d52d6a5ed1dde257cd81818a1eb8d0c35691cd43caa7289d02e79cce9b3",
         "references/knowledge-contract.md": "8d7e475201696a5aafa418b53f7f51fa1371203058bd624e00c44a72bd5d930e",
         "references/professional-references.md": "d0fb417a90b09689d7a70140a4d73b2296487c5467ccfe9596819e25527c3625",
-        "references/role-cards.md": "5e618ef941e20b0fca4c68081521d6d38415a5db9de34a6288ea4be304638d77",
+        "references/role-cards.md": "cb802cec9a2518d9c506a9147b175f7f636207b1112fe3454a5db66d32f9baa1",
         "references/role-contract.md": "ee99ebac82be72766066e2abedb1d28bc7ed105caf8dfff499b0db80920263de",
         "references/ui-adapter.md": "0fae758af6310da7612ccfeca8e3661d7543a8d48d0b3e899d497ea3d28e9ae6",
         "references/ui-fast-iteration.md": "3fe5162609428108a4c91b037cfa78ac9ee819a8e56766416e1f7c957925c45a",
@@ -226,23 +226,23 @@
     {
       "id": "game-workflow-supervision",
       "source": "skills/game-workflow-supervision",
-      "contractVersion": "2026-09-24",
+      "contractVersion": "2026-09-26",
       "files": {
-        "assets/run-template.md": "06aa77910295e7fb391fe60abc07965af3c13c20360dac267df97ae5c9076ba5",
-        "references/execution-supervision.md": "6d2cac61310800c00cfdb770e444a5fa91ba767f8d60fb547f36773eb8493070",
+        "assets/run-template.md": "8a73283a946975b7ce815f8bdb92342de7dc96a55b9d57f94043b99ebffa4f8c",
+        "references/execution-supervision.md": "0ac980a987aa84bce8b163a75faeac6664757356851e5da6a38fec10df5b9a31",
         "references/model-routing.md": "3db0dad0379c6c759a1ce3318aacd1033d382cc0866753e7cd2aa4ed315c4176",
         "references/run-registry.md": "2d41a6c7c547bbc0926d2d97a936776b9a8807d4cfc5b8a9421f4736bae7fdd2",
         "scripts/resolve_model_route.py": "90a182d1fc966ec5c56f15a519fa635ee790122518029a546506ea02970fb68f",
-        "SKILL.md": "1e2cf4e8955b640183b4c40a33e999ce4784f32de8cf6c1d3b9615fbac85aa40"
+        "SKILL.md": "dc99d2a8588fade84084f9250bb003bf86017dc23fa6bef5fab34f24851c1631"
       }
     },
     {
       "id": "game-workflow-audit",
       "source": "skills/game-workflow-audit",
-      "contractVersion": "2026-09-24",
+      "contractVersion": "2026-09-26",
       "files": {
-        "references/output-contract.md": "f1ccd2e0d53f0da41e3465c967a90e59778cdc2e3fc6bd1e6656accfcccc8e16",
-        "SKILL.md": "3ce6dcdcc331b41bb1c3ac919865c005dd3b7fd5077d2fbcf3312d24a902d310"
+        "references/output-contract.md": "90e8f2d2059451677a1f876b63210c03154ab9ab213cfe400f4351b68393a66e",
+        "SKILL.md": "8b6ba9c2de5f83a5a3e5fd3046f7ca3e620f5bb4a80390a34acb45dd5bdfd134"
       }
     },
     {
@@ -266,7 +266,7 @@
     {
       "id": "game-ui-art-direction",
       "source": "skills/game-ui-art-direction",
-      "contractVersion": "2026-09-24",
+      "contractVersion": "2026-09-26",
       "files": {
         "assets/sample-library/button-shapes/1.0.0/B01.svg": "547f57154bce35e5ef9835c829b922917a7c4f4830d724b34238fd9c17442e98",
         "assets/sample-library/button-shapes/1.0.0/B02.svg": "433e3425a7a5c09196c2516b68df9eaac37996af47c29491afe4ac6343db6d73",
@@ -283,11 +283,11 @@
         "assets/sample-library/square-motion/1.0.0/motion.js": "4a6d8391c83f6f0b8c2572e7de7dc56ee078efffeb858731faf3de99187a567b",
         "assets/sample-library/square-motion/1.0.0/style.css": "d9b4ae3937190795e7bdbccaddeb644fda829a75fd5d29d5b826e610146f6957",
         "assets/sample-library/square-motion/1.0.0/tile.png": "bdd1e3131d11e1a4d41884022e2a36d90d3b8dd7a486fcc8acd31ec99e0c09cd",
-        "references/independent-samples.md": "711526dd73e08fe972cab0299cdc4f86d7f53a9abcb1acaa6562ea1b388a04f6",
-        "references/output-contract.md": "b98bc52f8e7c0903358474e1fc98e65c68f1fce6f7620ee1b329fff3b4661906",
+        "references/independent-samples.md": "455423c969728b523afda6a0516182a0f7e5c7eb458357a46a4eac63f737e296",
+        "references/output-contract.md": "20bbfe370e84a52c2f3cc073e8b0391cb09c5afd18d820255767e370ecacc3ff",
         "references/sample-library.md": "5b9402166e1f38a549e937a4473623b6d4e1e2f477b6fbb5997a4e8184e31f99",
         "scripts/validate_sample_library.py": "fc92de672adf2d0e3ee3171f7e4b1d2eacaf9021876372852732d5f880675136",
-        "SKILL.md": "a3e7d522bb4a89fad4269cf6afa586eb286f12216080d7877a3b0bfada5ac28d"
+        "SKILL.md": "666555dc3f529e59ea89d799be28c78e7b5411a4e04d0359e4d3cfa228bdf4b4"
       }
     },
     {
@@ -331,10 +331,10 @@
     {
       "id": "game-ui-mockup",
       "source": "skills/game-ui-mockup",
-      "contractVersion": "2026-09-24",
+      "contractVersion": "2026-09-26",
       "files": {
         "references/formal-capture-preflight.md": "9e61b4d2c68eb8dd24b1b06ba924f442dd1b680d31b7e581b4a9e5bce2306cda",
-        "references/output-contract.md": "5a796ccd738d320c10d233454a79cb7e75bbfd37cad4303634b15031f007f345",
+        "references/output-contract.md": "02bf521835b5c7d9cd4b7d43f04d155d7b96e8571104a71d2007e59ce8718810",
         "scripts/validate_capture_preflight.py": "9d499297b814e365970b8ccf7d3e06ad4bb315c0ab0a151ce02085eb5e534cc9",
         "SKILL.md": "3c9bde9fd8983f1f87f01a9591bdf05d5d527cd810e25ded85030b346cf3a195"
       }

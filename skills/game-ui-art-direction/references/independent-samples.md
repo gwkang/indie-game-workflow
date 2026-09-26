@@ -43,19 +43,37 @@ Density is a choice, not an automatic preference for minimal text. Compare equiv
 
 ## 5. Check sufficiency before requesting selection
 
-Inspect all retained form samples at their intended size and actually play their motion evidence. Check:
+Inspect all retained form samples at original detail for every intended target and actually play their motion evidence. Freeze the option IDs/revisions, artifact fingerprints and exact decision/selection scope, then run two distinct checks.
+
+**Comparison integrity** checks whether the evidence supports a fair decision:
 
 - Every required family and consequential unresolved axis has usable, materially different alternatives; cosmetic recolors, tiny corner changes and speed-only motion variants cannot cover a major unresolved choice.
 - Each applicable family/style/event has replayable evidence or an explicit justified no-motion scope. The difference in onset, emphasis and recovery is observable.
 - Actual content, font and language coverage support the density/typography comparison; unsupported glyphs and lost meaning are failures, not tradeoffs to conceal.
-- Craft is sufficient for an informed choice: edges, spacing, type hierarchy, optical balance, state distinction and motion recovery are deliberate and readable. Source/hash parity alone does not establish this.
 - A requested family or axis can be revised independently, with unaffected selections preserved. IDs, source, provenance and comparison conditions are clear.
 
-If options do not expose the meaningful decision, repair or add focused alternatives before asking the user to choose. The independent verifier evaluates this same scope; author preference does not substitute for its evidence.
+**Visual craft readiness** checks whether any option is good enough to choose, using evidence-linked qualitative judgments rather than a numeric aesthetic score:
+
+- The player's current task has a clear focal path, with information and actions ordered by consequence rather than merely present.
+- Typography has deliberate display, reading, data and status roles where those roles exist; size changes alone do not prove hierarchy.
+- Density and empty space support scanning and emphasis, and dominant visual regions carry enough meaningful content or intentional rest to justify their weight.
+- Representative states change focus appropriately instead of relying only on generic dimming, color swaps or disabled styling.
+- Modal composition supports its decision task without accidental imbalance, competing hierarchy or unexplained dead space where a modal is in scope.
+- Each intended target preserves the hierarchy, rhythm, legibility and focus; a clean single target cannot cover materially different targets.
+
+Record `COMPARISON_INTEGRITY` and `VISUAL_CRAFT_READINESS` separately for the same candidate fingerprint and full selection scope. Distinctness, content presence, hashes, glyph/clipping checks and successful motion playback support integrity but cannot substitute for craft evidence. If no option passes craft readiness, return `DRAFT_REVISION_REQUIRED` with bounded repair findings; do not force a least-bad choice. The independent verifier evaluates this same identity and scope; author preference does not substitute for its evidence.
 
 Record selection, rejection and unresolved choices by family and axis. Separately assess compatibility of selected colors, optical weights, type hierarchy and motion behavior across families; incompatible mixes need an explicit adjustment proposal, not silent replacement or automatic global reselection. This can use focused comparisons and does not require a full-screen mockup. Only authorized selections proceed to investigation of compatible existing templates and addition of missing coverage. Sample files do not become approved templates by being reusable code.
 
+For an exact selected or approved baseline whose change is proven nonvisual, preserve the still-valid visual judgment and inspect only the impact proof. Do not regenerate alternatives or reopen selection solely because code, metadata or another nonvisual property changed.
+
+## Full-screen expansion preflight
+
+Isolated family, form and motion evidence follows the bounded checks above and does not trigger a whole-screen preflight. When the requested direction instead expands into a costly full-screen multi-state/target packet, or follows a prior whole-screen visual-quality rejection, use the [representative craft preflight](output-contract.md#representative-craft-preflight-and-expansion) before producing the remaining coverage. Freeze only the smallest applicable high-risk states and target classes; there is no fixed sample count. A separate verifier inspects the original-detail evidence. Preflight `PASS` authorizes expansion only, while an art-direction-owned failure returns for bounded revision and an unchanged upstream constraint returns to its named owner without consuming the art-direction retry budget.
+
 ## Optional reference links
+
+For the high-risk full-screen scope above, first reuse an exact compatible selected or canonical visual authority when available; a strong selected canonical reference needs no external search. When none exists, or a previous whole-screen direction was rejected for visual quality, choose only bounded project, canonical, professional or genre references that could change the decision, or record why extra reference evidence is unnecessary. This conditional grounding does not require a user URL, network access or an external source, and it does not authorize copying a reference's assets, features, wording or layout.
 
 When presenting style, component or motion choices, explicitly offer an optional URL field alongside candidate selection. For example: "Choose a candidate, request a focused revision, or optionally add a reference URL. For a link, you may indicate its scope and what to study or avoid; you can continue without one." This is a selection prompt/option-map input, not a requirement to implement a new product form. Scope can be the shared visual language, one family, a form or other variation axis, or a particular motion event. Record supplied scope and desired/avoided elements; if omitted, propose a narrow interpretation for review rather than treating the whole reference as desired.
 

@@ -26,7 +26,7 @@
 | game-project-profile / profile@1 | profile-template의 적용 가능한 공통 설정·실제 명령·기존 기준 참조 | 정확성·충분성·조회 용이성 확인; 미정 값은 의존 작업만 차단 |
 | game-feature-spec / specification@1 | feature-spec-template의 의도·상태·수용 기준·보존 조건 | proposed/unresolved에 의존하는 구현 차단 |
 | game-workflow-supervision, 세 indie-game 진입 / run@1 | run-template의 작업·사건·검증·수용·최종 상태 | 미충족 필수 기준은 완료 불가 |
-| game-workflow-audit / workflow-audit@1 | 감사 trigger/비용·run/task/candidate revision·실제 소비 스킬/인접 handoff·범위/한도; 4종 finding과 5종 원인 계층·근거/계약 비교/owner; 제한 개선 eligibility·최소 변경/제외/원래 사례와 무관 사례 검사/비용·rollback | 읽기 전용 shadow 결과이며 자동 task/gate/edit/완료 판정이 아님. 별도 권한의 author와 auditor·author 모두와 다른 verifier 없이는 개선으로 소비하지 않음 |
+| game-workflow-audit / workflow-audit@1 | 필수 T1–T4/선택 회고·사건/계보/기준/입력 revision·실배정/비용·현재 경로/범위/한도; 4종 finding과 5종 원인 계층·근거/계약 비교·owner/다음 행동/성공 관측; eligibility·고정 후보/보호 평가·원래/비공개 유사/정상 사례 비교·비용·scoped rollback·규칙/행동/실작업 효과 상태 | 읽기 전용 결과이며 자동 task/gate/edit/완료 판정이 아님. 필수 사건 실행 보류는 supervisor 계약 소유. 기존 권한의 별도 author와 auditor·author 모두와 다른 verifier 없이 개선 채택 불가; 후보 부적격/inconclusive도 다음 관측·교정 owner 반환 |
 | game-task-planning / plan@1 | run-template Tasks/Acceptance: 소유자·입출력·의존·읽기/쓰기·자원·join | 입력/실행자/양식 미정은 해당 dispatch 차단 |
 | game-technical-design / design@1 | technical-design-template: 현 코드·선택 이유·계약·실패·검증·인계 | 중대한 결정 미정은 담당자에게 반환 |
 | game-improvement-assessment / assessment@1 | 기준선 후보/환경·관측·가설·대안/비용·보존 조건·비교 기준; 의도 ID/출처/confirmed-proposed-delegated-unresolved/선택 이유 | 위임 출처와 선택 결과 없이 제안을 구현 범위로 소비하지 않음; 비교 조건이 다르면 inconclusive |

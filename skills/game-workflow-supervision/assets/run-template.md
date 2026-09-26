@@ -55,17 +55,27 @@ Out-of-scope observations create no task or gate. A necessary change beyond auth
 
 For audits and status reports, label each finding `confirmed-defect`, `recording-gap`, `operational-risk` or `efficiency-loss`. An older checkpoint conflicting with later explicit user steering is a recording gap pending reconciliation, not evidence of unauthorized work. Candidate movement inside an owned active attempt is normal; only affected evidence becomes stale until the candidate is frozen and rechecked. A finding alone creates no task, gate, edit, retry or blocker.
 
-## Optional workflow audit
+## Workflow audit events and follow-up
 
-Use only for an event-driven shadow audit selected under the supervision contract. Omit this section when no audit is justified.
+Use for required T1–T4 events and optional retrospectives under the supervision contract. Omit when there is no relevant event; record an evaluated exception as `not-applicable` with its reason.
+
+| Event ID / prior event | Required T1–T4 or optional / evidence or exception reason | Lineage / criteria / input revisions | State | Pending reason / next resource check / dispatch acknowledgement | Held retry or promotion / remaining shared budget |
+| --- | --- | --- | --- | --- | --- |
+
+States: `not-applicable`, `pending`, `running`, `completed`, `inconclusive`. Reuse an existing event for duplicate notices/resumption; link a new recurrence after applied correction. Cost cannot waive required dispatch; missing resources remain pending. Preserve repair/run budgets across audits.
 
 | Audit ID/event | Trigger and expected benefit | Run/task/candidate and source revisions | Actual consumed skills and adjacent handoffs | Read/excluded scope | Time/token/slot budget and stop condition | Auditor executor / state / actual cost | Output locator |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
-| Finding ID/class | Observation/evidence | Leading cause layer/confidence/alternatives | Existing contract comparison | Impact | Owner/disposition | Limited-improvement eligibility/proposal locator |
+| Finding ID/class | Observation/evidence | Leading cause layer/confidence/alternatives | Existing contract comparison | Impact | Owner/disposition; next changed action/success observation/retry condition | Limited-improvement eligibility/proposal locator |
 | --- | --- | --- | --- | --- | --- | --- |
 
-Cause layer is one of `product`, `environment-tooling`, `evidence-recording`, `execution-handoff` or `skill-contract`. Disposition is `observe-only`, `return-to-owner` or `limited-improvement-proposal`. A proposal remains advice until a separately authorized authoring task exists. Record auditor, author and verifier as different executor IDs; the verifier checks the original case and an unrelated compatible burden/regression case. Do not use static or walkthrough evidence as proof of product quality or realized time savings.
+Cause layer is one of `product`, `environment-tooling`, `evidence-recording`, `execution-handoff` or `skill-contract`. Disposition is `observe-only`, `return-to-owner` or `limited-improvement-proposal`. A proposal remains advice until an authorized authoring task exists; no eligible proposal leaves other owner actions visible. Inconclusive returns identify missing observation and owner. Record auditor, author and verifier as different executor IDs and apply the [candidate evaluation contract](../../game-workflow-audit/references/output-contract.md#candidate-evaluation-and-adoption).
+
+| Skill candidate / baseline / exact delta | Author / independent evaluator / protected criteria and raw locators | Original / held-out / normal comparison and cost | Adopt/hold/withdraw / scoped rollback | Rule application / behavioral test / real-work effect states and evidence |
+| --- | --- | --- | --- | --- |
+
+Keep observed, estimated and unmeasured costs distinct. Actual dispatch/return/action evidence is required for behavioral claims; static checks and walkthroughs do not prove them. Real-work follow-up records event/action/result/recurrence/cost; no eligible event is `unobserved`.
 
 ## Supervisor assignments
 | Assignment/plan revision | Executor/role card | Task set and read/write/resource boundary | Remaining shared retry budget | Previous owner stopped / retirement / activation evidence | Inherited results and input/criterion validity |

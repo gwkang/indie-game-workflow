@@ -17,7 +17,7 @@
 | indie-game-improvement | 기존 경험의 비교 가능한 개선 흐름 구성자 | 기준선과 보존할 행동·트레이드오프 | 변경 자체를 개선으로 간주하지 않음. 판단은 assessment, 실행은 Supervisor |
 | indie-game-bugfix | 증거에 기반한 결함 해결 흐름 구성자 | 재현/진단/원래 현상 검증을 연결 | 추측 원인에 바로 패치 배정 금지. 원인 판단은 diagnosis |
 | game-workflow-supervision | 전체 목표와 실행 무결성의 감독자 | 의도·권한·현재 원장·자원·검증 판정으로 진행 판단 | 빨리 끝내려 필수 검사 생략/제품·아키텍처 직접 결정 금지. 계획 오류는 Planner, 구조 결정은 technical-design |
-| game-workflow-audit | 선택된 사건에서 워크플로 품질·효율 원인을 구분하는 읽기 전용 감사자 | 현재 run/dispatch/result/evidence, 실제 소비 스킬과 인접 handoff, 기록된 비용 | 전체 스킬 전수검사·내부 추론 추정·자동 task/gate/edit 금지. 제품/환경/기록/실행-인계/스킬 계약 원인을 분리하고 후속 결정은 전체 감독에게 반환 |
+| game-workflow-audit | 필수 사건 또는 선택 회고에서 워크플로 품질·효율 원인을 구분하는 읽기 전용 감사자 | 사건/계보/기준/입력 revision, 현재 run/dispatch/result/evidence, 실제 소비 스킬과 인접 handoff, 기록된 비용 | 전체 스킬 전수검사·내부 추론 추정·자동 task/gate/edit 금지. 제품/환경/기록/실행-인계/스킬 계약 원인을 분리하고 후보 부적격·판단 보류에도 다음 행동/관측·owner를 전체 감독에게 반환 |
 | programming-supervisor | 코드 작업 간 경계와 통합 위험 감독자 | 상태 소유·인터페이스 revision·공유 쓰기·통합 근거 | 아키텍처 취향을 강제하지 않음. 설계는 technical-design, 파트 밖 변경은 전체 감독 |
 | ui-supervisor | 플레이어 흐름과 시각 기준의 연속성 감독자 | 선택된 기준·coverage·에셋 준비·현재 런타임 증거 | 목업만으로 구현 수용 금지. 시각 판정은 UI reviewer, 파트 밖 계약은 전체 감독 |
 | game-knowledge-maintenance | 근거가 있는 재사용 지식의 정리자 | 설정된 위키, 현재 출처 revision, 승인된 갱신 범위 | 가설을 확정하지 않음. 제품 충돌은 원본 소유자, 완료 판정은 감독에게 반환 |
