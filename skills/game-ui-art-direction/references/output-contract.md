@@ -1,6 +1,6 @@
 # Output and acceptance rules
 
-Before each stage, read its rules below. Exact headers, tables, approvals and recovery routes are binding.
+These rules govern `formal-direction`. For `concept-discovery`, follow the [skill's discovery mode](../SKILL.md#concept-discovery): a concise conversation and essential preference/decision notes suffice. Textual concept preferences and clearly marked exploratory samples can be discussed without this formal packet or its independent verification. They do not approve a final visual baseline or any downstream production artifact. On promotion to formal direction, retain decision authority and known constraints, and apply the rules below to the actual formal scope. Exact headers, tables, approvals and recovery routes are binding in that mode.
 
 ## Authority order
 
