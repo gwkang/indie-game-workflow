@@ -12,6 +12,9 @@ Revision: <revision>. Keep only applicable rows, translate prose into the artifa
 | communication.artifactLanguage | Omit unless different from preferredLanguage | |
 | workflowRunRegistryPath | Exact project-relative path when stateful workflow reuse is supported | |
 | modelRoutingProfilePath | Exact project-relative mapping when capability-tier model routing is supported | |
+| workflow.smallChangePolicyPath | Omit unless the project explicitly selects a bounded small-change policy; exact policy locator | Project authority |
+
+When selected, link the project's contract/evidence tool from that policy and apply the [small-change contract](../../game-task-planning/references/small-change.md). Collect locators only; creating this profile does not activate a policy or grant tool/commit/publication authority.
 
 ## Optional knowledge settings
 

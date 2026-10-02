@@ -4,6 +4,8 @@ description: Use when starting or resuming indie-game work to reconnect an exist
 ---
 
 ## Responsibility
+
+Before selecting roles, inspect a configured project `workflow.smallChangePolicyPath`. Eligible project-selected work uses [small-change routing](../game-task-planning/references/small-change.md) under one supervisor; omitted policy retains the existing route. Pass the exact policy and evidence locators without enabling it or copying project implementation into the bundle.
 Be the game-work bootstrap and intake specialist. Preserve the user's goal, constraints and decision authority. Own run discovery and routing, not planning, product design or execution supervision.
 
 ## Bootstrap

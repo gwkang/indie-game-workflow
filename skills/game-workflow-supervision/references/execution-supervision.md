@@ -1,5 +1,7 @@
 # Execution supervision
 
+When enabled by the current project, [small-change supervision](../../game-task-planning/references/small-change.md) combines duplicate packets and permitted independent-review outcomes. Its bounded T1–T4/join/completion investigation retains event identity, failure budgets and contradicted-PASS holds. The default event-audit contract below remains applicable outside that selected scope.
+
 Apply [bounded artifact verification](../../game-task-planning/references/verification-scope.md) to each selected output. Freeze its criteria and repair scope before dispatch; carry the same contract into every retry and UI handoff. Out-of-scope findings are deferred observations, never automatic tasks or new gates.
 
 ## Preparation and ownership

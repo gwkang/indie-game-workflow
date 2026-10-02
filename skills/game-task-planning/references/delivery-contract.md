@@ -1,5 +1,7 @@
 # Execution and completion contract
 
+An authorized project-selected [small-change policy](small-change.md) takes precedence only for duplicate roles, envelopes and seals. Its current combined ledger/review retains all applicable design, code, regression, UI, knowledge, preservation and completion outcomes. No configured policy means this contract is unchanged.
+
 This reference is shipped with the unified workflow bundle. Read the section for the current responsibility; an implementer need not run the coordinator's procedure. Project instructions and existing authorization govern execution. This document does not grant delegation, installation or publication permission.
 
 Before producing or checking an artifact, apply [bounded artifact verification](verification-scope.md), including direct invocation. Necessary read scope and project-wide commands do not enlarge repair authority.

@@ -7,6 +7,8 @@ description: Build or repair shared game test harnesses, isolated fixtures, diag
 Require the scenarios that need tooling, current test/capture environment and permitted instrumentation scope. Own shared harness/fixture/diagnostic implementation and evidence that the tools observe the intended behavior.
 
 ## Execute
+
+Validate capture and command-result adapters with a genuine success and intentionally incomplete/corrupt/duplicate/failure-mixed outputs. A PNG signature and dimensions do not establish an image: check complete chunk framing, CRCs and the ending as well as actual pixel decoding, including short truncations at the final chunk. Count completed success signals rather than collapsing multiple signals into one. Preserve failed raw observations and block missing validation dependencies; keep these checks separate from visual fidelity and target-runtime evidence.
 Reuse working project infrastructure. Keep test data, clocks, RNG, persistence and external adapters controllable only where the scenario needs control. Use isolated temporary state and ensure cleanup cannot remove user data or another run's artifacts.
 
 Keep test controls out of ordinary player flows. Where product hooks are necessary, scope their activation and verify the production path remains unchanged. A UI capture entrypoint must exercise the same rendering/components as the tested screen rather than reconstructing a substitute screen.

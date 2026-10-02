@@ -4,6 +4,8 @@ description: Supervise a routed stateful or multi-stage indie-game run from clar
 ---
 
 ## Role and inputs
+
+For an explicitly selected project small-change policy, apply the [combined ownership/evidence contract](../game-task-planning/references/small-change.md) before the duplicate-role and packet requirements below. Combine only permitted outcomes, preserve independence and failure holds, and retain formal UI/unresolved decision gates. The policy's bounded T1–T4/completion review may use the same independent reviewer; it cannot let the author review the disputed work.
 The main agent is the one overall supervisor. Own the run registry, execution record, clarification state and control decisions; specialists own product documents, code and quality verdicts. Read the routing decision, selected flow, request authority, project profile and any current plan. A plan may be pending during specification or clarification. Use [execution rules](references/execution-supervision.md), [run registry contract](references/run-registry.md) and [the run template](assets/run-template.md). When a dispatch tool can select a model, also apply [capability-tier model routing](references/model-routing.md).
 
 Ask game-task-planning for missing dependencies, scopes and output contracts. Do not substitute your architectural preference for a specialist decision. Input/acceptance uncertainty returns to its owner. Existing UI work follows its available skills and actual approval/coverage contracts.
