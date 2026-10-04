@@ -1,6 +1,6 @@
 # Indie Game Workflow
 
-버전 `0.9.8-small-change`. 게임 개발 28개와 UI 11개를 **한 묶음의 39개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다. `game-ui-art-direction`에는 대화형 콘셉트 탐색과 정식 방향 제작을 구분하는 계약, 독립 검증된 선택용 모션·버튼 형태 샘플 라이브러리가 포함됩니다.
+버전 `0.9.9-code-evidence`. 게임 개발 28개와 UI 11개를 **한 묶음의 39개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다. `game-ui-art-direction`에는 대화형 콘셉트 탐색과 정식 방향 제작을 구분하는 계약, 독립 검증된 선택용 모션·버튼 형태 샘플 라이브러리가 포함됩니다.
 
 ## 구성과 사용
 
@@ -52,3 +52,9 @@ python -B -m unittest discover -s tests -v
 ## 프로젝트 선택형 작은 변경
 
 프로젝트가 `workflow.smallChangePolicyPath`를 명시적으로 선택하면 [작은 변경 계약](skills/game-task-planning/references/small-change.md)에 따라 조정자·작성자·실제 별도 리뷰어와 하나의 현재 증거 목록으로 중복 역할/양식을 통합할 수 있습니다. 설계·코드·실패 경계·회귀·UI·지식·완료 및 실패 조사 결과는 유지합니다. 미정 제품/구조와 정식 아트는 전문 경로를 유지하며, 정책이 없는 프로젝트의 기존 계약은 바꾸지 않습니다. 프로젝트 정책·도구·위키·실행 기록은 번들에 포함하거나 자동 생성하지 않습니다. 역할 통합 및 도구 검증은 실작업 시간 절감이나 게임 품질의 증거가 아닙니다.
+
+## 코드 리뷰와 실행 증거
+
+[코드 리뷰](skills/game-code-review/SKILL.md)는 현재 후보·호출자·테스트 기대값·실패 경로와 반증을 확인하고, 실제 결함과 선택 조언을 구분합니다. [Lua/Python 지침](skills/game-task-planning/references/language-coding.md)은 변경된 언어에만 적용하며 프로젝트의 실제 지원 버전과 관례를 우선합니다.
+
+공통 실행기나 구조화된 완료 출력을 사용하는 프로젝트는 [실행 증거 계약](skills/game-task-planning/references/execution-evidence.md)에 따라 후보 cwd·입력·실행기 신원, 인코딩·timeout, 완료 schema/type/count와 실행별 raw 분리를 검증합니다. 엔진·명령·timeout 값과 실행 도구 구현은 프로젝트가 관리합니다. 이 배포는 범용 지침과 번들 무결성에 관한 것으로 실제 게임 품질·기기 실행·시간 절감의 검증을 뜻하지 않습니다.

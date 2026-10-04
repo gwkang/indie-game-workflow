@@ -10,6 +10,8 @@ Before producing or checking an artifact, apply [bounded artifact verification](
 
 Apply this section even when an implementation skill is invoked directly. Inspect the affected existing code, callers, tests and project conventions before editing; preserve unrelated changes. Read the relevant profile/project verification commands, not commands from another game. If a required command is unknown, determine it from the project or record the blocked check.
 
+For changed Lua or Python code, apply the relevant [language coding guidance](language-coding.md) during implementation; confirm supported versions and select only affected behavior checks. This shared path also covers assigned scripts, tests and adapters without adding unrelated style migrations or tools.
+
 Use these coding decisions only where the assigned change touches them; apply them within the existing implementation/review, without a new document or gate:
 - **Responsibility:** group behavior that protects the same state or changes for the same reason. Split a function/class when unrelated policy and I/O obscure that responsibility; do not split merely to meet a size rule.
 - **Encapsulation:** keep objects valid at creation and through updates. Expose only necessary operations; do not return mutable internals that let callers bypass invariants. Use read-only views, snapshots or explicit ownership transfer as appropriate, without forcing copies in hot paths.

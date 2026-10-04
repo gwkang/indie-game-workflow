@@ -16,6 +16,8 @@ Read necessary guideline dependencies once and pass exact locators/revisions plu
 
 Use one current evidence list for candidate/input identity, actor acknowledgements, commands, raw stdout/stderr, exit/timeout, actual completed names/counts, applicable artifacts and original/save preservation. Preflight and exit zero are insufficient for PASS. Reject zero, missing, incomplete, duplicated or failed completion signals, stale captures and changed inputs. PNG evidence must have complete chunks/ending and valid CRCs plus decodable pixels; a dimension header or decoder alone is insufficient. Keep dependency failures blocked rather than silently skipping validation.
 
+When the project uses a common native runner or structured completion adapter, apply [execution evidence](execution-evidence.md) for candidate working-directory and input isolation, executable/runner identity, encoding/timeouts, exact schema/count validation and fresh raw attempts. The project retains its implementation and configured values.
+
 Preserve unsuccessful attempts and the shared failure/retry budget. A new candidate invalidates affected results and links the old record as history. Review binds to the same candidate and current evidence; a later check changes the evidence identity and requires the same reviewer to refresh the affected conclusion. A record hash is consistency evidence, not authentication or proof of test meaning.
 
 ## Impact, failure and completion

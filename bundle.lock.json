@@ -1,6 +1,6 @@
 {
   "lockVersion": 1,
-  "bundleVersion": "0.9.8-small-change",
+  "bundleVersion": "0.9.9-code-evidence",
   "entries": [
     {
       "id": "indie-game-development",
@@ -75,19 +75,23 @@
     {
       "id": "game-task-planning",
       "source": "skills/game-task-planning",
-      "contractVersion": "2026-09-30",
+      "contractVersion": "2026-10-04",
       "files": {
         "references/artifact-contract.md": "077a4d7ce49a6023ff429035a2ca7b459a1712dca1bf57069e4d64e95d20d598",
-        "references/delivery-contract.md": "d9b038accd5ff8581925c206546c09e857e280f29e873159a50035438ddac916",
+        "references/code-quality-lua.md": "a65a6c1ed34393ae6f4e8577ea01b0c086d3c9925e7b4a57352a2edd0b607cd9",
+        "references/code-quality-python.md": "31d9e7a0518c654cf2344ccd541652585ff102eacfdd0933d62afd7586905beb",
+        "references/delivery-contract.md": "47c0c911b0b8a23e3e6345182202e461d144af9ce1c4f9bcabf71c198615224d",
+        "references/execution-evidence.md": "f70bfbbddedb613627f96481ca93e2eb8863cc414a92084d791fca0a6ea6eb78",
         "references/knowledge-contract.md": "8d7e475201696a5aafa418b53f7f51fa1371203058bd624e00c44a72bd5d930e",
+        "references/language-coding.md": "bea601af2b017ff9dcb5304b16233b1d404b9bdf8d3ecb51d6df2eb43b90adee",
         "references/professional-references.md": "d0fb417a90b09689d7a70140a4d73b2296487c5467ccfe9596819e25527c3625",
         "references/role-cards.md": "cb802cec9a2518d9c506a9147b175f7f636207b1112fe3454a5db66d32f9baa1",
         "references/role-contract.md": "fc39e9fb97c97dd390c61c643b2c1d99d6bf65f7cea3896aa6da6d4ce74e626a",
+        "references/small-change.md": "908e96f59d43487b71e5c117ae7ee118a2a79e0e026c4f8158475f55ce95cf4e",
         "references/ui-adapter.md": "1ef519c32564ab433f0a039e47acb257d05989a41da1f5b9e757f205b25120c9",
         "references/ui-fast-iteration.md": "3fe5162609428108a4c91b037cfa78ac9ee819a8e56766416e1f7c957925c45a",
         "references/verification-scope.md": "c687c2edae39573965e8a33b90d6925092e9f57f328b466326bd91c046fa39d2",
-        "SKILL.md": "f4ef820b739b0af80f65ebb09b0028ef025cf7371a896b444c3744225ca40bcc",
-        "references/small-change.md": "d2df1cf333ac9a8432f77cb57309a43d0ec3421766dbedeaff6e98011c7ef366"
+        "SKILL.md": "f4ef820b739b0af80f65ebb09b0028ef025cf7371a896b444c3744225ca40bcc"
       }
     },
     {
@@ -109,9 +113,9 @@
     {
       "id": "game-code-review",
       "source": "skills/game-code-review",
-      "contractVersion": "2026-09-13",
+      "contractVersion": "2026-10-04",
       "files": {
-        "SKILL.md": "495cdb57ec722451074826f0a91d230209778bc41235d2b06c4993d988372094"
+        "SKILL.md": "a0bdca14437a64c58899fbdf4bd1887b4fcfef7493071de17c35c1678062b8cf"
       }
     },
     {
@@ -168,9 +172,9 @@
     {
       "id": "game-test-infrastructure",
       "source": "skills/game-test-infrastructure",
-      "contractVersion": "2026-09-13",
+      "contractVersion": "2026-10-04",
       "files": {
-        "SKILL.md": "1e44b0a531cf3d45bdeac48d88d36764003c5e3e11581a7ffc06bb814dcfee10"
+        "SKILL.md": "c6a1f1978f4450b87a29df9efab566d173a699ebfdfa78036d713630a05cc21f"
       }
     },
     {
@@ -323,10 +327,10 @@
     {
       "id": "game-ui-implementation",
       "source": "skills/game-ui-implementation",
-      "contractVersion": "2026-09-24",
+      "contractVersion": "2026-10-04",
       "files": {
         "references/output-contract.md": "467f35fdd453b39bfb45b0fcd1266e9ddb23cf558b3767437ed9ea34d6954cbc",
-        "SKILL.md": "046bf3995bb5ab6d2aaa0fc5ab45fe913e5238e3fa24354d3cc72c35cf33190c"
+        "SKILL.md": "74ca9ffd4ebd1ab9f2477280f2ba16658b659937fd172a5d78c18c07fd5947e9"
       }
     },
     {

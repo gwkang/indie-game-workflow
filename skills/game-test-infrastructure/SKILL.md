@@ -8,6 +8,8 @@ Require the scenarios that need tooling, current test/capture environment and pe
 
 ## Execute
 
+For common native runners and structured completion adapters, apply [execution evidence](../game-task-planning/references/execution-evidence.md). Bind actual commands and input/runner identities, reject malformed or incomplete completion, and preserve isolated raw attempts without treating tool validation as product acceptance.
+
 Validate capture and command-result adapters with a genuine success and intentionally incomplete/corrupt/duplicate/failure-mixed outputs. A PNG signature and dimensions do not establish an image: check complete chunk framing, CRCs and the ending as well as actual pixel decoding, including short truncations at the final chunk. Count completed success signals rather than collapsing multiple signals into one. Preserve failed raw observations and block missing validation dependencies; keep these checks separate from visual fidelity and target-runtime evidence.
 Reuse working project infrastructure. Keep test data, clocks, RNG, persistence and external adapters controllable only where the scenario needs control. Use isolated temporary state and ensure cleanup cannot remove user data or another run's artifacts.
 
