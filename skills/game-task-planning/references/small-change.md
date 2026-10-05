@@ -27,3 +27,11 @@ Select checks from actual impact: core behavior, storage/failure/cancel/retry, r
 The same independent reviewer may cover normal join/completion retrospective and bounded T1–T4 investigation when the selected project policy explicitly combines them. Retain the cause lineage, budget and holds on retries/promotions that depend on a contradicted PASS. If that reviewer authored the disputed work or lacks the required specialist competence, dispatch a distinct reviewer for that boundary. Investigation remains read-only and creates no edit or acceptance authority; a skill change still separates auditor, author and evaluator.
 
 Integrate required knowledge deltas and confirm candidate/original/save preservation before completion. Report local/static, target-runtime, device and publication evidence separately. Measure observable stage spans and command durations without inventing prior or internal costs. A regression suite or smaller role count does not establish real-work time savings. Existing user pauses and separate commit/push/deploy permissions remain in force.
+
+## Concise current checkpoint
+
+Keep one current checkpoint in the existing run with the selected unit, observed state, root-applied version, candidate/evidence locator, next owner and remaining cause budget. Refresh it at assignment, return, failure, repair and completion; preserve history rather than adding duplicate reports or seals. Distinguish the original checkout from the reviewed candidate. A read-only projection is optional project tooling and does not authorize completion or retry.
+
+Compare an exact expected ID set with the actual consumed set when a transformation can lose coverage. Record each producer/consumer and source fingerprint; counts alone cannot detect a missing ID replaced by another or duplicates. Identity agreement does not prove fixture semantics or runtime behavior. Keep current and historical frontiers distinct and have their meaning reviewed independently.
+
+Read the exact actor acknowledgement and selected JSON fields needed for the decision. Mark truncation and missing/non-object fields; a preview is not full-document consumption. Observe design/authoring starts when they occur and connect later stage spans to those locators. Missing pre-init time remains unmeasured.
