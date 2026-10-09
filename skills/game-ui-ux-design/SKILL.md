@@ -13,6 +13,7 @@ For a new formal screen or a material change to task flow, information hierarchy
 - Read the user's goal, approved product behavior, actual content/action boundaries, supported targets and input paths, and current screen evidence if one exists. A preliminary source-backed content/target/state record may help but a formal screen specification is not a prerequisite.
 - Trace the primary player task and likely interruption, error, cancel, and return paths. Distinguish observed player evidence from design inference; never invent user research, personas, product rules, or new controls.
 - Choose the information grouping, scan order, action priority, progressive disclosure, feedback, and overflow strategy that make the task understandable at the target scale. Compare materially different structures when the evidence does not settle the choice; give a reasoned recommendation, not a generic checklist.
+- Apply the [player-facing copy rules](../game-task-planning/references/ui-adapter.md#플레이어-문구) to decide which text is needed, its priority and when it appears. Preserve decision-critical and accessible information; hand final wording to the assigned copy author and screen-spec owner.
 - Follow the [UX decision and handoff contract](references/output-contract.md). Return unresolved product behavior to game-feature-spec, selected visual treatment to game-ui-art-direction, reusable control structure to game-ui-component-system, exact content/state/responsive rules to game-ui-screen-spec, and composition to game-ui-mockup.
 
 ## Boundaries

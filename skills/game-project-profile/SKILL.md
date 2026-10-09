@@ -14,5 +14,11 @@ Give other skills one quick source for applicable engine/version, 2D/3D, platfor
 
 For requested wiki integration, apply the [knowledge setup/adoption contract](../game-task-planning/references/knowledge-contract.md): own the five profile settings and exact locators, coordinate the actual index/policy and source-backed content with their owner, and verify consumer lookup before reporting integration complete. A profile flag alone does not establish working integration.
 
+## Project dashboard setup
+
+During authorized workflow adoption/setup, connect the [project dashboard](../game-workflow-supervision/references/dashboard.md) to this project's display name, profile, run registry and optional actual development-scope list. Record `workflow.dashboardPath`, `workflow.dashboardConfigPath` and the init/update/open commands in the profile. Generate the default project-owned dashboard unless the user has explicitly excluded it. Missing development scope is unknown; do not invent game goals to populate a progress number. Existing settings are preserved. Read-only consultation is not adoption authority.
+
 ## Shared contract
 Apply [role, language and bounded verification](../game-task-planning/references/role-contract.md). Use the profile-specific metadata placement in the shared output rules; keep the settings body concise.
+
+For authorized adoption of the [state tool](../game-workflow-supervision/references/run-state.md), record `workflow.stateToolPath` and the exact existing registry locator. Link an explicitly selected `workflow.smallChangePolicyPath` only after its owner/user has chosen it; do not invent or enable another project's policy. New JSON records and legacy Markdown use the same dashboard. These settings connect the chosen workflow and do not authorize product changes or migration of existing runs.

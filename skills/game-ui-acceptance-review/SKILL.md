@@ -27,6 +27,8 @@ Before judging, apply [current-state and prior-record review](../game-task-plann
 
 Acceptance must include a composed-screen readability check: the primary task is visually dominant, the first-read region is apparent, secondary information is not competing in the default state, and required details remain reachable through the declared disclosure or scroll rules. Do not pass a screen merely because every component is present and individually readable.
 
+Include the [player-facing copy rules](../game-task-planning/references/ui-adapter.md#플레이어-문구) in the existing independent acceptance review. Assess all retained text in the assigned screen/states for necessity, semantic accuracy, intuitive wording and understanding without author explanation. Text-fit or functional PASS alone is insufficient. Use existing findings/evidence fields and preserve candidate/coverage/approval rules; hold only affected acceptance when required copy is ambiguous or unreviewed.
+
 ## Verification boundary
 Freeze artifact/revision, criteria, target and repair scope. A separate subagent verifies; the author repairs only returned in-scope failures and the verifier rechecks affected criteria. Preserve unaffected valid evidence. Follow the retry budget (default two); block on exhaustion or unavailable independent verification. Defer out-of-scope findings without new work/gates. Supervisors check report scope/evidence; do not create recursive reviewers.
 

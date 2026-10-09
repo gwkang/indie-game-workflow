@@ -28,6 +28,8 @@ Before judging, apply [current-state and prior-record review](../game-task-plann
 
 For each representative runtime state, verify that the primary task and first-read region are discoverable without scanning every panel, that secondary content is disclosed according to the screen contract, and that text/controls do not create avoidable density or competition. Record a failure when the implementation is functionally correct but violates the persona-derived information priority.
 
+Apply the [player-facing copy rules](../game-task-planning/references/ui-adapter.md#플레이어-문구) to the assigned visible text in its actual screen/state. Record necessity, semantic accuracy, intuitive wording and understanding in screen context through the existing observations/evidence, separately from clipping/font/text-fit. Missing or ambiguous required wording prevents the affected coverage from passing; return it to its author without repairing it.
+
 ## Verification boundary
 Freeze artifact/revision, criteria, target and repair scope. A separate subagent verifies; the author repairs only returned in-scope failures and the verifier rechecks affected criteria. Preserve unaffected valid evidence. Follow the retry budget (default two); block on exhaustion or unavailable independent verification. Defer out-of-scope findings without new work/gates. Supervisors check report scope/evidence; do not create recursive reviewers.
 

@@ -1,6 +1,6 @@
 {
   "lockVersion": 1,
-  "bundleVersion": "0.9.11-balance-preflight",
+  "bundleVersion": "0.9.12-dashboard-state-copy",
   "entries": [
     {
       "id": "indie-game-development",
@@ -34,7 +34,7 @@
         "assets/profile-template.md": "c0f5c8be0eff5059e3c67f0dfbcd3f80ecbdcba884721371ab53a657b2074749",
         "references/artifact-language.md": "0c0626ac7406e1202f949d685bda08480810427b052d563a70f2279a9fdd8e9a",
         "references/profile-contract.md": "4160a89d1b621e95506af72cf87ea64e6534f11b368028a57c854feeb9bd6182",
-        "SKILL.md": "d85aca0ae6ecc6b217e38453c8fe009b8b413d38e864ca947d1681ba9c48e175"
+        "SKILL.md": "7c195006e81bee0eedd909702aaa6b2bfcd1f04c1ca7f2757d18ce1767fc15f2"
       }
     },
     {
@@ -88,7 +88,7 @@
         "references/role-cards.md": "cb802cec9a2518d9c506a9147b175f7f636207b1112fe3454a5db66d32f9baa1",
         "references/role-contract.md": "fc39e9fb97c97dd390c61c643b2c1d99d6bf65f7cea3896aa6da6d4ce74e626a",
         "references/small-change.md": "ebf7ea1c938fd4e512e39000d1b871e0ac5ea3f8122f27946aa73a03fbe164da",
-        "references/ui-adapter.md": "1ef519c32564ab433f0a039e47acb257d05989a41da1f5b9e757f205b25120c9",
+        "references/ui-adapter.md": "6bcd881d87d31d29da7224edd7584fe63351ede4393038edd29fb3ce4910ad9d",
         "references/ui-fast-iteration.md": "3fe5162609428108a4c91b037cfa78ac9ee819a8e56766416e1f7c957925c45a",
         "references/verification-scope.md": "c687c2edae39573965e8a33b90d6925092e9f57f328b466326bd91c046fa39d2",
         "SKILL.md": "f4ef820b739b0af80f65ebb09b0028ef025cf7371a896b444c3744225ca40bcc"
@@ -225,7 +225,7 @@
         "assets/routing-template.md": "48668022f93be7262769c04434523800d89fa369b61e7f7ff730313e4164708a",
         "references/workflow-run-registry.schema.json": "9878e2bc17c06692884dcd14f9397942d0116eab5d3f7d78f1dfc4c1db389cd2",
         "scripts/workflow_run_registry.py": "457caddeddf42ed019a9ffa65dee47bb29434f0709e18e3413c9985aa9c256e1",
-        "SKILL.md": "dc28a2838ce4faaed6b5761aebda18f68aec4f2c5dfffb9f2fc0aed330d88f74"
+        "SKILL.md": "ddbe46aef0b90c5f8dac69aa7f43a7c37841e4b5b7831582a02afeac213d5375"
       }
     },
     {
@@ -233,12 +233,20 @@
       "source": "skills/game-workflow-supervision",
       "contractVersion": "2026-09-30",
       "files": {
+        "assets/dashboard/app.js": "79d99fe9b3f54c2b0f958f2fe855c680d066e163183df7de727de56736588058",
+        "assets/dashboard/index.html": "a47bb273ce5a9c0b4b6b3caf015a247d97a00130a49141a53a95086e0598ca59",
+        "assets/dashboard/style.css": "293d1a2a52899272e9f60b7a486565155234fd23bd9e75693add4d6610c8b701",
         "assets/run-template.md": "8a73283a946975b7ce815f8bdb92342de7dc96a55b9d57f94043b99ebffa4f8c",
+        "references/dashboard.md": "4bbdbcaff0bc4030e94c61de43c96fdc098b7842f58a008827902d1ae338db8a",
         "references/execution-supervision.md": "ee2774dee1f6fe3f0a432984e1271eb96f2b204621f73b13f4c9f4a63eb4af70",
         "references/model-routing.md": "3db0dad0379c6c759a1ce3318aacd1033d382cc0866753e7cd2aa4ed315c4176",
-        "references/run-registry.md": "2d41a6c7c547bbc0926d2d97a936776b9a8807d4cfc5b8a9421f4736bae7fdd2",
+        "references/run-registry.md": "0537acad1341cd3f3f4bb199c9805a1edc82c37c2c9bd3a62dad448544caa2a8",
+        "references/run-state.md": "dc6944d347df3c682cf6df359647d949a261d4fd07ab46977d992902cee017b5",
+        "references/ui-supervision.md": "f3c9a08402fe9c85476a5d0551396fb330bafd52b172089876dc861edcf703da",
+        "scripts/dashboard.py": "ebe148ca85d7907f2a57ffff8ff28650fcc8693cd4164eef0e8a20bbe8bebaef",
         "scripts/resolve_model_route.py": "90a182d1fc966ec5c56f15a519fa635ee790122518029a546506ea02970fb68f",
-        "SKILL.md": "7b74ccbb30ff8d7d86067e33e258b4f666ba3695f3498aab82376aaaa810696f"
+        "scripts/workflow_state.py": "46ca05f0976d06d1a3cc38c42a4bc68444b23e8dfe34aa4f9ccd0ce7937216e8",
+        "SKILL.md": "bfebd351bede048e689d4cf658a9d348c10bef94b0a7d8145a58dd6bdf74d996"
       }
     },
     {
@@ -265,7 +273,7 @@
       "contractVersion": "2026-09-12",
       "files": {
         "references/output-contract.md": "5e9aa3c0ef9f88d6054ad1b75833dfa885419d3a2af0967e78eeef28f484d4c1",
-        "SKILL.md": "be7ce43adba1a2e340d88a445d3bf66918604c37ae6fdc537f75dd1d89b0d049"
+        "SKILL.md": "3416b28a33364f672ed468d9cc50b4cdb149ccdd944dadd740400878368f9a08"
       }
     },
     {
@@ -330,7 +338,7 @@
       "contractVersion": "2026-10-04",
       "files": {
         "references/output-contract.md": "467f35fdd453b39bfb45b0fcd1266e9ddb23cf558b3767437ed9ea34d6954cbc",
-        "SKILL.md": "74ca9ffd4ebd1ab9f2477280f2ba16658b659937fd172a5d78c18c07fd5947e9"
+        "SKILL.md": "21b615ce03d6fede1abec2853ddd6624dfe459de4dfdcb77a0beef698b9f5cd0"
       }
     },
     {
@@ -350,7 +358,7 @@
       "contractVersion": "2026-09-12",
       "files": {
         "references/output-contract.md": "5d6ed4dae2ebc6c34fcf2e8ecb420a65236f0cb46dc341ef051b34d1b470b719",
-        "SKILL.md": "062578e166a2df5d255807dd4adf8c1c822647883aaf9aff5c808670de24c665"
+        "SKILL.md": "6016fa3572b2e3f0f88b3ac5f68c928dc8747e8ffa736c62c3b324231e9bcce6"
       }
     },
     {
@@ -358,9 +366,9 @@
       "source": "skills/game-ui-screen-spec",
       "contractVersion": "2026-09-24",
       "files": {
-        "references/output-contract.md": "8df40f53b7415a870403273e26722f1d058d70f6340fc1cdbdbd362edcf7c132",
+        "references/output-contract.md": "b02090f32763e3dba7f07b28261fea3fd610caae61b4e7a23723cbfa8fa994ee",
         "references/persona-contract.md": "c6f94c89f1dc1cb085f16953fedc2f87e502323af77dd395ad39b95b89dba041",
-        "SKILL.md": "85b3c675868e6a5255e85f97b9cf1900e627ef21e6478754a01b47e4e44830a4"
+        "SKILL.md": "bcc346ac59f1e89f1994f795cc7c8de555cca47e882a815e58575735a451ebf7"
       }
     },
     {
@@ -369,7 +377,7 @@
       "contractVersion": "2026-09-24",
       "files": {
         "references/output-contract.md": "04d985bb9b9701e69c85f6bb7e13ec815c74c67e345a97c037acee1ba47b008f",
-        "SKILL.md": "f1690f45663e99b12c9ff010e641459370e1c20c3fdec16c7dc9b9875526f2bb"
+        "SKILL.md": "3077cf5de9f035c48edb59cc561bf2f43ed2d194e14b7b620ad3f1622f27e163"
       }
     },
     {

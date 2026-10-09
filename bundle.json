@@ -1,5 +1,5 @@
 {
-  "bundleVersion": "0.9.11-balance-preflight",
+  "bundleVersion": "0.9.12-dashboard-state-copy",
   "status": "published-source",
   "skills": [
     "indie-game-development",
@@ -49,5 +49,7 @@
     "transactionalRunnerImplemented": false,
     "allArtifactTemplatesImplemented": false,
     "runtimeDiscovery": "verified-18-of-18-2026-09-15"
-  }
+  },
+  "dashboardImplemented": true,
+  "workflowStateImplemented": true
 }

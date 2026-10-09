@@ -22,6 +22,7 @@ Record unavailable required inputs as `OPEN` or `BLOCKED`. Do not replace them w
 ## Work and handoff
 1. Translate the UX decision's task flow and priorities into sourced visible content, state, input and responsive rules; trace exact reusable bindings. Return a UX-structure conflict to game-ui-ux-design rather than silently redesigning the flow.
 2. Make the resolved UX priorities and their persona evidence explicit in a small information-priority contract: primary task, first-read region, secondary/disclosed content, maximum simultaneous groups, and state-specific visibility. Do not treat a complete content inventory as a requirement to show everything at once or silently redesign the UX hierarchy.
+   Apply the [player-facing copy rules](../game-task-planning/references/ui-adapter.md#플레이어-문구): consume the authorized wording and visibility decisions, trace them to product meaning, and return unclear or unauthorized rewrites to their owner.
 3. Follow [output and approval rules](references/output-contract.md) for this stage; preserve exact schemas and required coverage.
 4. Produce the screen contract and runtime coverage map. Keep required design approval separate from changing implementation evidence; do not invent thresholds or downstream work.
 

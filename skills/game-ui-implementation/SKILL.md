@@ -8,6 +8,8 @@ Implement the contract for the selected mode. Preserve approved gameplay and int
 
 For code changes in any selected mode, apply [implementation completion](../game-task-planning/references/delivery-contract.md#implementation-completion), including the relevant [Lua/Python guidance](../game-task-planning/references/language-coding.md) when applicable. Keep the selected mode's existing ownership and verification scope.
 
+For player-visible text in any selected mode, apply the [player-facing copy rules](../game-task-planning/references/ui-adapter.md#플레이어-문구). Implement the resolved wording and visibility conditions. Include newly necessary explanations in the same copy review; return unresolved meaning or protected-copy changes to the current owner. Keep source preparation limited to its declared component content.
+
 ## Playable functional interface
 For an agreed gameplay slice before final visual polish, consume the recorded code-impact decision (or make it within a directly invoked bounded task) and implement the smallest product UI that exposes approved player actions, live state and outcomes in the target runtime. Use the current gameplay/interaction contract, real data and target/input constraints; reuse existing controls or provisional code-native components. Keep presentation replaceable and record deferred visual choices. Resolve consequential layout, hit-area and state decisions early enough to avoid rebuilding the interaction code during polish. This mode may bind live content and input, unlike bounded source preparation below.
 

@@ -32,5 +32,11 @@ Skills are instructions read by the executing agent, not function calls. Resolve
 
 For optional project knowledge, pass configured index/policy locators during intake under the [knowledge contract](../game-task-planning/references/knowledge-contract.md). Distinguish installation-only requests from requested wiki integration using its setup/adoption rules; missing settings alone do not authorize creation, and must not silently downgrade an authorized integration to installation only.
 
+For a configured `workflow.stateToolPath`, pass its exact locator to supervision. New adopted runs use its canonical JSON and derived current checkpoint; existing Markdown runs keep their current owner and record. A status question or consultation does not authorize creation, migration or setup.
+
+## Project dashboard
+
+For an adopted project, check its project-owned dashboard at intake/resume using the [dashboard contract](../game-workflow-supervision/references/dashboard.md). If missing, route authorized initial generation to profile/setup; preserve existing settings and verify the project binding. Dashboard generation is a default workflow result unless the user explicitly excludes it in project adoption. Do not ask the user to supply the project root: the installed tool discovers its owning project. Consultation does not by itself authorize setup or mutation.
+
 ## Required contracts
 Apply [role, output, language and independent verification rules](../game-task-planning/references/role-contract.md) even for direct invocation. Read only your role card and output type.
