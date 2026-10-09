@@ -11,14 +11,16 @@ Revision: <revision>. Keep only applicable rows, translate prose into the artifa
 | communication.preferredLanguage | ko unless explicitly overridden | User preference or workflow default |
 | communication.artifactLanguage | Omit unless different from preferredLanguage | |
 | workflowRunRegistryPath | Exact project-relative path when stateful workflow reuse is supported | |
-| modelRoutingProfilePath | Exact project-relative mapping when capability-tier model routing is supported | |
+| modelRoutingProfilePath | Optional explicit override mapping; common host-default model decision is always required | |
+| workflow.requirementsPath | Exact required preparation manifest; default planning/workflow-requirements.json | [Required preparations](../../game-workflow-supervision/references/mandatory.md) |
+| workflow.roadmapPath | Required development list; preserve unknown scope | |
 | workflow.smallChangePolicyPath | Omit unless the project explicitly selects a bounded small-change policy; exact policy locator | Project authority |
 
 When selected, link the project's contract/evidence tool from that policy and apply the [small-change contract](../../game-task-planning/references/small-change.md). Collect locators only; creating this profile does not activate a policy or grant tool/commit/publication authority.
 
-## Optional knowledge settings
+## Required knowledge settings
 
-When enabled, record `knowledge.enabled`, stable `knowledge.projectName`, `knowledge.root` (`<project-name>-wiki/`), `knowledge.indexPath` and `knowledge.policyPath`. Keep exact project-relative locators here; source authority, write policy and checks stay in the referenced project policy. Omit this section for projects without integration. Follow the [knowledge contract](../../game-task-planning/references/knowledge-contract.md); do not migrate an existing wiki while collecting settings.
+During authorized workflow setup, record `knowledge.enabled`, stable `knowledge.projectName`, `knowledge.root` (`<project-name>-wiki/`), `knowledge.indexPath` and `knowledge.policyPath`. Keep exact project-relative locators here; source authority, write policy and checks stay in the referenced project policy. Missing integration is required preparation. Set enabled=true and connect source-backed content. Follow the [knowledge contract](../../game-task-planning/references/knowledge-contract.md); do not migrate an existing wiki while collecting settings.
 
 ## Commands
 

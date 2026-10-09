@@ -63,3 +63,6 @@ Record which candidate was observed and how stability was maintained. Before/aft
 Record one assembled source/configuration identity and maintain Stable verification inputs while observing it. Run applicable integration/functional verification and project-required final gates on that identity. Reuse evidence only when its inputs remain valid. Apply Code review for code changes and the existing UI/specialist acceptance gates where relevant. Keep unrelated gate failures separate but do not call the full gate green.
 
 After a repair or integration edit, recheck the affected evidence on the new candidate before acceptance. Report accepted, ready for required review, blocked or unverified according to actual results and the project's authority. Local packaging or successful review does not authorize external release.
+
+## Required workflow preparations
+Before affected product implementation and final acceptance, apply the [seven-preparation contract](../../game-workflow-supervision/references/mandatory.md). Knowledge, per-dispatch model decision, exact development item and all four actual applicable quality outcomes are required. Pending/unsupported preparation is not optional or PASS; preserve unrelated scopes and report maintenance completion separately from product readiness.

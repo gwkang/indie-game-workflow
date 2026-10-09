@@ -18,7 +18,7 @@ def load_profile(path):
     data = json.loads(Path(path).read_text(encoding="utf-8"))
     if not isinstance(data, dict) or not {"schemaVersion", "revision", "tiers"} <= set(data):
         raise ProfileError("profile requires schemaVersion, revision and tiers")
-    if data["schemaVersion"] != 1 or not isinstance(data["revision"], str) or not data["revision"]:
+    if type(data["schemaVersion"]) is not int or data["schemaVersion"] != 1 or not isinstance(data["revision"], str) or not data["revision"]:
         raise ProfileError("unsupported model-routing profile")
     if not isinstance(data["tiers"], dict) or set(data["tiers"]) != set(TIERS):
         raise ProfileError("profile must define exactly the four capability tiers")
@@ -36,6 +36,8 @@ def load_profile(path):
 
 
 def resolve(profile, tier, available_models, override_supported, explicit_model=None):
+    if tier not in TIERS:
+        raise ProfileError("unknown capability tier")
     available = set(available_models)
     if explicit_model:
         if not override_supported:
@@ -49,6 +51,13 @@ def resolve(profile, tier, available_models, override_supported, explicit_model=
         return {"decision": "override", "capabilityTier": tier, "reasoningClass": None,
                 "resolvedModel": explicit_model, "resolutionSource": "explicit-user",
                 "overrideSupported": True, "fallbackReason": None}
+
+    if profile is None:
+        return {"decision": "host-default", "capabilityTier": tier,
+                "reasoningClass": None, "resolvedModel": "host-default",
+                "resolutionSource": "common-host-default",
+                "overrideSupported": bool(override_supported),
+                "fallbackReason": "common-policy-preserves-host-selection"}
 
     row = profile["tiers"][tier]
     if not override_supported:
@@ -71,14 +80,14 @@ def resolve(profile, tier, available_models, override_supported, explicit_model=
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("profile", type=Path)
+    parser.add_argument("profile", type=Path, nargs="?")
     parser.add_argument("--tier", choices=TIERS, required=True)
     parser.add_argument("--available-model", action="append", default=[])
     parser.add_argument("--override-supported", action="store_true")
     parser.add_argument("--explicit-model")
     args = parser.parse_args()
     try:
-        result = resolve(load_profile(args.profile), args.tier, args.available_model,
+        result = resolve(load_profile(args.profile) if args.profile else None, args.tier, args.available_model,
                          args.override_supported, args.explicit_model)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         raise SystemExit(2 if result["decision"] == "blocked" else 0)

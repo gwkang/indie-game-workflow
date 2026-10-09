@@ -46,3 +46,5 @@ For each selected formal UI screen, record a `UX prerequisite` in its task row: 
 
 ## Required contracts
 Apply [role, output, language and independent verification rules](references/role-contract.md) even for direct invocation. Read only your role card and output type.
+
+Apply the [seven required preparations](../game-workflow-supervision/references/mandatory.md). Link the current agreed product item and completion criteria before its implementation; include all four actual quality checks and required knowledge outcomes in the existing task/evidence record. Missing support/setup blocks affected product work; maintenance can prepare it without claiming readiness.

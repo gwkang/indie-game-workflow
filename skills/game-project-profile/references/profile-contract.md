@@ -23,3 +23,6 @@ Freeze these checks for the requested profile; do not add a new gate or game exe
 - Lookup: locate an implementer's run command, a UI worker's target/profile (if applicable), and a document worker's output language without reading installation or approval procedures. These are bounded reading checks, not a full workflow simulation.
 
 No finding quota, document-size quota or mandatory product tests. The separate verifier returns only supported scoped failures; the author repairs and the verifier rechecks affected criteria within the existing retry budget. Installation/link success alone is not content acceptance.
+
+## Required connections
+Authorized workflow setup connects the [seven required preparations](../../game-workflow-supervision/references/mandatory.md): source-backed wiki, common model decision policy, actual development list and all four quality capabilities. Link exact project settings; missing setup remains unmet. A profile entry alone is not actual execution or approval.

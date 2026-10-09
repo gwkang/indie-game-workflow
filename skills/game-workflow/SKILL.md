@@ -26,11 +26,11 @@ For visible UI or player-facing copy, apply the [UI change classification](../ga
 
 Use [the routing template](assets/routing-template.md) for a handoff. The router asks only when route or authority cannot be determined. After supervision begins, the supervisor owns later clarification. Ask only when an unresolved choice materially changes the outcome or authority, and present the recommendation and effect.
 
-For supervised work, propose an initial portable capability tier from task risk and shape; do not name a concrete model. The supervisor resolves each actual dispatch using the project model-routing profile and current host capabilities.
+For supervised work, propose an initial portable capability tier from task risk and shape; do not name a concrete model. The supervisor records a model decision for every actual dispatch using the common policy, any explicit mapping and current host capabilities.
 
 Skills are instructions read by the executing agent, not function calls. Resolve the selected sibling's actual SKILL.md and references. Report missing dependencies without installing them. Project AGENTS.md may require this bootstrap but must not duplicate its routing procedure.
 
-For optional project knowledge, pass configured index/policy locators during intake under the [knowledge contract](../game-task-planning/references/knowledge-contract.md). Distinguish installation-only requests from requested wiki integration using its setup/adoption rules; missing settings alone do not authorize creation, and must not silently downgrade an authorized integration to installation only.
+Apply the [seven required preparations](../game-workflow-supervision/references/mandatory.md) at authorized adoption and each affected dispatch/resume. Pass the exact requirements/profile/wiki/roadmap/quality locators to supervision; missing preparation is assigned to its owner, never an optional skip. Consultation stays read-only. [Project knowledge](../game-task-planning/references/knowledge-contract.md) is required; preserve sources and existing records.
 
 For a configured `workflow.stateToolPath`, pass its exact locator to supervision. New adopted runs use its canonical JSON and derived current checkpoint; existing Markdown runs keep their current owner and record. A status question or consultation does not authorize creation, migration or setup.
 

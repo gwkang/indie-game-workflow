@@ -238,6 +238,11 @@ PASS, 100% 완료
             server.server_close()
             worker.join()
 
+    def test_partial_unknown_scope_has_no_overall_percent(self):
+        value = {'schemaVersion': 1, 'scopeRevision': 'partial', 'scopeState': 'unknown',
+                 'items': [{'id': 'partial-feature'}]}
+        self.assertIsNone(d.progress(value)['percent'])
+
 
 if __name__ == '__main__':
     unittest.main()

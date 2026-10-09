@@ -4,7 +4,7 @@ description: Integrate evidence-backed reusable knowledge into an enabled projec
 ---
 
 ## Role and inputs
-Own the wiki delta, not source documents or run status. Read the project knowledge settings, authorized page scope, source revisions and returned findings. Use the [knowledge contract](../game-task-planning/references/knowledge-contract.md). Missing or disabled configuration does not authorize creating a wiki.
+Own the wiki delta, not source documents or run status. Read the project knowledge settings, authorized page scope, source revisions and returned findings. Use the [knowledge contract](../game-task-planning/references/knowledge-contract.md). Missing or disabled configuration is unmet required preparation. Authorized adoption/setup includes source-backed wiki preparation under the [required contract](../game-workflow-supervision/references/mandatory.md); consultation stays read-only.
 
 ## Procedure
 1. Read the configured index and relevant pages. Confirm which claims are still supported by current sources; separate intended behavior, observed behavior and unresolved disagreement.

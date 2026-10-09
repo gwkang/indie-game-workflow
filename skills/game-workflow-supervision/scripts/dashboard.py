@@ -310,8 +310,12 @@ def progress(roadmap):
     unknown = {'state': 'unknown', 'reason': '전체 범위 미정', 'percent': None, 'items': []}
     if roadmap is None:
         return unknown
-    if not isinstance(roadmap, dict) or roadmap.get('schemaVersion') != 1 or not roadmap.get('scopeRevision'):
+    if not isinstance(roadmap, dict) or type(roadmap.get('schemaVersion')) is not int or roadmap.get('schemaVersion') != 1 or not roadmap.get('scopeRevision'):
         raise DashboardError('개발 항목 목록의 형식 또는 범위 번호를 확인하세요.')
+    if roadmap.get('scopeState') not in (None, 'known', 'unknown'):
+        raise DashboardError('개발 범위 상태를 확인하세요.')
+    if roadmap.get('scopeState') == 'unknown':
+        return unknown
     items = roadmap.get('items')
     if not isinstance(items, list) or not items:
         return unknown

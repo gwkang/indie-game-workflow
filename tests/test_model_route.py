@@ -64,6 +64,22 @@ class ModelRouteTests(unittest.TestCase):
         self.assertEqual("explicit-model-override-unsupported", result["fallbackReason"])
         self.assertEqual("explicit-user", result["resolutionSource"])
 
+    def test_common_policy_without_profile_preserves_host(self):
+        for tier in router.TIERS:
+            result = router.resolve(None, tier, [], False)
+            self.assertEqual('host-default', result['decision'])
+            self.assertEqual('common-host-default', result['resolutionSource'])
+            self.assertIsNone(result['reasoningClass'])
+            self.assertTrue(result['fallbackReason'])
+
+    def test_explicit_model_still_blocks_or_overrides_without_profile(self):
+        self.assertEqual('blocked', router.resolve(None, 'high-volume', [], True, 'requested')['decision'])
+        self.assertEqual('override', router.resolve(None, 'high-volume', ['requested'], True, 'requested')['decision'])
+
+    def test_unknown_tier_is_rejected(self):
+        with self.assertRaises(router.ProfileError):
+            router.resolve(None, 'skip', [], False)
+
 
 if __name__ == "__main__":
     unittest.main()

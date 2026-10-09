@@ -101,8 +101,8 @@ Use pending/ready/running/completed/failed/blocked/cancelled/skipped for task ex
 - Interim context handoff, when unfinished: consumed input revisions; candidate/changed paths; completed checks and raw locators; current blocker; next action and remaining budget. This is not a completed result or approval.
 - Deferred out-of-scope observations (no automatic work or gate):
 
-## Optional knowledge integration
-When enabled, record policy/index locators, selected page scope, required/optional/not-applicable classification and authority, writer, sources/revisions, and applied/no-change/deferred/blocked outcome with verification evidence. Reuse Tasks and Artifact verification rows rather than duplicate them. A deferred required update remains unmet.
+## Required preparations and knowledge integration
+Record the seven preparation states and applicable actual results; missing items remain blocked with owner/reason. Always record policy/index locators, selected page scope, required/optional/not-applicable classification and authority, writer, sources/revisions, and applied/no-change/deferred/blocked outcome with verification evidence. Reuse Tasks and Artifact verification rows rather than duplicate them. A deferred required update remains unmet.
 
 ## Acceptance coverage
 | Criterion ID | Intent/source | Artifact/candidate | Scenario/result/evidence | Review/decision if required | Current status |

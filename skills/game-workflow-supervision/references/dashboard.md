@@ -36,7 +36,7 @@ python -B planning/workflow-dashboard/open.py update
 
 ## 전체 개발 범위
 
-목록이 없으면 ‘전체 범위 미정’이다. 작업 수나 작업 종료 수를 전체 게임 완료율로 만들지 않는다. 범위가 실제로 정해진 프로젝트만 설정의 `roadmapPath`에 프로젝트 안의 JSON을 연결한다. schemaVersion1, `scopeRevision`, `items`를 사용한다. 항목은 아래 형식이다. 이 예시는 형식 설명이며 실제 완료 근거가 아니다.
+개발 목록 연결은 필수다. 목록이 없으면 준비 미완료이며, 전체 범위가 `scopeState:unknown`이면 부분 항목이 있어도 ‘전체 범위 미정’과 percent=null을 유지한다. 작업 수나 작업 종료 수를 전체 게임 완료율로 만들지 않는다. 범위가 실제로 정해진 프로젝트만 설정의 `roadmapPath`에 프로젝트 안의 JSON을 연결한다. schemaVersion1, `scopeRevision`, `items`를 사용한다. 항목은 아래 형식이다. 이 예시는 형식 설명이며 실제 완료 근거가 아니다.
 
 ```json
 {
