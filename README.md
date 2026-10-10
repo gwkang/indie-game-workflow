@@ -1,6 +1,6 @@
 # Indie Game Workflow
 
-버전 `0.10.0-required-workflow`. 게임 개발 28개와 UI 11개를 **한 묶음의 39개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다. `game-ui-art-direction`에는 대화형 콘셉트 탐색과 정식 방향 제작을 구분하는 계약, 독립 검증된 선택용 모션·버튼 형태 샘플 라이브러리가 포함됩니다.
+버전 `0.10.1-task-model-mapping`. 게임 개발 28개와 UI 11개를 **한 묶음의 39개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다. `game-ui-art-direction`에는 대화형 콘셉트 탐색과 정식 방향 제작을 구분하는 계약, 독립 검증된 선택용 모션·버튼 형태 샘플 라이브러리가 포함됩니다.
 
 ## 구성과 사용
 
@@ -90,6 +90,14 @@ python -B planning/workflow-dashboard/open.py
 
 위키 연결, 매 작업의 AI 모델 결정, 개발 목록과 진행률, 코드 규칙·형식·타입 또는 의미 분석·실제 게임 코드 테스트 범위를 필수 절차로 연결했습니다. [공통 계약](skills/game-workflow-supervision/references/mandatory.md)을 따릅니다. 새 버전 적용은 기존 로컬 변경과 설정을 보존하며 병합합니다. 이미 사용 중인 다른 프로젝트를 원격 게시만으로 자동 갱신하지 않습니다.
 
-설치된 프로젝트에서 `python -B .agents/skills/game-workflow-supervision/scripts/workflow_requirements.py init --name "기존 프로젝트 이름"`으로 준비하고 `check`로 빠진 연결을 확인합니다. 프로젝트 폴더는 자동 발견합니다. 모델 매핑이 없으면 공통 host-default 결정이 동작합니다. 위키 초안·전체 범위 미정·부족한 품질 도구는 준비 미완료로 남고 PASS/선택 사항으로 숨기지 않습니다.
+설치된 프로젝트에서 `python -B .agents/skills/game-workflow-supervision/scripts/workflow_requirements.py init --name "기존 프로젝트 이름"`으로 준비하고 `check`로 빠진 연결을 확인합니다. 프로젝트 폴더는 자동 발견합니다. 프로젝트 모델 매핑이 없으면 공통 작업별 기본 모델 표를 읽고 실제 새 작업자의 model/effort 인자에 연결합니다. 위키 초안·전체 범위 미정·부족한 품질 도구는 준비 미완료로 남고 PASS/선택 사항으로 숨기지 않습니다.
 
 준비 확인은 실제 게임 검사를 실행하지 않습니다. 필요한 자료/도구가 없으면 관련 제품 작업을 준비부터 진행하며, 상담에는 파일을 쓰지 않습니다. 공통 코드 게시와 각 프로젝트의 준비·실제 검증·출시는 별개입니다.
+
+## 작업별 공통 모델 매핑
+
+39개 스킬의 기본 난이도와 실제 작업 위험을 [하나의 공통표](skills/game-workflow-supervision/references/model-routing-defaults.json)에 연결했습니다. 중요한 설계/판단은 Astra/high, 복잡한 구현/검토는 GPT-6.1 Sol/high, 일반 작업은 Sol/medium, 좁은 반복 작업은 Luna/low를 기본으로 합니다. [선택·실제 배정 계약](skills/game-workflow-supervision/references/model-routing.md)을 따릅니다.
+
+프로젝트마다 표를 복사하지 않습니다. 현재 호스트의 모델/effort 지원을 확인해 새 작업자에 model/reasoning_effort/fork_turns none을 전달합니다. 새로운 공통표에서 적합한 후보나 지정 기능이 없으면 배정을 막습니다. 기존 schema1 custom 프로필과 사용자 선택·root 모델·기존 기록은 보존합니다. 선택한 설정, 실제 생성 응답, 미관측 runtime header와 모델 품질/시간/비용 효과는 구분합니다.
+
+공식 [OpenAI 선택 안내](https://developers.openai.com/api/docs/guides/model-selection)와 [Codex/Work 모델 안내](https://learn.chatgpt.com/docs/models)를 근거로 한 운영 기본값이며 최적성이나 실제 비용/시간 절감의 벤치마크가 아닙니다. 게시만으로 다른 프로젝트를 자동 갱신하지 않습니다.

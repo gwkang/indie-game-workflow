@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "revision": "common-task-models-2026-10-10",
+  "tiers": {
+    "highest-judgment": {
+      "preferredModels": [
+        "gpt-6-astra",
+        "gpt-6.1-sol"
+      ],
+      "reasoningEffort": "high"
+    },
+    "complex-execution": {
+      "preferredModels": [
+        "gpt-6.1-sol",
+        "gpt-6-astra"
+      ],
+      "reasoningEffort": "high"
+    },
+    "balanced-execution": {
+      "preferredModels": [
+        "gpt-6.1-sol",
+        "gpt-6-astra"
+      ],
+      "reasoningEffort": "medium"
+    },
+    "high-volume": {
+      "preferredModels": [
+        "gpt-6-luna",
+        "gpt-6.1-sol",
+        "gpt-6-astra"
+      ],
+      "reasoningEffort": "low"
+    }
+  },
+  "skillTiers": {
+    "art-asset-review": "complex-execution",
+    "game-bug-diagnosis": "highest-judgment",
+    "game-bug-reproduction": "balanced-execution",
+    "game-build-packaging": "balanced-execution",
+    "game-camera-implementation": "complex-execution",
+    "game-code-review": "complex-execution",
+    "game-content-loading": "complex-execution",
+    "game-feature-spec": "highest-judgment",
+    "game-functional-verification": "complex-execution",
+    "game-improvement-assessment": "highest-judgment",
+    "game-input-implementation": "complex-execution",
+    "game-knowledge-maintenance": "balanced-execution",
+    "game-movement-implementation": "complex-execution",
+    "game-performance-profiling": "complex-execution",
+    "game-platform-integration": "complex-execution",
+    "game-project-profile": "balanced-execution",
+    "game-rule-implementation": "complex-execution",
+    "game-save-implementation": "complex-execution",
+    "game-session-implementation": "complex-execution",
+    "game-task-planning": "highest-judgment",
+    "game-technical-design": "highest-judgment",
+    "game-test-design": "complex-execution",
+    "game-test-infrastructure": "complex-execution",
+    "game-ui-acceptance-review": "complex-execution",
+    "game-ui-art-direction": "highest-judgment",
+    "game-ui-asset-production": "complex-execution",
+    "game-ui-component-system": "complex-execution",
+    "game-ui-handoff": "balanced-execution",
+    "game-ui-implementation": "complex-execution",
+    "game-ui-mockup": "complex-execution",
+    "game-ui-runtime-validation": "balanced-execution",
+    "game-ui-screen-spec": "complex-execution",
+    "game-ui-ux-design": "highest-judgment",
+    "game-workflow": "balanced-execution",
+    "game-workflow-audit": "highest-judgment",
+    "game-workflow-supervision": "highest-judgment",
+    "indie-game-bugfix": "complex-execution",
+    "indie-game-development": "complex-execution",
+    "indie-game-improvement": "complex-execution"
+  },
+  "onUnavailable": "blocked",
+  "onUnsupportedOverride": "blocked"
+}

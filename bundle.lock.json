@@ -1,6 +1,6 @@
 {
   "lockVersion": 1,
-  "bundleVersion": "0.10.0-required-workflow",
+  "bundleVersion": "0.10.1-task-model-mapping",
   "entries": [
     {
       "id": "indie-game-development",
@@ -31,9 +31,9 @@
       "source": "skills/game-project-profile",
       "contractVersion": "2026-09-16",
       "files": {
-        "assets/profile-template.md": "511430441d642d4128ef5495a57427ba198f1a3d746ec1f61ce766786cf6aff4",
+        "assets/profile-template.md": "5b2e4cf9264a29d09fdf17ad6daad90c76e82bfc3a5741ae1dbdaadf570e555e",
         "references/artifact-language.md": "0c0626ac7406e1202f949d685bda08480810427b052d563a70f2279a9fdd8e9a",
-        "references/profile-contract.md": "6632526c47e515434deb6145092c1b171d5fcfb5ccc4033c7db810d19a81afb6",
+        "references/profile-contract.md": "091d68eff50ec68bd2e072b60ba4b194f27830c685f5523814c8ced6f773b092",
         "SKILL.md": "4cfb0960f5366c506ad298b96cb28bb8390fc0296dfc2b777723d685d0e0be28"
       }
     },
@@ -239,17 +239,18 @@
         "assets/dashboard/style.css": "293d1a2a52899272e9f60b7a486565155234fd23bd9e75693add4d6610c8b701",
         "assets/run-template.md": "e9db9fec350b9103adb3302253ec1c8154929fdc68fcf455ddd559439ff0b4c4",
         "references/dashboard.md": "5e52f75f0caf0d0b665c33c4fe6c867a846da6622cb390f94a244ef85803e932",
-        "references/execution-supervision.md": "ee2774dee1f6fe3f0a432984e1271eb96f2b204621f73b13f4c9f4a63eb4af70",
-        "references/mandatory.md": "6a630fa57b32440c76771260c12a14623018f6454cce1676a1be69b70b94635e",
-        "references/model-routing.md": "5e8db0ea34d4b8e4cf5b920ac13b68f3ce3984c941022a1a7ce5249c822cbe3b",
+        "references/execution-supervision.md": "1adc590837f090ff2d6665d7e90fcc425412e4328ea147a41e51b0967c02f2c4",
+        "references/mandatory.md": "b6311054283106335632b1f181298acd466d239f698a537dc7231c79a9690298",
+        "references/model-routing-defaults.json": "f1080b2122e0b1a74e1528148e56cafb28ea4703a69c9eff5d249b28c7f5b70d",
+        "references/model-routing.md": "febc3ad1e6147e961bf4a69a23e6cf498552301a8a22a7e542dadc4c306c9f44",
         "references/run-registry.md": "0537acad1341cd3f3f4bb199c9805a1edc82c37c2c9bd3a62dad448544caa2a8",
         "references/run-state.md": "dc6944d347df3c682cf6df359647d949a261d4fd07ab46977d992902cee017b5",
         "references/ui-supervision.md": "f3c9a08402fe9c85476a5d0551396fb330bafd52b172089876dc861edcf703da",
         "scripts/dashboard.py": "753cfc3fda8f4650c92045ede73d0a524ab1c2bf8f72ef0a2be1296bfcc1fbcd",
-        "scripts/resolve_model_route.py": "c4f002d011bd992e87a279266e960d75c0ce4d8c5f7b0a6eef42ed5a4f6ca9af",
-        "scripts/workflow_requirements.py": "3efe3eaba1ee7ee890f510dabce01c63ae5aaa85f448f8e8b23c779c884487cd",
+        "scripts/resolve_model_route.py": "dd6c406729c318dac40eede1f77dc9f39c468a78b45312e0343e2358982c79af",
+        "scripts/workflow_requirements.py": "3e9220a6de2bb66b91664f4b4e552248348b5057fddf35ac6709f9bff1eb0b64",
         "scripts/workflow_state.py": "46ca05f0976d06d1a3cc38c42a4bc68444b23e8dfe34aa4f9ccd0ce7937216e8",
-        "SKILL.md": "ac5ec8836cbab84acc76cfbf9047b17169a15c9ddba56a90bccd794f355b8db8"
+        "SKILL.md": "4622df63e00c3c2887600fc8b6516813bacf88baca0253318080242a4b122890"
       }
     },
     {

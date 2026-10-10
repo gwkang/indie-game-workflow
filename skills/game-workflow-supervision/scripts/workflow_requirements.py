@@ -14,6 +14,7 @@ QUALITY = ('lint', 'format', 'analysis', 'coverage')
 FEATURES = ('knowledge', 'models', 'roadmap', *QUALITY)
 LABELS = dict(zip(FEATURES, ('프로젝트 위키', 'AI 모델 선택', '개발 목록',
                             '코드 규칙 검사', '형식 검사', '타입·의미 분석', '게임 코드 테스트 범위')))
+BUNDLED_MODELS = 'bundle:game-workflow-supervision/references/model-routing-defaults.json'
 
 
 class RequirementsError(ValueError):
@@ -130,10 +131,25 @@ def _inspect(root, *, scope_item=None, settings=SETTINGS, observed):
         object_shape(value, ('policy', 'profilePath'))
         if value['policy'] != 'capability-tier':
             raise RequirementsError('작업 난이도에 따른 공통 모델 선택 규칙이 필요합니다.')
+        router = sibling('resolve_model_route')
+        profile = None
         if value['profilePath'] is not None:
-            observe(value['profilePath'])
-            sibling('resolve_model_route').load_profile(path(root, value['profilePath']))
-        return {'policySource': 'configured-profile' if value['profilePath'] else 'common-host-default'}
+            profile = router.parse_profile(observe(value['profilePath']).decode('utf-8-sig'))
+        if profile is None or 'skillTiers' not in profile:
+            target = router.common_profile_path()
+            project = Path(root).resolve(strict=True)
+            if target.is_relative_to(project):
+                data = observe(target.relative_to(project).as_posix())
+            else:
+                # Direct function fixtures may consume the exact trusted bundled asset.
+                # Installed project assets still pass the ordinary in-project path checks.
+                data = target.read_bytes()
+                observed.setdefault(BUNDLED_MODELS, hashlib.sha256(data).hexdigest())
+            common = router.validate_common_profile(router.parse_profile(data.decode('utf-8-sig')))
+            if profile is None:
+                profile = common
+        return {'policySource': 'configured-profile' if value['profilePath'] is not None else 'common-profile',
+                'profileRevision': profile['revision']}
 
     progress = {'ready': False}
 
@@ -212,8 +228,10 @@ def inspect(root, *, scope_item=None, settings=SETTINGS):
         changed = []
         for locator, expected in observed.items():
             try:
-                actual = hashlib.sha256(path(root, locator).read_bytes()).hexdigest()
-            except (OSError, RequirementsError):
+                target = (sibling('resolve_model_route').common_profile_path()
+                          if locator == BUNDLED_MODELS else path(root, locator))
+                actual = hashlib.sha256(target.read_bytes()).hexdigest()
+            except (OSError, ValueError):
                 actual = None
             if actual != expected:
                 changed.append(locator)

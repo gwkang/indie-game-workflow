@@ -145,12 +145,102 @@ class RequirementsTests(unittest.TestCase):
         target.mkdir(parents=True)
         for name in ('workflow_requirements.py', 'dashboard.py', 'resolve_model_route.py'):
             shutil.copyfile(SCRIPT.with_name(name), target / name)
+        asset = target.parent / 'references/model-routing-defaults.json'
+        asset.parent.mkdir()
+        shutil.copyfile(SCRIPT.parent.parent / 'references/model-routing-defaults.json', asset)
         result = subprocess.run([sys.executable, '-B', '-X', 'utf8', str(target / SCRIPT.name),
                                  'init', '--name', 'sample-game'], cwd=self.root.parent,
                                 capture_output=True, text=True, encoding='utf-8', timeout=20)
         self.assertEqual(2, result.returncode, result.stderr)
         self.assertTrue((self.root / requirements.SETTINGS).is_file())
         self.assertFalse(json.loads(result.stdout)['readiness']['setupReady'])
+
+    def test_common_profile_is_observed_and_fingerprinted(self):
+        self.configured()
+        result = requirements.inspect(self.root)
+        row = next(x for x in result['items'] if x['id'] == 'models')
+        self.assertEqual('common-profile', row['policySource'])
+        self.assertIn(requirements.BUNDLED_MODELS, result['sources'])
+        self.assertEqual(64, len(result['sources'][requirements.BUNDLED_MODELS]))
+
+    def test_legacy_explicit_profile_observes_common_table_as_well(self):
+        config = self.configured()
+        config['models']['profilePath'] = 'planning/models.json'
+        self.write(requirements.SETTINGS, config)
+        self.write('planning/models.json', json.loads((PACKAGE / 'tests/fixtures/model-routing-profile.json').read_text(encoding='utf-8')))
+        result = requirements.inspect(self.root)
+        self.assertTrue(result['setupReady'])
+        self.assertIn('planning/models.json', result['sources'])
+        self.assertIn(requirements.BUNDLED_MODELS, result['sources'])
+        row = next(x for x in result['items'] if x['id'] == 'models')
+        self.assertEqual('portable-test-fixture', row['profileRevision'])
+
+    def test_full_custom_profile_does_not_require_unused_common_asset(self):
+        config = self.configured()
+        config['models']['profilePath'] = 'planning/models.json'
+        self.write(requirements.SETTINGS, config)
+        self.write('planning/models.json', requirements.sibling('resolve_model_route').load_profile())
+        result = requirements.inspect(self.root)
+        self.assertTrue(result['setupReady'])
+        self.assertNotIn(requirements.BUNDLED_MODELS, result['sources'])
+
+    def bundled_fixture(self):
+        router = requirements.sibling('resolve_model_route')
+        target = self.root / 'fixture-common.json'
+        shutil.copyfile(router.common_profile_path(), target)
+        original = requirements.sibling
+        router.common_profile_path = lambda: target
+        return target, lambda name: router if name == 'resolve_model_route' else original(name)
+
+    def test_missing_and_malformed_bundled_asset_block_model_preparation(self):
+        self.configured()
+        target, modules = self.bundled_fixture()
+        for value in (None, '{broken', json.dumps({'schemaVersion': 1, 'revision': 'bad', 'tiers': {}})):
+            if value is None:
+                target.unlink(missing_ok=True)
+            else:
+                target.write_text(value, encoding='utf-8')
+            with patch.object(requirements, 'sibling', side_effect=modules):
+                result = requirements.inspect(self.root)
+            row = next(x for x in result['items'] if x['id'] == 'models')
+            self.assertEqual('blocked', row['state'])
+            self.assertFalse(result['setupReady'])
+
+    def test_changed_bundled_asset_retries_then_blocks(self):
+        self.configured()
+        target, modules = self.bundled_fixture()
+        original = requirements._inspect
+
+        def change_after_read(*args, **kwargs):
+            result = original(*args, **kwargs)
+            value = json.loads(target.read_text(encoding='utf-8'))
+            value['revision'] += '-changed'
+            target.write_text(json.dumps(value), encoding='utf-8')
+            return result
+
+        with patch.object(requirements, 'sibling', side_effect=modules), patch.object(requirements, '_inspect', side_effect=change_after_read):
+            result = requirements.inspect(self.root)
+        self.assertEqual('configuration-changed', result['observation'])
+        self.assertFalse(result['setupReady'])
+        self.assertIn('fixture-common.json', result['changedSources'])
+
+    def test_installed_cli_check_records_installed_asset_and_fails_if_missing(self):
+        self.configured()
+        target = self.root / '.agents/skills/game-workflow-supervision/scripts'
+        target.mkdir(parents=True)
+        for name in ('workflow_requirements.py', 'dashboard.py', 'resolve_model_route.py'):
+            shutil.copyfile(SCRIPT.with_name(name), target / name)
+        asset = target.parent / 'references/model-routing-defaults.json'
+        asset.parent.mkdir()
+        shutil.copyfile(SCRIPT.parent.parent / 'references/model-routing-defaults.json', asset)
+        command = [sys.executable, '-B', '-X', 'utf8', str(target / SCRIPT.name), 'check']
+        result = subprocess.run(command, cwd=self.root.parent, capture_output=True, text=True, encoding='utf-8', timeout=20)
+        self.assertEqual(0, result.returncode, result.stderr)
+        self.assertIn('.agents/skills/game-workflow-supervision/references/model-routing-defaults.json', json.loads(result.stdout)['sources'])
+        asset.unlink()
+        result = subprocess.run(command, cwd=self.root.parent, capture_output=True, text=True, encoding='utf-8', timeout=20)
+        self.assertEqual(2, result.returncode, result.stderr)
+        self.assertFalse(json.loads(result.stdout)['setupReady'])
 
     def test_existing_custom_manifest_is_reused(self):
         config = self.configured()

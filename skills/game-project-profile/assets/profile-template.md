@@ -11,7 +11,7 @@ Revision: <revision>. Keep only applicable rows, translate prose into the artifa
 | communication.preferredLanguage | ko unless explicitly overridden | User preference or workflow default |
 | communication.artifactLanguage | Omit unless different from preferredLanguage | |
 | workflowRunRegistryPath | Exact project-relative path when stateful workflow reuse is supported | |
-| modelRoutingProfilePath | Optional explicit override mapping; common host-default model decision is always required | |
+| modelRoutingProfilePath | Optional explicit project override; bundled common model/effort mapping is automatically used when omitted | |
 | workflow.requirementsPath | Exact required preparation manifest; default planning/workflow-requirements.json | [Required preparations](../../game-workflow-supervision/references/mandatory.md) |
 | workflow.roadmapPath | Required development list; preserve unknown scope | |
 | workflow.smallChangePolicyPath | Omit unless the project explicitly selects a bounded small-change policy; exact policy locator | Project authority |
