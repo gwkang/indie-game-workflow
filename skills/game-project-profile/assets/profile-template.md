@@ -14,9 +14,10 @@ Revision: <revision>. Keep only applicable rows, translate prose into the artifa
 | modelRoutingProfilePath | Optional explicit project override; bundled common model/effort mapping is automatically used when omitted | |
 | workflow.requirementsPath | Exact required preparation manifest; default planning/workflow-requirements.json | [Required preparations](../../game-workflow-supervision/references/mandatory.md) |
 | workflow.roadmapPath | Required development list; preserve unknown scope | |
-| workflow.smallChangePolicyPath | Omit unless the project explicitly selects a bounded small-change policy; exact policy locator | Project authority |
+| workflow.smallChangePolicyPath | Omit for the common bounded default; exact plain relative path for an explicit project override | Project authority |
+| workflow.stateToolPath | Omit for the installed native tool on new supervised runs; exact plain relative path for an explicit project tool | Existing run sources are preserved |
 
-When selected, link the project's contract/evidence tool from that policy and apply the [small-change contract](../../game-task-planning/references/small-change.md). Collect locators only; creating this profile does not activate a policy or grant tool/commit/publication authority.
+Consume actual `workflowDefaults` from the preparation check, then apply the resolved [small-change contract](../../game-task-planning/references/small-change.md) only to eligible settled work. Missing/invalid explicit selections block. Keep the three machine-key override values as exact plain relative paths, without links or descriptions in the value cell. The common defaults do not grant product, tool installation, commit or publication authority.
 
 ## Required knowledge settings
 

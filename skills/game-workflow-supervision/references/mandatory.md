@@ -9,7 +9,9 @@ python -B .agents/skills/game-workflow-supervision/scripts/workflow_requirements
 python -B .agents/skills/game-workflow-supervision/scripts/workflow_requirements.py check
 ```
 
-프로필의 `workflow.requirementsPath`는 기본 `planning/workflow-requirements.json` 또는 보존한 정확한 설정 경로다. 다른 설정은 `--settings 프로젝트/상대경로.json`을 명령 앞쪽에 전달한다. manifest는 projectName/profilePath, knowledge의 enabled/state/owner/reason/indexPath/policyPath/sources, models의 policy/profilePath, roadmapPath/qualityPath를 연결한다. 필수성을 끄는 키는 없다.
+도구는 현재 프로필의 `workflow.requirementsPath`를 자동으로 읽으며 키가 없으면 `planning/workflow-requirements.json`을 사용한다. 표의 machine-key 값은 설명/링크가 없는 정확한 프로젝트 상대 파일 경로다. 명시 `--settings`와 선택적 `--profile`은 자동 선택을 덮어쓰는 도구 호출 인자로 계속 지원한다. 실제 settings/profile 경로·선택 출처·파일 지문을 반환에서 확인한다. 선택한 파일 부재·잘못된 값·중복 키·살아 있는 프로필 간 불일치를 기본 파일로 숨기지 않는다. 사용자에게 폴더나 경로를 입력하도록 요구하지 않는다. manifest는 projectName/profilePath, knowledge의 enabled/state/owner/reason/indexPath/policyPath/sources, models의 policy/profilePath, roadmapPath/qualityPath를 연결한다. 필수성을 끄는 키는 없다.
+
+같은 resolver의 `workflowDefaults.smallChangePolicy/stateTool`은 실제 path/source/available와 실패 이유를 제공한다. 감독은 이 선택을 작은 변경 분류와 새 실행 도구 호출에 전달한다. 기본 정책과 도구는 현재 설치 번들에서 확인하며 명시 프로젝트 선택은 보존한다. 이 값의 유효성과 필수7의 준비·실행 상태는 구분한다. 대시보드 설정을 자동 변경하지 않는다.
 
 init은 없는 설정·지식 초안·개발 목록·품질 준비 파일만 만든다. 기본 위키와 검사 준비는 pending, 전체 범위는 unknown이다. 준비가 남으면 exit2와 항목별 blocked를 반환한다. 파일 저장 성공은 준비 완료가 아니다. check는 명령을 실행하지 않고 연결·타입·출처 파일 지문만 확인한다. `setupReady`와 `checksExecuted:false`, 각 항목과 원본을 읽는다. 실제 의미·지원·실행·별도 검토는 기존 실행 기록에 연결한다. 한 파일의 저장과 여러 파일의 부분 성공을 구분하며 단일 작성자/안정된 입력을 유지한다. check 중 입력 변경은 한 번 재읽고 다시 바뀌면 차단한다.
 

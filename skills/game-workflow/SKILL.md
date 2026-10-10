@@ -5,7 +5,7 @@ description: Use when starting or resuming indie-game work to reconnect an exist
 
 ## Responsibility
 
-Before selecting roles, inspect a configured project `workflow.smallChangePolicyPath`. Eligible project-selected work uses [small-change routing](../game-task-planning/references/small-change.md) under one supervisor; omitted policy retains the existing route. Pass the exact policy and evidence locators without enabling it or copying project implementation into the bundle.
+Before selecting roles, consume the required preparation check's actual `workflowDefaults.smallChangePolicy` locator. Eligible settled work uses [small-change routing](../game-task-planning/references/small-change.md) under one supervisor by default. An explicit project policy takes precedence; missing or invalid selected policy blocks that consumer. Preserve existing project choices and pass exact policy/evidence locators without copying project rules into the bundle.
 Be the game-work bootstrap and intake specialist. Preserve the user's goal, constraints and decision authority. Own run discovery and routing, not planning, product design or execution supervision.
 
 ## Bootstrap
@@ -32,7 +32,7 @@ Skills are instructions read by the executing agent, not function calls. Resolve
 
 Apply the [seven required preparations](../game-workflow-supervision/references/mandatory.md) at authorized adoption and each affected dispatch/resume. Pass the exact requirements/profile/wiki/roadmap/quality locators to supervision; missing preparation is assigned to its owner, never an optional skip. Consultation stays read-only. [Project knowledge](../game-task-planning/references/knowledge-contract.md) is required; preserve sources and existing records.
 
-For a configured `workflow.stateToolPath`, pass its exact locator to supervision. New adopted runs use its canonical JSON and derived current checkpoint; existing Markdown runs keep their current owner and record. A status question or consultation does not authorize creation, migration or setup.
+For a new supervised run, pass the required preparation check's actual `workflowDefaults.stateTool` locator to supervision. The installed native state tool is the default; an explicit project tool remains authoritative and requires its own compatible contract. Existing runs keep their registry-selected owner and source, including Markdown. A status question or consultation does not authorize creation, migration or setup.
 
 ## Project dashboard
 

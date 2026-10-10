@@ -56,6 +56,10 @@ On return inspect artifacts and observations, not only prose. Compare the delive
 
 Classify audit and status findings by evidence strength. A `confirmed-defect` requires a current observed product or contract failure. A `recording-gap` means authority, candidate or task state is newer than the shared record but does not by itself prove unauthorized work or product failure. An `operational-risk` identifies a plausible future failure without current failure evidence. Report these separately and do not aggregate them as equally confirmed problems.
 
+## Observed phase cost
+
+Use the existing [measurement helper](run-state.md#단계-시간-기록) at real phase boundaries when comparing an approved workflow change. Reuse its raw/event in the existing run; do not create a parallel reporting system. Keep pre-init or missing periods unmeasured, state whether waits/parallel work are included, and compare model, tools, inputs and budget before attributing a difference. Recording measurements does not add an acceptance gate or prove realized savings.
+
 ## Event-driven workflow audit
 
 Classify new events at user feedback, worker/verification returns, pre-recorded budget checkpoints and resumption, not every tool call. The following events require an actual separate read-only `game-workflow-audit` dispatch:

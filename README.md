@@ -1,6 +1,6 @@
 # Indie Game Workflow
 
-버전 `0.10.1-task-model-mapping`. 게임 개발 28개와 UI 11개를 **한 묶음의 39개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다. `game-ui-art-direction`에는 대화형 콘셉트 탐색과 정식 방향 제작을 구분하는 계약, 독립 검증된 선택용 모션·버튼 형태 샘플 라이브러리가 포함됩니다.
+버전 `0.10.2-workflow-defaults`. 게임 개발 28개와 UI 11개를 **한 묶음의 39개 스킬**로 관리합니다. UI도 `skills/`에 포함하므로 별도 UI 저장소나 설치가 필요하지 않습니다. `game-ui-art-direction`에는 대화형 콘셉트 탐색과 정식 방향 제작을 구분하는 계약, 독립 검증된 선택용 모션·버튼 형태 샘플 라이브러리가 포함됩니다.
 
 ## 구성과 사용
 
@@ -101,3 +101,11 @@ python -B planning/workflow-dashboard/open.py
 프로젝트마다 표를 복사하지 않습니다. 현재 호스트의 모델/effort 지원을 확인해 새 작업자에 model/reasoning_effort/fork_turns none을 전달합니다. 새로운 공통표에서 적합한 후보나 지정 기능이 없으면 배정을 막습니다. 기존 schema1 custom 프로필과 사용자 선택·root 모델·기존 기록은 보존합니다. 선택한 설정, 실제 생성 응답, 미관측 runtime header와 모델 품질/시간/비용 효과는 구분합니다.
 
 공식 [OpenAI 선택 안내](https://developers.openai.com/api/docs/guides/model-selection)와 [Codex/Work 모델 안내](https://learn.chatgpt.com/docs/models)를 근거로 한 운영 기본값이며 최적성이나 실제 비용/시간 절감의 벤치마크가 아닙니다. 게시만으로 다른 프로젝트를 자동 갱신하지 않습니다.
+
+## 공통 기본 절차와 설정 연결
+
+설정 도구가 프로젝트 프로필의 정확한 설정 위치를 자동으로 선택하고 실제 읽은 경로·지문과 작은 변경 정책/상태 도구 선택을 반환합니다. 프로젝트 폴더를 입력할 필요가 없습니다. 명시한 프로젝트 설정은 보존하며 잘못된 선택을 기본 파일로 숨기지 않습니다.
+
+조건에 맞는 작은 변경에는 공통 간소한 경로가 기본입니다. 새 감독 실행은 공용 상태 도구를 기본으로 사용하고 기존 Markdown 원본·프로젝트별 도구·정책은 유지합니다. 정식 UI, 중요한 설계, 필요한 검사·승인·별도 검토 조건은 계속 적용합니다.
+
+[시간 기록 도구](skills/game-workflow-supervision/scripts/workflow_measure.py)는 실제 단계 시각과 조건을 기존 measurement에 연결합니다. 별도 서버·모델 성능 추정은 없으며 실제 시간·비용 절감은 후속 작업에서 확인해야 합니다. 이번 버전은 대시보드 코드·화면·설정과 개발 목록 자동 연결을 변경하지 않습니다.

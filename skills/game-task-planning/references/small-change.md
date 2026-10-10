@@ -1,6 +1,6 @@
-# Project-selected small changes
+# Bounded small changes
 
-Use this path only when the current project profile links an authorized `workflow.smallChangePolicyPath` and the work meets that policy. Otherwise retain the existing workflow. The project owns its policy, contract, evidence tool and exact locators; the bundle does not install or enable a project policy.
+This is the common default for eligible settled work. Consume the preparation resolver's actual `workflowDefaults.smallChangePolicy` path/source. An explicit `workflow.smallChangePolicyPath` preserves the project's policy and additional constraints; invalid or missing explicit selections block instead of falling back. No project policy file is required for the common default, and no existing policy is copied or overwritten. Ineligible work retains its specialist workflow.
 
 ## Scope and precedence
 
